@@ -40,3 +40,14 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Custom
+.yarn
+.angular
+*.patch
+.husky/*
+junit.xml
+/junit
+.env
+package-lock.json
+yarn.lock
