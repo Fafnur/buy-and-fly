@@ -1,25 +1,23 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
+  "ignorePatterns": ["projects/**/*"],
+  "plugins": ["@typescript-eslint", "prettier", "simple-import-sort", "import", "@angular-eslint/eslint-plugin-template", "jsdoc"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:import/recommended"
       ],
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
           {
             "type": "attribute",
-            "prefix": "app",
+            "prefix": "baf",
             "style": "camelCase"
           }
         ],
@@ -27,20 +25,75 @@
           "error",
           {
             "type": "element",
-            "prefix": "app",
+            "prefix": "baf",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "default",
+            "format": ["camelCase"],
+            "leadingUnderscore": "allow",
+            "trailingUnderscore": "allow",
+            "filter": {
+              "regex": "^(ts-jest|\\^.*)$",
+              "match": false
+            }
+          },
+          {
+            "selector": "default",
+            "format": ["camelCase"],
+            "leadingUnderscore": "allow",
+            "trailingUnderscore": "allow"
+          },
+          {
+            "selector": "variable",
+            "format": ["camelCase", "UPPER_CASE"],
+            "leadingUnderscore": "allow",
+            "trailingUnderscore": "allow"
+          },
+          {
+            "selector": "typeLike",
+            "format": ["PascalCase"]
+          },
+          {
+            "selector": "enumMember",
+            "format": ["PascalCase"]
+          }
+        ],
+        "complexity": "error",
+        "max-len": [
+          "error",
+          {
+            "code": 140
+          }
+        ],
+        "no-new-wrappers": "error",
+        "no-throw-literal": "error",
+        "import/no-unresolved": "off",
+        "simple-import-sort/exports": "error",
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [["^\\u0000"], ["^@?(?!baf)\\w"], ["^@baf?\\w"], ["^\\w"], ["^[^.]"], ["^\\."]]
+          }
+        ],
+        "sort-imports": "off",
+        "import/named": "off",
+        "import/first": "error",
+        "import/newline-after-import": "error",
+        "import/no-duplicates": "error",
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": "error",
+        "no-invalid-this": "off",
+        "@typescript-eslint/no-invalid-this": ["warn"]
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended",
-        "plugin:@angular-eslint/template/accessibility"
-      ],
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended", "plugin:@angular-eslint/template/accessibility"],
       "rules": {}
     }
   ]
