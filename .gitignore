@@ -51,3 +51,4 @@ junit.xml
 .env
 package-lock.json
 yarn.lock
+.nx
