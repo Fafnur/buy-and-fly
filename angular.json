@@ -28,6 +28,9 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": ["node_modules", "./"]
+            },
             "assets": [
               {
                 "glob": "**/*",
