@@ -6,6 +6,11 @@ export const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
-    children: [],
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
+      },
+    ],
   },
 ];
