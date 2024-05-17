@@ -1,12 +1,22 @@
 import { Routes } from '@angular/router';
 
-import { LayoutComponent } from '@baf/ui/layout';
+import { FooterComponent, HeaderComponent, LayoutComponent } from '@baf/ui/layout';
 
 export const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
     children: [
+      {
+        path: '',
+        component: HeaderComponent,
+        outlet: 'header',
+      },
+      {
+        path: '',
+        component: FooterComponent,
+        outlet: 'footer',
+      },
       {
         path: '',
         loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),

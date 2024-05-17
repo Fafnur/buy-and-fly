@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'baf-page',
+  selector: 'baf-home-page',
   standalone: true,
   imports: [],
   templateUrl: './home-page.component.html',
