@@ -5,13 +5,32 @@
     display: none;
   }
 
+  &.is-start-date input {
+    border-radius: 0.25rem;
+  }
+  &.is-end-date input {
+    border-radius: 0 0.25rem 0.25rem 0;
+  }
+  &.is-start-date.is-valid input {
+    border-radius: 0.25rem 0 0 0.25rem;
+    border-right: 1px solid var(--md-sys-color-background);
+  }
+
   @include device.media-web() {
     &.is-hide {
       display: block;
     }
-  }
-}
 
-input {
-  width: 100px;
+    &.is-start-date input,
+    &.is-start-date.is-valid input {
+      border-radius: 0;
+      border-left: 1px solid var(--md-sys-color-background);
+      border-right: 1px solid var(--md-sys-color-background);
+    }
+
+    &.is-end-date input {
+      border-radius: 0;
+      border-right: 1px solid var(--md-sys-color-background);
+    }
+  }
 }

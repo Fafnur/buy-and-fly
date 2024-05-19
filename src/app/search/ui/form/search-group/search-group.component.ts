@@ -9,7 +9,7 @@ import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchGroupComponent {
-  @Input() mode?: 'destination' | 'date' | 'line';
+  @Input() mode?: 'destination' | 'date' | 'line' | 'submit';
 
   @HostBinding('class.is-destination') get isDestination() {
     return this.mode === 'destination';
@@ -21,5 +21,9 @@ export class SearchGroupComponent {
 
   @HostBinding('class.is-line') get isLine() {
     return this.mode === 'line';
+  }
+
+  @HostBinding('class.is-submit') get isSubmit() {
+    return this.mode === 'submit';
   }
 }

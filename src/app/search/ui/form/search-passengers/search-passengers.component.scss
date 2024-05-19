@@ -1,3 +1,7 @@
+@use 'src/stylesheets/mixins' as device;
+
 input {
-  width: 100px;
+  @include device.media-web() {
+    border-radius: 0 0.25rem 0.25rem 0;
+  }
 }

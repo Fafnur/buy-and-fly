@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+
+import { SearchInputComponent } from '../search-input/search-input.component';
 
 export interface SearchDestinationOptions {
   readonly label: string;
@@ -10,7 +12,7 @@ export interface SearchDestinationOptions {
 @Component({
   selector: 'baf-search-destination',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, SearchInputComponent],
   templateUrl: './search-destination.component.html',
   styleUrl: './search-destination.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -18,4 +20,12 @@ export interface SearchDestinationOptions {
 export class SearchDestinationComponent {
   @Input({ required: true }) control!: FormControl<string>;
   @Input({ required: true }) options!: SearchDestinationOptions;
+
+  @HostBinding('class.is-from') get isFrom() {
+    return this.options.id === 'from';
+  }
+
+  @HostBinding('class.is-to') get isTo() {
+    return this.options.id === 'to';
+  }
 }

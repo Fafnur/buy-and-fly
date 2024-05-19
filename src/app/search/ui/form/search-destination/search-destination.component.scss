@@ -1,3 +1,21 @@
-input {
-  width: 100%;
+@use 'src/stylesheets/mixins' as device;
+
+:host {
+  &.is-from input {
+    border-radius: 0.25rem 0.25rem 0 0;
+    border-bottom: 1px solid var(--md-sys-color-background);
+  }
+  &.is-to input {
+    border-radius: 0 0 0.25rem 0.25rem;
+  }
+
+  @include device.media-web() {
+    &.is-from input {
+      border-radius: 0.25rem 0 0 0.25rem;
+      border-bottom: none;
+    }
+    &.is-to input {
+      border-radius: 0;
+    }
+  }
 }
