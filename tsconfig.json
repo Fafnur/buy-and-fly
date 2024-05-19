@@ -21,6 +21,7 @@
     "lib": ["ES2022", "dom"],
     "baseUrl": ".",
     "paths": {
+      "@baf/core": ["src/app/core/index.ts"],
       "@baf/home/page": ["src/app/home/page/index.ts"],
       "@baf/ui/container": ["src/app/ui/container/index.ts"],
       "@baf/ui/icons": ["src/app/ui/icons/index.ts"],
