@@ -23,6 +23,7 @@
     "paths": {
       "@baf/home/page": ["src/app/home/page/index.ts"],
       "@baf/ui/container": ["src/app/ui/container/index.ts"],
+      "@baf/ui/icons": ["src/app/ui/icons/index.ts"],
       "@baf/ui/layout": ["src/app/ui/layout/index.ts"]
     }
   },
