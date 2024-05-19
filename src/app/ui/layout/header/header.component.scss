@@ -1,0 +1,34 @@
+@use 'src/stylesheets/mixins' as device;
+
+:host {
+  display: block;
+  background-color: var(--md-sys-color-surface-container-low);
+  color: var(--md-sys-color-on-secondary-container);
+  padding: 0.5rem 0;
+
+  @include device.media-tablet-up() {
+    padding: 1rem 0;
+  }
+}
+
+.baf-container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  fill: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-secondary);
+
+  &:hover {
+    fill: var(--md-sys-color-on-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+  }
+}
+
+nav a {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
