@@ -1,1 +1,20 @@
-<form formGroup="form"></form>
+<form [formGroup]="form">
+  <baf-search-group mode="destination">
+    <baf-search-destination [control]="form.controls.from" [options]="{ label: 'Откуда', id: 'from' }" />
+    <baf-search-reverse />
+    <baf-search-destination [control]="form.controls.to" [options]="{ label: 'Куда', id: 'to' }" />
+  </baf-search-group>
+
+  <baf-search-group mode="line">
+    <baf-search-group mode="date">
+      <baf-search-date [control]="form.controls.startDate" [options]="{ label: 'Когда', id: 'startDate' }" />
+      <baf-search-date
+        [control]="form.controls.endDate"
+        [options]="{ label: 'Обратно', id: 'endDate', autoHide: form.controls.startDate }"
+      />
+    </baf-search-group>
+    <baf-search-passengers [control]="form.controls.passengers" />
+  </baf-search-group>
+
+  <button type="submit">Найти</button>
+</form>

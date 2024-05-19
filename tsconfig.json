@@ -23,6 +23,7 @@
     "paths": {
       "@baf/core": ["src/app/core/index.ts"],
       "@baf/home/page": ["src/app/home/page/index.ts"],
+      "@baf/search/common": ["src/app/search/common/index.ts"],
       "@baf/search/page": ["src/app/search/page/index.ts"],
       "@baf/search/ui": ["src/app/search/ui/index.ts"],
       "@baf/ui/container": ["src/app/ui/container/index.ts"],

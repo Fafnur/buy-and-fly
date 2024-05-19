@@ -1,0 +1,12 @@
+@use 'src/stylesheets/mixins' as device;
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include device.media-web() {
+    flex-direction: row;
+    gap: 0;
+  }
+}

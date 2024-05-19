@@ -1,0 +1,24 @@
+@use 'src/stylesheets/mixins' as device;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &.is-date {
+    flex-direction: row;
+  }
+
+  &.is-line {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  @include device.media-web() {
+    flex-direction: row;
+
+    &.is-line {
+      gap: 0;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use 'src/stylesheets/mixins' as device;
+
+:host {
+  &.is-hide {
+    display: none;
+  }
+
+  @include device.media-web() {
+    &.is-hide {
+      display: block;
+    }
+  }
+}
+
+input {
+  width: 100px;
+}

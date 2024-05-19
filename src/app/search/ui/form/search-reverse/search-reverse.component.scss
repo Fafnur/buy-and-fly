@@ -1,0 +1,13 @@
+@use 'src/stylesheets/mixins' as device;
+
+:host {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @include device.media-web() {
+    position: relative;
+    top: initial;
+    right: initial;
+  }
+}
