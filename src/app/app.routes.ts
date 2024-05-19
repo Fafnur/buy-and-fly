@@ -21,6 +21,10 @@ export const routes: Routes = [
         path: '',
         loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
       },
+      {
+        path: 'search',
+        loadComponent: () => import('@baf/search/page').then((m) => m.SearchPageComponent),
+      },
     ],
   },
 ];
