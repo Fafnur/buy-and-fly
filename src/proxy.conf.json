@@ -1,0 +1,10 @@
+{
+  "/api/autocomplete": {
+    "target": "https://autocomplete.travelpayouts.com",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/autocomplete": ""
+    },
+    "changeOrigin": true
+  }
+}

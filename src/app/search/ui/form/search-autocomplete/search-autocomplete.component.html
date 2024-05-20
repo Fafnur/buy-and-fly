@@ -1,0 +1,17 @@
+<input baf-search-input type="text" [formControl]="control" />
+
+<div *ngFor="let option of options">
+  {{ option.code }}
+</div>
+
+<!--<button (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin">-->
+<!--  {{ isOpen ? 'Close' : 'Open' }}-->
+<!--</button>-->
+<!--&lt;!&ndash; This template displays the overlay content and is connected to the button &ndash;&gt;-->
+<!--<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen">-->
+<!--  <ul class="example-list">-->
+<!--    <li>Item 1</li>-->
+<!--    <li>Item 2</li>-->
+<!--    <li>Item 3</li>-->
+<!--  </ul>-->
+<!--</ng-template>-->

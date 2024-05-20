@@ -1,8 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
-import { ApiService } from '@baf/core';
+import { SearchCityOrAirport } from '@baf/search/common';
 
 @Injectable()
 export class SearchService {
-  private readonly apiService = inject(ApiService);
+  private readonly httpClient = inject(HttpClient);
+
+  findCityOrAirport(term: string): Observable<SearchCityOrAirport[]> {
+    return this.httpClient.get<SearchCityOrAirport[]>(`/api/autocomplete/places2?locale=ru&types[]=airport&types[]=city&term=${term}`);
+  }
 }
