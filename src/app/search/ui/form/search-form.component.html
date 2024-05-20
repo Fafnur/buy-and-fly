@@ -1,7 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <baf-search-group mode="destination">
     <baf-search-destination [control]="form.controls.from" [options]="{ label: 'Откуда', id: 'from' }" />
-    <baf-search-reverse />
+    <baf-search-reverse [form]="form" />
     <baf-search-destination [control]="form.controls.to" [options]="{ label: 'Куда', id: 'to' }" />
   </baf-search-group>
   <baf-search-group mode="line">
