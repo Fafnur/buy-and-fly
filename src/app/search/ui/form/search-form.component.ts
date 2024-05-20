@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { SearchFormGroup } from '@baf/search/common';
+import { SearchService } from '@baf/search/services';
 import { ButtonComponent } from '@baf/ui/buttons';
 
 import { SearchDateComponent } from './search-date/search-date.component';
@@ -48,9 +49,14 @@ const initialForm: SearchFormGroup = new FormGroup({
   templateUrl: './search-form.component.html',
   styleUrl: './search-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [SearchService],
 })
 export class SearchFormComponent {
   readonly form = initialForm;
+
+  private readonly searchService = inject(SearchService);
+
+  constructor() {}
 
   onSubmit(): void {}
 }
