@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, TransferState } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { envStateKey } from '../env/env';
 import { ApiRequestOptions, getApiRequestOptions, getUrlWithoutSlash } from './api.util';
 
 /**
@@ -29,7 +30,10 @@ export interface ApiConfig {
 })
 export class ApiService {
   private readonly httpClient = inject(HttpClient);
-  private readonly config: ApiConfig = { host: 'https://www.travelpayouts.com' };
+  private readonly transferState = inject(TransferState);
+  private readonly config: ApiConfig = {
+    host: this.transferState.get(envStateKey, { apiUrl: '', apiToken: '' }).apiUrl,
+  };
 
   /**
    * Return full url with API host
