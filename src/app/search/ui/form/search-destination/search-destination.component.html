@@ -1,1 +1,6 @@
-<input baf-input type="text" [formControl]="control" [placeholder]="options.placeholder ?? options.label" />
+<baf-autocomplete
+  [control]="control"
+  [options]="{ label: 'Откуда', id: 'from' }"
+  [options$]="options$"
+  (changed)="onChanged($event)"
+></baf-autocomplete>

@@ -1,4 +1,4 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<form>
   <baf-search-group mode="destination">
     <baf-search-destination [control]="form.controls.from" [options]="{ label: 'Откуда', id: 'from' }" />
     <baf-search-reverse [form]="form" />
@@ -15,9 +15,6 @@
     <baf-search-passengers [control]="form.controls.passengers" />
   </baf-search-group>
   <baf-search-group mode="submit">
-    <button baf-button mode="primary">Найти</button>
+    <button baf-button mode="primary" (click)="onSubmit()">Найти</button>
   </baf-search-group>
 </form>
-<p>
-  <baf-autocomplete [control]="form.controls.from" [options]="{ label: 'Откуда', id: 'from' }" [options$]="options$"></baf-autocomplete>
-</p>

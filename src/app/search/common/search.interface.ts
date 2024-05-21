@@ -1,4 +1,4 @@
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { FormFor } from '@baf/core';
 
@@ -11,6 +11,29 @@ export interface SearchForm {
 }
 
 export type SearchFormGroup = FormGroup<FormFor<SearchForm>>;
+
+export const initialSearchForm: SearchFormGroup = new FormGroup({
+  from: new FormControl<string>('', {
+    nonNullable: true,
+    validators: [Validators.required],
+  }),
+  to: new FormControl<string>('', {
+    nonNullable: true,
+    validators: [Validators.required],
+  }),
+  startDate: new FormControl<string>('', {
+    nonNullable: true,
+    validators: [Validators.required],
+  }),
+  endDate: new FormControl<string>('', {
+    nonNullable: true,
+    validators: [],
+  }),
+  passengers: new FormControl<number>(1, {
+    nonNullable: true,
+    validators: [Validators.required],
+  }),
+});
 
 export interface SearchDeclination {
   readonly vi: string;
