@@ -1,8 +1,10 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { of } from 'rxjs';
 
 import { SearchFormGroup } from '@baf/search/common';
 import { SearchService } from '@baf/search/services';
+import { AutocompleteComponent } from '@baf/ui/autocomplete';
 import { ButtonComponent } from '@baf/ui/buttons';
 
 import { SearchDateComponent } from './search-date/search-date.component';
@@ -10,8 +12,6 @@ import { SearchDestinationComponent } from './search-destination/search-destinat
 import { SearchGroupComponent } from './search-group/search-group.component';
 import { SearchPassengersComponent } from './search-passengers/search-passengers.component';
 import { SearchReverseComponent } from './search-reverse/search-reverse.component';
-import { AutocompleteComponent } from '@baf/ui/autocomplete';
-import { of } from 'rxjs';
 
 const initialForm: SearchFormGroup = new FormGroup({
   from: new FormControl<string>('', {

@@ -2,7 +2,7 @@ import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
-import { SearchInputComponent } from '../search-input/search-input.component';
+import { InputComponent } from '@baf/ui/input';
 
 export interface SearchDateOptions {
   readonly label: string;
@@ -14,7 +14,7 @@ export interface SearchDateOptions {
 @Component({
   selector: 'baf-search-date',
   standalone: true,
-  imports: [ReactiveFormsModule, NgIf, SearchInputComponent],
+  imports: [ReactiveFormsModule, NgIf, InputComponent],
   templateUrl: './search-date.component.html',
   styleUrl: './search-date.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

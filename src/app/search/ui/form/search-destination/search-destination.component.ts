@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
-import { SearchInputComponent } from '../search-input/search-input.component';
+import { InputComponent } from '@baf/ui/input';
 
 export interface SearchDestinationOptions {
   readonly label: string;
@@ -12,7 +12,7 @@ export interface SearchDestinationOptions {
 @Component({
   selector: 'baf-search-destination',
   standalone: true,
-  imports: [ReactiveFormsModule, SearchInputComponent],
+  imports: [ReactiveFormsModule, InputComponent],
   templateUrl: './search-destination.component.html',
   styleUrl: './search-destination.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
