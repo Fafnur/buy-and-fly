@@ -27,6 +27,7 @@
       "@baf/search/page": ["src/app/search/page/index.ts"],
       "@baf/search/services": ["src/app/search/services/index.ts"],
       "@baf/search/ui": ["src/app/search/ui/index.ts"],
+      "@baf/ui/autocomplete": ["src/app/ui/autocomplete/index.ts"],
       "@baf/ui/buttons": ["src/app/ui/buttons/index.ts"],
       "@baf/ui/container": ["src/app/ui/container/index.ts"],
       "@baf/ui/icons": ["src/app/ui/icons/index.ts"],

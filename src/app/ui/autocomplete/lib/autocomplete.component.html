@@ -1,6 +1,6 @@
 <input
   #input
-  baf-search-input
+  baf-input
   type="text"
   [formControl]="control"
   [placeholder]="options.placeholder ?? options.label"
@@ -17,7 +17,7 @@
   [cdkConnectedOverlayOffsetY]="1"
   (overlayOutsideClick)="onClose()"
 >
-  <div class="search-autocomplete-overlay">
+  <div class="autocomplete-overlay">
     <div *ngFor="let option of options$ | async">
       {{ option.code }}
     </div>
