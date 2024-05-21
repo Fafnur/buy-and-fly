@@ -1,9 +1,11 @@
-import { ChangeDetectionStrategy, Component, HostBinding, inject, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, HostBinding, inject, Input, OnInit } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { of } from 'rxjs';
+import { BehaviorSubject, debounceTime, of, switchMap, tap } from 'rxjs';
 
+import { SearchCityOrAirport } from '@baf/search/common';
 import { SearchService } from '@baf/search/services';
-import { AutocompleteComponent } from '@baf/ui/autocomplete';
+import { AutocompleteComponent, AutocompleteOptions } from '@baf/ui/autocomplete';
 import { InputComponent } from '@baf/ui/input';
 
 export interface SearchDestinationOptions {
@@ -20,7 +22,8 @@ export interface SearchDestinationOptions {
   styleUrl: './search-destination.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchDestinationComponent {
+export class SearchDestinationComponent implements OnInit {
+  private readonly destroyRef = inject(DestroyRef);
   private readonly searchService = inject(SearchService);
 
   @Input({ required: true }) control!: FormControl<string>;
@@ -34,25 +37,37 @@ export class SearchDestinationComponent {
     return this.options.id === 'to';
   }
 
-  options$ = of([
-    {
-      name: 'MOW',
-      code: 'aaa',
-      type: 'airplane',
-    },
-    {
-      name: 'MOW',
-      code: 'bbb',
-      type: 'airplane',
-    },
-    {
-      name: 'MOW',
-      code: 'ccc',
-      type: 'airplane',
-    },
-  ]);
+  autocompleteOptions!: AutocompleteOptions;
 
-  onChanged(value: string): void {
-    console.log(value);
+  readonly data$ = new BehaviorSubject<SearchCityOrAirport[]>([]);
+
+  ngOnInit(): void {
+    this.autocompleteOptions = {
+      ...this.options,
+      displayFn: (item: SearchCityOrAirport) => {
+        return item.code;
+      },
+    };
+    this.control.valueChanges
+      .pipe(
+        debounceTime(300),
+        switchMap((query) => {
+          if (!query) {
+            return of([]);
+          }
+
+          return this.searchService.findCityOrAirport(query);
+        }),
+        tap((response) => this.data$.next(response.slice(0, 10))),
+        takeUntilDestroyed(this.destroyRef),
+      )
+      .subscribe();
+  }
+
+  onClosed(): void {
+    const options = this.data$.getValue();
+    if (options.length && this.control.value !== options[0].code) {
+      this.control.patchValue(options[0].code, { emitEvent: false });
+    }
   }
 }

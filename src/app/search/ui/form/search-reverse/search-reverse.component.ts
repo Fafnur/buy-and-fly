@@ -19,7 +19,7 @@ export class SearchReverseComponent {
     const { from, to } = this.form.getRawValue();
 
     if (from && to) {
-      this.form.patchValue({ from: to, to: from });
+      this.form.patchValue({ from: to, to: from }, { emitEvent: false });
     }
   }
 }

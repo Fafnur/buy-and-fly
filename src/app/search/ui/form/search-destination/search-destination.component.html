@@ -1,6 +1,1 @@
-<baf-autocomplete
-  [control]="control"
-  [options]="{ label: 'Откуда', id: 'from' }"
-  [options$]="options$"
-  (changed)="onChanged($event)"
-></baf-autocomplete>
+<baf-autocomplete [control]="control" [options]="autocompleteOptions" [data]="data$" (closed)="onClosed()"></baf-autocomplete>
