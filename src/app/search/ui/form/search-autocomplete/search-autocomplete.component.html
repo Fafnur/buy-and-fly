@@ -1,17 +1,25 @@
-<input baf-search-input type="text" [formControl]="control" />
+<input
+  #input
+  baf-search-input
+  type="text"
+  [formControl]="control"
+  [placeholder]="options.placeholder ?? options.label"
+  cdkOverlayOrigin
+  #trigger="cdkOverlayOrigin"
+  (click)="onOpen()"
+/>
 
-<div *ngFor="let option of options">
-  {{ option.code }}
-</div>
-
-<!--<button (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin">-->
-<!--  {{ isOpen ? 'Close' : 'Open' }}-->
-<!--</button>-->
-<!--&lt;!&ndash; This template displays the overlay content and is connected to the button &ndash;&gt;-->
-<!--<ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen">-->
-<!--  <ul class="example-list">-->
-<!--    <li>Item 1</li>-->
-<!--    <li>Item 2</li>-->
-<!--    <li>Item 3</li>-->
-<!--  </ul>-->
-<!--</ng-template>-->
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="opened()"
+  [cdkConnectedOverlayWidth]="width"
+  [cdkConnectedOverlayOffsetY]="1"
+  (overlayOutsideClick)="onClose()"
+>
+  <div class="search-autocomplete-overlay">
+    <div *ngFor="let option of options$ | async">
+      {{ option.code }}
+    </div>
+  </div>
+</ng-template>

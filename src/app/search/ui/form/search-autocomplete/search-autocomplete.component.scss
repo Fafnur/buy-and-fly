@@ -1,0 +1,11 @@
+:host {
+  position: relative;
+}
+
+.search-autocomplete-overlay {
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}

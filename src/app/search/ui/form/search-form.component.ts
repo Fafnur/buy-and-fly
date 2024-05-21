@@ -5,12 +5,12 @@ import { SearchFormGroup } from '@baf/search/common';
 import { SearchService } from '@baf/search/services';
 import { ButtonComponent } from '@baf/ui/buttons';
 
+import { SearchAutocompleteComponent } from './search-autocomplete/search-autocomplete.component';
 import { SearchDateComponent } from './search-date/search-date.component';
 import { SearchDestinationComponent } from './search-destination/search-destination.component';
 import { SearchGroupComponent } from './search-group/search-group.component';
 import { SearchPassengersComponent } from './search-passengers/search-passengers.component';
 import { SearchReverseComponent } from './search-reverse/search-reverse.component';
-import { SearchAutocompleteComponent } from './search-autocomplete/search-autocomplete.component';
 
 const initialForm: SearchFormGroup = new FormGroup({
   from: new FormControl<string>('', {
