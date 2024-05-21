@@ -44,10 +44,12 @@ export class SearchDestinationComponent implements OnInit {
   ngOnInit(): void {
     this.autocompleteOptions = {
       ...this.options,
+      key: 'code',
       displayFn: (item: SearchCityOrAirport) => {
-        return item.code;
+        return `${item.name}, ${item.code}<br>${item.country_name}, ${item.city_name ?? item.name}`;
       },
     };
+
     this.control.valueChanges
       .pipe(
         debounceTime(300),
@@ -58,16 +60,9 @@ export class SearchDestinationComponent implements OnInit {
 
           return this.searchService.findCityOrAirport(query);
         }),
-        tap((response) => this.data$.next(response.slice(0, 10))),
+        tap((response) => this.data$.next(response.slice(0, 6))),
         takeUntilDestroyed(this.destroyRef),
       )
       .subscribe();
-  }
-
-  onClosed(): void {
-    const options = this.data$.getValue();
-    if (options.length && this.control.value !== options[0].code) {
-      this.control.patchValue(options[0].code, { emitEvent: false });
-    }
   }
 }

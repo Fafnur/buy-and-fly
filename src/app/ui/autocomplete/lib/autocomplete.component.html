@@ -3,7 +3,7 @@
   baf-input
   type="text"
   [formControl]="control"
-  [placeholder]="options.placeholder"
+  [placeholder]="options.placeholder ?? ''"
   cdkOverlayOrigin
   #trigger="cdkOverlayOrigin"
   (click)="onOpen()"
@@ -19,8 +19,11 @@
   (overlayOutsideClick)="onClose()"
 >
   <div class="autocomplete-overlay">
-    <div *ngFor="let option of data | async; let index = index">
-      {{ displayFn(option, index) }}
-    </div>
+    <a
+      class="autocomplete-option"
+      [innerHTML]="displayFn(option, index)"
+      (click)="onSelect(option)"
+      *ngFor="let option of data | async; let index = index"
+    ></a>
   </div>
 </ng-template>

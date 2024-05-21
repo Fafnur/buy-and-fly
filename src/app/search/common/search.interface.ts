@@ -52,6 +52,7 @@ export interface SearchCityOrAirportDTO {
   readonly name: string;
   readonly country_code: string;
   readonly country_name: string;
+  readonly city_name?: string;
   readonly state_code: string | null;
   readonly coordinates: {
     readonly lon: number;
@@ -63,10 +64,12 @@ export interface SearchCityOrAirportDTO {
   readonly country_cases: SearchDeclination | null;
   readonly main_airport_name: string | null;
 }
-/* eslint-enable @typescript-eslint/naming-convention */
 
 export interface SearchCityOrAirport {
   readonly type: string;
   readonly code: string;
   readonly name: string;
+  readonly country_name: string;
+  readonly city_name: string;
 }
+/* eslint-enable @typescript-eslint/naming-convention */
