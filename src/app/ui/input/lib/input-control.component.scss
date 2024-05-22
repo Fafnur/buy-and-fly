@@ -20,43 +20,6 @@
       opacity: 1;
     }
   }
-
-  // Fucked encapsulation
-  ::ng-deep {
-    .baf-input-prefix {
-      margin-left: 12px;
-    }
-
-    .baf-input-suffix {
-      margin-right: 12px;
-    }
-
-    .baf-input-native {
-      display: block;
-      background-color: transparent;
-      height: 100%;
-      width: 100%;
-      padding: 0;
-      border: none;
-      outline: none;
-
-      &:hover,
-      &:focus,
-      &:active {
-        outline: none;
-      }
-
-      &::placeholder {
-        color: var(--md-sys-color-on-surface-variant);
-      }
-    }
-  }
-
-  &.is-invalid {
-    ::ng-deep .baf-input-native {
-      color: red;
-    }
-  }
 }
 
 .input-box {

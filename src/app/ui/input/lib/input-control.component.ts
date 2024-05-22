@@ -15,7 +15,7 @@ import { startWith, tap } from 'rxjs';
 
 import { LabelComponent } from '@baf/ui/label';
 
-import { InputDirective } from './input.directive';
+import { InputComponent } from './input.component';
 
 @Component({
   selector: 'baf-input-control',
@@ -34,7 +34,7 @@ export class InputControlComponent implements AfterViewInit, OnDestroy {
   readonly renderer = inject(Renderer2);
 
   @ContentChild(LabelComponent) label?: LabelComponent;
-  @ContentChild(InputDirective) input?: InputDirective;
+  @ContentChild(InputComponent) input?: InputComponent;
 
   private isDisabled = false;
 

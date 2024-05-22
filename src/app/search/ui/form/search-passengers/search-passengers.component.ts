@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
-import { InputControlComponent, InputDirective } from '@baf/ui/input';
+import { InputComponent, InputControlComponent } from '@baf/ui/input';
 import { LabelComponent } from '@baf/ui/label';
 
 @Component({
   selector: 'baf-search-passengers',
   standalone: true,
-  imports: [ReactiveFormsModule, InputDirective, InputControlComponent, LabelComponent],
+  imports: [ReactiveFormsModule, InputComponent, InputControlComponent, LabelComponent],
   templateUrl: './search-passengers.component.html',
   styleUrl: './search-passengers.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
