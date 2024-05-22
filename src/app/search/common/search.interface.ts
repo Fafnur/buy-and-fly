@@ -31,7 +31,7 @@ export const initialSearchForm: SearchFormGroup = new FormGroup({
   }),
   passengers: new FormControl<number>(1, {
     nonNullable: true,
-    validators: [Validators.required],
+    validators: [Validators.required, Validators.min(1), Validators.max(20)],
   }),
 });
 

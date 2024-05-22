@@ -89,6 +89,7 @@ export class InputControlComponent implements AfterViewInit, OnDestroy {
     if (!this.isDisabled) {
       this.renderer.removeClass(this.elementRef.nativeElement, 'is-pressed');
     }
+    this.check();
   };
 
   private onInput = (event: Event | { target: HTMLInputElement }) => {
@@ -100,6 +101,8 @@ export class InputControlComponent implements AfterViewInit, OnDestroy {
       } else {
         this.renderer.removeClass(this.elementRef.nativeElement, 'is-value');
       }
+
+      this.check();
     }
   };
 
@@ -108,6 +111,16 @@ export class InputControlComponent implements AfterViewInit, OnDestroy {
       this.renderer.addClass(this.elementRef.nativeElement, 'is-disabled');
     } else {
       this.renderer.removeClass(this.elementRef.nativeElement, 'is-disabled');
+    }
+  }
+
+  private check(): void {
+    if (this.input?.ngControl.touched) {
+      if (this.input.ngControl.errors) {
+        this.renderer.addClass(this.elementRef.nativeElement, 'is-invalid');
+      } else {
+        this.renderer.removeClass(this.elementRef.nativeElement, 'is-invalid');
+      }
     }
   }
 }

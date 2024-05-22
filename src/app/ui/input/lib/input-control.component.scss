@@ -51,6 +51,12 @@
       }
     }
   }
+
+  &.is-invalid {
+    ::ng-deep .baf-input-native {
+      color: red;
+    }
+  }
 }
 
 .input-box {
