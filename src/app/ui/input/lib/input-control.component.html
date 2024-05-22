@@ -1,0 +1,11 @@
+<div class="input-container">
+  <ng-content select="[baf-input-prefix]"></ng-content>
+  <div class="input-box">
+    <ng-content select="label[baf-label],baf-label"></ng-content>
+    <div class="input">
+      <ng-content select="input[baf-input],baf-input"></ng-content>
+    </div>
+  </div>
+  <ng-content select="[baf-input-suffix]"></ng-content>
+</div>
+<ng-content></ng-content>
