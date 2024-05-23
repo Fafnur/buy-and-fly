@@ -1,4 +1,4 @@
-import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkConnectedOverlay, CdkOverlayOrigin } from '@angular/cdk/overlay';
 import { AsyncPipe, NgForOf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, OnInit, Output, signal, ViewChild } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
@@ -21,10 +21,22 @@ export interface AutocompleteOptions {
 @Component({
   selector: 'baf-autocomplete',
   standalone: true,
-  imports: [OverlayModule, ReactiveFormsModule, InputComponent, NgForOf, AsyncPipe, InputControlComponent, LabelComponent],
+  imports: [
+    ReactiveFormsModule,
+    CdkConnectedOverlay,
+    CdkOverlayOrigin,
+    InputComponent,
+    NgForOf,
+    AsyncPipe,
+    InputControlComponent,
+    LabelComponent,
+  ],
   templateUrl: './autocomplete.component.html',
   styleUrl: './autocomplete.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'baf-input-control',
+  },
 })
 export class AutocompleteComponent implements OnInit {
   @Input({ required: true }) control!: FormControl<string>;

@@ -11,7 +11,6 @@ import { MobileDirective } from './mobile.directive';
   template: '<ng-content></ng-content>',
   styleUrl: './container.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
     class: 'baf-container',
   },

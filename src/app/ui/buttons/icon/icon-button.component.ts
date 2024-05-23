@@ -13,7 +13,6 @@ import { ModeDirective } from '../base/mode.directive';
   templateUrl: './icon-button.component.html',
   styleUrl: './icon-button.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
     class: 'baf-icon-button',
   },

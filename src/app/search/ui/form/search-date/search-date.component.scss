@@ -5,14 +5,7 @@
     display: none;
   }
 
-  &.is-start-date input {
-    border-radius: 0.25rem;
-  }
-  &.is-end-date input {
-    border-radius: 0 0.25rem 0.25rem 0;
-  }
-  &.is-start-date.is-valid input {
-    border-radius: 0.25rem 0 0 0.25rem;
+  &.is-start-date.is-valid {
     border-right: 1px solid var(--md-sys-color-background);
   }
 
@@ -21,15 +14,13 @@
       display: block;
     }
 
-    &.is-start-date input,
-    &.is-start-date.is-valid input {
-      border-radius: 0;
+    &.is-start-date,
+    &.is-start-date.is-valid {
       border-left: 1px solid var(--md-sys-color-background);
       border-right: 1px solid var(--md-sys-color-background);
     }
 
-    &.is-end-date input {
-      border-radius: 0;
+    &.is-end-date {
       border-right: 1px solid var(--md-sys-color-background);
     }
   }

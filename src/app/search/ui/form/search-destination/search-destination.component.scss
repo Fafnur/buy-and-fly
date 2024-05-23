@@ -1,21 +1,13 @@
 @use 'src/stylesheets/device' as device;
 
 :host {
-  &.is-from ::ng-deep input {
-    border-radius: 0.25rem 0.25rem 0 0;
+  &.is-from {
     border-bottom: 1px solid var(--md-sys-color-background);
-  }
-  &.is-to ::ng-deep input {
-    border-radius: 0 0 0.25rem 0.25rem;
   }
 
   @include device.media-web() {
-    &.is-from ::ng-deep input {
-      border-radius: 0.25rem 0 0 0.25rem;
+    &.is-from {
       border-bottom: none;
-    }
-    &.is-to ::ng-deep input {
-      border-radius: 0;
     }
   }
 }
