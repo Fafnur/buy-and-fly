@@ -4,7 +4,8 @@ import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, On
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Observable, take, tap } from 'rxjs';
 
-import { InputComponent } from '@baf/ui/input';
+import { InputComponent, InputControlComponent } from '@baf/ui/input';
+import { LabelComponent } from '@baf/ui/label';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type AutocompleteVariant = Record<string, any>;
@@ -20,7 +21,7 @@ export interface AutocompleteOptions {
 @Component({
   selector: 'baf-autocomplete',
   standalone: true,
-  imports: [OverlayModule, ReactiveFormsModule, InputComponent, NgForOf, AsyncPipe],
+  imports: [OverlayModule, ReactiveFormsModule, InputComponent, NgForOf, AsyncPipe, InputControlComponent, LabelComponent],
   templateUrl: './autocomplete.component.html',
   styleUrl: './autocomplete.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

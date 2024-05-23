@@ -1,14 +1,16 @@
-<input
-  #input
-  baf-input
-  type="text"
-  [formControl]="control"
-  [placeholder]="options.placeholder ?? ''"
-  cdkOverlayOrigin
-  #trigger="cdkOverlayOrigin"
-  (click)="onOpen()"
-  (input)="onInput($event)"
-/>
+<baf-input-control cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+  <label baf-label [attr.for]="options.id">{{ options.label }}</label>
+  <input
+    #input
+    baf-input
+    type="text"
+    [id]="options.id"
+    [formControl]="control"
+    [placeholder]="options.placeholder ?? ''"
+    (click)="onOpen()"
+    (input)="onInput($event)"
+  />
+</baf-input-control>
 
 <ng-template
   cdkConnectedOverlay
