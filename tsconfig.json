@@ -30,6 +30,7 @@
       "@baf/ui/autocomplete": ["src/app/ui/autocomplete/index.ts"],
       "@baf/ui/buttons": ["src/app/ui/buttons/index.ts"],
       "@baf/ui/container": ["src/app/ui/container/index.ts"],
+      "@baf/ui/datepicker": ["src/app/ui/datepicker/index.ts"],
       "@baf/ui/icons": ["src/app/ui/icons/index.ts"],
       "@baf/ui/input": ["src/app/ui/input/index.ts"],
       "@baf/ui/label": ["src/app/ui/label/index.ts"],

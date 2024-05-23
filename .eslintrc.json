@@ -88,7 +88,8 @@
         "no-shadow": "off",
         "@typescript-eslint/no-shadow": "error",
         "no-invalid-this": "off",
-        "@typescript-eslint/no-invalid-this": ["warn"]
+        "@typescript-eslint/no-invalid-this": ["warn"],
+        "@angular-eslint/no-host-metadata-property": "off"
       }
     },
     {
