@@ -1,0 +1,20 @@
+<header>
+  <pre class="left" (click)="onPrev()">◀</pre>
+  <div class="header-display">
+    <p class="display">{{ selectedDate | date: 'MMMM y' }}</p>
+  </div>
+  <pre class="right" (click)="onNext()">▶</pre>
+</header>
+<div class="week">
+  <div>Su</div>
+  <div>Mo</div>
+  <div>Tu</div>
+  <div>We</div>
+  <div>Th</div>
+  <div>Fr</div>
+  <div>Sa</div>
+</div>
+<div #days class="days">
+  <div *ngFor="let item of config.firstDay.getDay() | calendarDays"></div>
+  <div *ngFor="let days of config.lastDay.getDate() | calendarDays">{{ days }}</div>
+</div>
