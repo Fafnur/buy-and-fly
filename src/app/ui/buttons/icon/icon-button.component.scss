@@ -43,4 +43,10 @@
   justify-content: center;
   color: var(--md-sys-color-on-surface-variant);
   fill: var(--md-sys-color-on-surface-variant);
+  line-height: 1;
+
+  :host:hover & {
+    color: var(--md-sys-color-on-surface);
+    fill: var(--md-sys-color-on-surface);
+  }
 }

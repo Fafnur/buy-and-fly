@@ -3,12 +3,13 @@
   <input
     #input
     baf-input
-    type="text"
+    type="tel"
     [id]="options.id"
     [formControl]="control"
     [placeholder]="options.placeholder ?? ''"
     (click)="onOpen()"
     (input)="onInput($event)"
+    [value]="12"
   />
 </baf-input-control>
 
@@ -16,11 +17,11 @@
   cdkConnectedOverlay
   [cdkConnectedOverlayOrigin]="trigger"
   [cdkConnectedOverlayOpen]="open()"
-  [cdkConnectedOverlayWidth]="'480px'"
+  [cdkConnectedOverlayWidth]="width"
   [cdkConnectedOverlayOffsetY]="1"
   (overlayOutsideClick)="onClose()"
 >
   <div class="datepicker-overlay">
-    <baf-calendar [control]="control"></baf-calendar>
+    <baf-calendar [startDate]="control.value" (selected)="onSelected($event)"></baf-calendar>
   </div>
 </ng-template>
