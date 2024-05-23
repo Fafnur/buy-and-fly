@@ -15,9 +15,35 @@
   cdkConnectedOverlay
   [cdkConnectedOverlayOrigin]="trigger"
   [cdkConnectedOverlayOpen]="open()"
-  [cdkConnectedOverlayWidth]="width"
+  [cdkConnectedOverlayWidth]="'480px'"
   [cdkConnectedOverlayOffsetY]="1"
   (overlayOutsideClick)="onClose()"
 >
-  <div class="datepicker-overlay"></div>
+  <div class="datepicker-overlay">
+    <div class="calendar">
+      <header>
+        <pre class="left">◀</pre>
+
+        <div class="header-display">
+          <p class="display">{{ selectedDate | date: 'MMMM y' }}</p>
+        </div>
+
+        <pre class="right">▶</pre>
+      </header>
+
+      <div class="week">
+        <div>Su</div>
+        <div>Mo</div>
+        <div>Tu</div>
+        <div>We</div>
+        <div>Th</div>
+        <div>Fr</div>
+        <div>Sa</div>
+      </div>
+      <div class="days"></div>
+    </div>
+    <div class="display-selected">
+      <p class="selected"></p>
+    </div>
+  </div>
 </ng-template>
