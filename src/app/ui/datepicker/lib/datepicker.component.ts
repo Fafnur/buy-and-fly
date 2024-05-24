@@ -67,7 +67,7 @@ export class DatepickerComponent {
   }
 
   onSelected(option: CalendarSelected): void {
-    // this.control.patchValue(option, { emitEvent: false });
+    this.control.patchValue(option.format);
     this.closed.emit();
     this.open.set(false);
   }
