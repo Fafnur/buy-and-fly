@@ -13,14 +13,12 @@
   <div class="calculator-week-day">Сб</div>
 </div>
 <div class="calculator-days">
-  <div *ngFor="let day of config.firstDay.getDay() | calendarDays"></div>
-  <button
-    type="button"
-    class="calculator-day"
-    (click)="onSelect(day)"
-    [class.is-active]="day === config.active"
-    *ngFor="let day of config.lastDay.getDate() | calendarDays"
-  >
-    {{ day }}
-  </button>
+  @for (day of config.firstDay.getDay() | calendarDays; track day) {
+    <div></div>
+  }
+  @for (day of config.lastDay.getDate() | calendarDays; track day) {
+    <button type="button" class="calculator-day" (click)="onSelect(day)" [class.is-active]="day === config.active">
+      {{ day }}
+    </button>
+  }
 </div>

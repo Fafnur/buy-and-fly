@@ -8,13 +8,14 @@ import { InputComponent, InputControlComponent } from '@baf/ui/input';
 import { LabelComponent } from '@baf/ui/label';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type AutocompleteVariant = Record<string, any>;
+export type AutocompleteVariant = Record<string, any> & { id: number | string };
 
 export interface AutocompleteOptions {
   readonly label: string;
   readonly placeholder?: string;
   readonly id: string;
   readonly key: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   readonly displayFn: (item: any, index?: number) => string;
 }
 

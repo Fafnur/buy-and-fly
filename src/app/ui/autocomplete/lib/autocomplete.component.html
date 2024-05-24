@@ -21,11 +21,8 @@
   (overlayOutsideClick)="onClose()"
 >
   <div class="autocomplete-overlay">
-    <a
-      class="autocomplete-option"
-      [innerHTML]="displayFn(option, index)"
-      (click)="onSelect(option)"
-      *ngFor="let option of data | async; let index = index"
-    ></a>
+    @for (option of data | async; track option.id; let index = $index) {
+      <a class="autocomplete-option" [innerHTML]="displayFn(option, index)" (click)="onSelect(option)"></a>
+    }
   </div>
 </ng-template>
