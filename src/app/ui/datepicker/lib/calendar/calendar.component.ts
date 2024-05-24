@@ -30,7 +30,14 @@ export interface CalendarSelected {
 })
 export class CalendarComponent {
   @Input() set startDate(date: string | null | undefined) {
-    const startDate = date ? new Date(date) : new Date();
+    let startDate: Date;
+    if (date && date.length === 10) {
+      const parts = date.split('.');
+      startDate = new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0]));
+    } else {
+      startDate = new Date();
+    }
+
     this.config = this.getConfig(startDate, startDate.getDate());
   }
 
