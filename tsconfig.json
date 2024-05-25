@@ -26,7 +26,7 @@
       "@baf/search/common": ["src/app/search/common/index.ts"],
       "@baf/search/page": ["src/app/search/page/index.ts"],
       "@baf/search/services": ["src/app/search/services/index.ts"],
-      "@baf/search/ui": ["src/app/search/ui/index.ts"],
+      "@baf/search/ui/form": ["src/app/search/ui/form/index.ts"],
       "@baf/ui/autocomplete": ["src/app/ui/autocomplete/index.ts"],
       "@baf/ui/buttons": ["src/app/ui/buttons/index.ts"],
       "@baf/ui/container": ["src/app/ui/container/index.ts"],

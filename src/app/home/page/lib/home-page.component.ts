@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { SearchFormComponent } from '@baf/search/ui';
+import { SearchFormComponent } from '@baf/search/ui/form';
 import { ContainerComponent } from '@baf/ui/container';
 
 @Component({

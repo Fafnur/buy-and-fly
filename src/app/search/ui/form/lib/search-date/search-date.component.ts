@@ -2,7 +2,7 @@ import { NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
-import { DatepickerComponent } from '@baf/ui/datepicker';
+import { DatepickerComponent } from '../../../../../ui/datepicker';
 
 export interface SearchDateOptions {
   readonly label: string;

@@ -1,4 +1,3 @@
-export * from './coercoin/coercoin';
-export * from './form/form';
-export * from './interceptors/provide';
-export * from './utils/uuid.util';
+export * from './lib/form/form';
+export * from './lib/interceptors/provide';
+export * from './lib/utils/uuid.util';
