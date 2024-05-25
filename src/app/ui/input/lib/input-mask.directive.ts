@@ -1,20 +1,14 @@
 import { Directive, ElementRef, forwardRef, HostListener, inject, InjectionToken, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
+export const INPUT_MASK_VALUES = new InjectionToken<Record<string, RegExp>>('INPUT_MASK_VALUES');
+
+// eslint-disable-next-line @typescript-eslint/naming-convention
+const DEFAULT_INPUT_MASK_VALUES: Record<string, RegExp> = { 0: /[0-9]/, a: /[a-z]/, A: /[A-Z]/, B: /[a-zA-Z]/ };
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type ChangeFn = (value: any) => void;
 type TouchedFn = () => void;
-
-export const INPUT_MASK_VALUES = new InjectionToken<Record<string, RegExp>>('INPUT_MASK_VALUES');
-
-/* eslint-disable @typescript-eslint/naming-convention */
-const DEFAULT_INPUT_MASK_VALUES: Record<string, RegExp> = {
-  '0': /[0-9]/,
-  a: /[a-z]/,
-  A: /[A-Z]/,
-  B: /[a-zA-Z]/,
-};
-/* eslint-disable @typescript-eslint/naming-convention */
 
 @Directive({
   // eslint-disable-next-line @angular-eslint/directive-selector

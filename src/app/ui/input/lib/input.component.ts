@@ -14,12 +14,6 @@ import { InputMaskDirective } from './input-mask.directive';
   host: {
     class: 'baf-input',
   },
-  hostDirectives: [
-    {
-      directive: InputMaskDirective,
-      inputs: ['mask'],
-    },
-  ],
 })
 export class InputComponent {
   readonly elementRef: ElementRef<HTMLInputElement> = inject(ElementRef);

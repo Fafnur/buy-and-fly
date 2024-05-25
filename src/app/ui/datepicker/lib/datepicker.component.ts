@@ -3,7 +3,7 @@ import { DOCUMENT } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, inject, Input, Output, signal, ViewChild } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
-import { InputComponent, InputControlComponent } from '@baf/ui/input';
+import { InputComponent, InputControlComponent, InputMaskDirective } from '@baf/ui/input';
 import { LabelComponent } from '@baf/ui/label';
 
 import { CalendarComponent, CalendarSelected } from './calendar/calendar.component';
@@ -25,6 +25,7 @@ export interface DatepickerOptions {
     InputControlComponent,
     LabelComponent,
     CalendarComponent,
+    InputMaskDirective,
   ],
   templateUrl: './datepicker.component.html',
   styleUrl: './datepicker.component.scss',
