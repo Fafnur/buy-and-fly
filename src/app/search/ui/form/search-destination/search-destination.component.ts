@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, HostBinding, inject, Input, OnInit } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { BehaviorSubject, debounceTime, of, switchMap, tap } from 'rxjs';
+import { BehaviorSubject, debounceTime, EMPTY, of, switchMap, tap } from 'rxjs';
 
 import { SearchCityOrAirport } from '@baf/search/common';
 import { SearchService } from '@baf/search/services';
@@ -26,7 +26,7 @@ export class SearchDestinationComponent implements OnInit {
   private readonly destroyRef = inject(DestroyRef);
   private readonly searchService = inject(SearchService);
 
-  @Input({ required: true }) control!: FormControl<string>;
+  @Input({ required: true }) control!: FormControl<string | SearchCityOrAirport>;
   @Input({ required: true }) options!: SearchDestinationOptions;
 
   @HostBinding('class.is-from') get isFrom() {
@@ -48,6 +48,16 @@ export class SearchDestinationComponent implements OnInit {
       displayFn: (item: SearchCityOrAirport) => {
         return `${item.name}, ${item.code}<br>${item.country_name}, ${item.city_name ?? item.name}`;
       },
+      inputDisplayFn: (item: SearchCityOrAirport | string) => {
+        if (!item) {
+          return '';
+        }
+        if (typeof item === 'string') {
+          return item;
+        }
+
+        return `${item.name}, ${item.code}`;
+      },
     };
 
     this.control.valueChanges
@@ -56,6 +66,10 @@ export class SearchDestinationComponent implements OnInit {
         switchMap((query) => {
           if (!query) {
             return of([]);
+          }
+
+          if (typeof query !== 'string') {
+            return EMPTY;
           }
 
           return this.searchService.findCityOrAirport(query);

@@ -4,6 +4,7 @@
     #input
     baf-input
     type="text"
+    [display]="options.inputDisplayFn"
     [id]="options.id"
     [formControl]="control"
     [placeholder]="options.placeholder ?? ''"
@@ -22,7 +23,7 @@
 >
   <div class="autocomplete-overlay">
     @for (option of data | async; track option.id; let index = $index) {
-      <a class="autocomplete-option" [innerHTML]="displayFn(option, index)" (click)="onSelect(option)"></a>
+      <a class="autocomplete-option" [innerHTML]="options.displayFn(option, index)" (click)="onSelect(option)"></a>
     }
   </div>
 </ng-template>

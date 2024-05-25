@@ -1,22 +1,23 @@
 import { CdkConnectedOverlay, CdkOverlayOrigin } from '@angular/cdk/overlay';
 import { AsyncPipe, NgForOf } from '@angular/common';
-import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, OnInit, Output, signal, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, Output, signal, ViewChild } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Observable, take, tap } from 'rxjs';
 
-import { InputComponent, InputControlComponent } from '@baf/ui/input';
+import { DisplayFn } from '@baf/core';
+import { InputComponent, InputControlComponent, InputDisplayDirective } from '@baf/ui/input';
 import { LabelComponent } from '@baf/ui/label';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type AutocompleteVariant = Record<string, any> & { id: number | string };
+export type AutocompleteVariant = Record<string, any> & { readonly id: number | string };
 
 export interface AutocompleteOptions {
   readonly label: string;
   readonly placeholder?: string;
   readonly id: string;
   readonly key: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  readonly displayFn: (item: any, index?: number) => string;
+  readonly displayFn: DisplayFn;
+  readonly inputDisplayFn: DisplayFn;
 }
 
 @Component({
@@ -30,6 +31,7 @@ export interface AutocompleteOptions {
     NgForOf,
     AsyncPipe,
     InputControlComponent,
+    InputDisplayDirective,
     LabelComponent,
   ],
   templateUrl: './autocomplete.component.html',
@@ -39,8 +41,8 @@ export interface AutocompleteOptions {
     class: 'baf-input-control',
   },
 })
-export class AutocompleteComponent implements OnInit {
-  @Input({ required: true }) control!: FormControl<string>;
+export class AutocompleteComponent {
+  @Input({ required: true }) control!: FormControl<string | AutocompleteVariant>;
   @Input({ required: true }) options!: AutocompleteOptions;
   @Output() changed = new EventEmitter<string>();
   @Output() opened = new EventEmitter<void>();
@@ -54,12 +56,6 @@ export class AutocompleteComponent implements OnInit {
 
   get width(): string {
     return this.input?.nativeElement.clientWidth > 200 ? `${this.input.nativeElement.clientWidth}px` : '200px';
-  }
-
-  displayFn!: (item: AutocompleteVariant, index?: number) => string;
-
-  ngOnInit(): void {
-    this.displayFn = this.options.displayFn;
   }
 
   onOpen(): void {
@@ -77,8 +73,12 @@ export class AutocompleteComponent implements OnInit {
       .pipe(
         take(1),
         tap((options) => {
-          if (options.length && this.control.value !== options[0][this.options.key]) {
-            this.control.patchValue(options[0][this.options.key], { emitEvent: false });
+          if (
+            options.length &&
+            this.control.value &&
+            (typeof this.control.value === 'string' || JSON.stringify(this.control.value) !== JSON.stringify(options[0]))
+          ) {
+            this.control.patchValue(options[0], { emitEvent: false });
           }
         }),
       )
@@ -90,7 +90,7 @@ export class AutocompleteComponent implements OnInit {
   }
 
   onSelect(option: AutocompleteVariant): void {
-    this.control.patchValue(option[this.options.key], { emitEvent: false });
+    this.control.patchValue(option, { emitEvent: false });
     this.closed.emit();
     this.open.set(false);
   }
