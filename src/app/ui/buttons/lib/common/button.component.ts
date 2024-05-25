@@ -1,9 +1,8 @@
 import { ChangeDetectionStrategy, Component, ElementRef } from '@angular/core';
 
+import { DisabledDirective, ExtraSizeDirective, ModeDirective } from '@baf/ui/utils';
+
 import { AnchorBase, ButtonBase } from '../base/button-base';
-import { DisabledDirective } from '../base/disabled.directive';
-import { ExtraSizeDirective } from '../base/extra-size.directive';
-import { ModeDirective } from '../base/mode.directive';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector

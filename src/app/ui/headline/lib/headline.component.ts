@@ -3,13 +3,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AlignDirective, SizeDirective } from '@baf/ui/utils';
 
 @Component({
-  selector: 'baf-title,[baf-title]',
+  selector: 'baf-headline,[baf-headline]',
   standalone: true,
   template: '<ng-content></ng-content>',
-  styleUrl: './title.component.scss',
+  styleUrl: './headline.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    class: 'baf-title',
+    class: 'baf-headline',
   },
   hostDirectives: [
     {
@@ -22,4 +22,4 @@ import { AlignDirective, SizeDirective } from '@baf/ui/utils';
     },
   ],
 })
-export class TitleComponent {}
+export class HeadlineComponent {}

@@ -1,0 +1,13 @@
+@mixin make-size() {
+  &.baf-size-small {
+    @content (small);
+  }
+
+  &.baf-size-medium {
+    @content (medium);
+  }
+
+  &.baf-size-large {
+    @content (large);
+  }
+}
