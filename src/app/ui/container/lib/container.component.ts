@@ -5,7 +5,7 @@ import { FluidDirective } from './fluid.directive';
 import { MobileDirective } from './mobile.directive';
 
 @Component({
-  selector: 'baf-lib',
+  selector: 'baf-container',
   standalone: true,
   imports: [RouterOutlet],
   template: '<ng-content></ng-content>',

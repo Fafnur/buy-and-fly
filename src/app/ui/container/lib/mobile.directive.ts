@@ -3,7 +3,7 @@ import { Directive, HostBinding, Input } from '@angular/core';
 
 @Directive({
   // eslint-disable-next-line @angular-eslint/directive-selector
-  selector: 'baf-lib[mobile]',
+  selector: 'baf-container[mobile]',
   standalone: true,
 })
 export class MobileDirective {
