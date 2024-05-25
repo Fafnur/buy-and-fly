@@ -5,7 +5,7 @@ import { FluidDirective } from './fluid.directive';
 import { MobileDirective } from './mobile.directive';
 
 @Component({
-  selector: 'baf-container',
+  selector: 'baf-lib',
   standalone: true,
   imports: [RouterOutlet],
   template: '<ng-content></ng-content>',
@@ -13,7 +13,7 @@ import { MobileDirective } from './mobile.directive';
   changeDetection: ChangeDetectionStrategy.OnPush,
   // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
-    class: 'baf-container',
+    class: 'baf-lib',
   },
   hostDirectives: [
     {

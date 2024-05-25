@@ -1,1 +1,1 @@
-export * from './container/container.component';
+export * from './lib/container.component';

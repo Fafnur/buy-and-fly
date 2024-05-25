@@ -1,1 +1,1 @@
-export * from './coercoin/coercoin';
+export * from './lib/coercoin/coercoin';
