@@ -1,0 +1,3 @@
+@for (link of links; track link.label) {
+  <a [routerLink]="link.route | path: link.params">{{ link.label }}</a>
+}
