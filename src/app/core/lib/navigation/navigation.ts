@@ -25,4 +25,5 @@ export interface NavigationLink<T extends PathValues = PathValues> {
   readonly label: string;
   readonly route: T;
   readonly params?: GetPathParams<T>;
+  readonly suffix?: string;
 }

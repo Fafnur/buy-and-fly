@@ -1,3 +1,8 @@
 @for (link of links; track link.label) {
-  <a [routerLink]="link.route | path: link.params">{{ link.label }}</a>
+  <a class="nav-link" [routerLink]="link.route | path: link.params">
+    {{ link.label }}
+    @if (link.suffix) {
+      <span class="nav-link-suffix">{{ link.suffix }}</span>
+    }
+  </a>
 }

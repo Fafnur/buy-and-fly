@@ -19,6 +19,7 @@ export class HomePageComponent {
     {
       label: 'Avia',
       route: PATHS.home,
+      suffix: '10%',
     },
     {
       label: 'Hotels',
