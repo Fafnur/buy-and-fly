@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular
   selector: 'baf-search-group',
   standalone: true,
   imports: [],
-  templateUrl: './search-group.component.html',
+  template: '<ng-content></ng-content>',
   styleUrl: './search-group.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

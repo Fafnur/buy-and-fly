@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
-import { SearchFormGroup } from '@baf/search/common';
 import { IconButtonComponent } from '@baf/ui/buttons';
 import { SyncAltComponent } from '@baf/ui/icons';
 
@@ -13,7 +13,7 @@ import { SyncAltComponent } from '@baf/ui/icons';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchReverseComponent {
-  @Input({ required: true }) form!: SearchFormGroup;
+  @Input({ required: true }) form!: FormGroup;
 
   onReverse(): void {
     const { from, to } = this.form.getRawValue();

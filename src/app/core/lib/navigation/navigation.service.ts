@@ -1,23 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { NavigationExtras, Router, UrlCreationOptions, UrlTree } from '@angular/router';
 
-import { PathValues } from './navigation';
-
-type Split<Value extends string, Pattern extends string = '/'> = Value extends `${infer LValue}${Pattern}${infer RValue}`
-  ? [LValue, ...Split<RValue, Pattern>]
-  : [Value];
-
-type Filter<T extends string[]> = T extends [first: infer FirstProperty, ...args: infer OtherProperties extends string[]]
-  ? FirstProperty extends `:${infer U}`
-    ? U | Filter<OtherProperties>
-    : Filter<OtherProperties>
-  : never;
-
-type Build<T extends string> = {
-  [key in T]: string | number;
-};
-
-type GetParams<T extends string> = Build<Filter<Split<T>>>;
+import { GetPathParams, PathValues } from './navigation';
 
 @Injectable({
   providedIn: 'root',
@@ -25,7 +9,7 @@ type GetParams<T extends string> = Build<Filter<Split<T>>>;
 export class NavigationService {
   private readonly router = inject(Router);
 
-  createUrlTree<T extends PathValues>(path: T, params?: GetParams<T>, navigationExtras?: UrlCreationOptions): UrlTree {
+  createUrlTree<T extends PathValues>(path: T, params?: GetPathParams<T>, navigationExtras?: UrlCreationOptions): UrlTree {
     return this.router.createUrlTree(this.getRoute(path, params), navigationExtras);
   }
 
@@ -53,7 +37,7 @@ export class NavigationService {
     return this.router.navigate(path, extras);
   }
 
-  navigateByUrl<T extends PathValues>(path: T, params?: GetParams<T>, extras?: NavigationExtras): Promise<boolean> {
+  navigateByUrl<T extends PathValues>(path: T, params?: GetPathParams<T>, extras?: NavigationExtras): Promise<boolean> {
     return this.navigate(this.getRoute(path, params), extras);
   }
 }

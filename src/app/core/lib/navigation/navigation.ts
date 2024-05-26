@@ -1,16 +1,9 @@
-export interface NavigationLink {
-  readonly route: string;
-  readonly label: string;
-  readonly params?: Record<string, unknown>;
-}
-
 export const PATHS = {
   home: '',
   rules: 'rules',
   terms: 'terms',
   documents: 'documents',
   faq: 'faq',
-  tag: 'tag/:id',
   search: 'search',
   searchAvia: 'search/avia',
   searchHotel: 'search/hotel',
@@ -19,3 +12,17 @@ export const PATHS = {
 } as const;
 
 export type PathValues = (typeof PATHS)[keyof typeof PATHS];
+
+type Split<Value extends string> = Value extends `${infer LValue}/${infer RValue}` ? Filter<LValue> | Split<RValue> : Filter<Value>;
+
+type Filter<T extends string> = T extends `:${infer Param}` ? Param : never;
+
+export type GetPathParams<T extends string> = {
+  [key in Split<T>]: string | number;
+};
+
+export interface NavigationLink<T extends PathValues = PathValues> {
+  readonly label: string;
+  readonly route: T;
+  readonly params?: GetPathParams<T>;
+}
