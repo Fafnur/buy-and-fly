@@ -2,6 +2,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { FormFor } from '@baf/core';
 
+export enum SearchType {
+  Avia = 'avia',
+  Hotel = 'hotel',
+  Tour = 'tour',
+  Railway = 'railway',
+}
+
 export interface SearchDeclination {
   readonly vi: string;
   readonly tv: string;

@@ -1,0 +1,46 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.125rem;
+  background: transparent;
+  color: var(--md-sys-color-on-surface-variant);
+  border: none;
+  cursor: pointer;
+
+  span {
+    padding: 0 0.25rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  &.is-active {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+
+    span {
+      display: block;
+      background-color: var(--md-sys-color-tertiary-container);
+      color: var(--md-sys-color-on-tertiary);
+    }
+  }
+}

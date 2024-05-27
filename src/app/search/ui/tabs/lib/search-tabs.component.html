@@ -1,0 +1,24 @@
+<div class="tabs">
+  @for (tab of tabs; track tab.id) {
+    <button type="button" class="tab" [class.is-active]="tab.id === selected().id" (click)="onSelect(tab)">
+      {{ tab.label }}
+      <span class="nav-suffix">{{ tab.suffix }}</span>
+    </button>
+  }
+</div>
+<div class="tab-content">
+  @switch (selected().id) {
+    @case (types.Avia) {
+      Case A.
+    }
+    @case (types.Hotel) {
+      Case B.
+    }
+    @case (types.Tour) {
+      Case C
+    }
+    @case (types.Railway) {
+      Case D
+    }
+  }
+</div>
