@@ -9,7 +9,7 @@ import { Directive, HostBinding, Input } from '@angular/core';
 export class DisabledDirective {
   @Input() disabled: string | boolean | null | undefined;
 
-  @HostBinding('class.baf-is-disabled') get isSmall(): boolean {
+  @HostBinding('class.is-disabled') get isSmall(): boolean {
     return coerceBooleanProperty(this.disabled);
   }
 }

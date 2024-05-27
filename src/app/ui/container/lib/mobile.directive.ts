@@ -9,7 +9,7 @@ import { Directive, HostBinding, Input } from '@angular/core';
 export class MobileDirective {
   @Input() mobile: boolean | string | undefined | null;
 
-  @HostBinding('class.baf-mobile-no-gutter') get isMobile() {
+  @HostBinding('class.mobile-no-gutter') get isMobile() {
     return coerceBooleanProperty(this.mobile);
   }
 }

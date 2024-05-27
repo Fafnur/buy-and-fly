@@ -10,15 +10,15 @@ import { Align } from './types';
 export class AlignDirective {
   @Input() align: Align = 'left';
 
-  @HostBinding('class.baf-align-left') get isLeft(): boolean {
+  @HostBinding('class.align-left') get isLeft(): boolean {
     return this.align === 'left';
   }
 
-  @HostBinding('class.baf-align-center') get isCenter(): boolean {
+  @HostBinding('class.align-center') get isCenter(): boolean {
     return this.align === 'center';
   }
 
-  @HostBinding('class.baf-align-right') get isRight(): boolean {
+  @HostBinding('class.align-right') get isRight(): boolean {
     return this.align === 'right';
   }
 }

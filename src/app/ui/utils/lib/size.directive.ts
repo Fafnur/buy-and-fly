@@ -10,15 +10,15 @@ import { Size } from './types';
 export class SizeDirective {
   @Input() size: Size = 'medium';
 
-  @HostBinding('class.baf-size-small') get isSmall(): boolean {
+  @HostBinding('class.size-small') get isSmall(): boolean {
     return this.size === 'small';
   }
 
-  @HostBinding('class.baf-size-medium') get isMedium(): boolean {
+  @HostBinding('class.size-medium') get isMedium(): boolean {
     return this.size === 'medium';
   }
 
-  @HostBinding('class.baf-size-large') get isLarge(): boolean {
+  @HostBinding('class.size-large') get isLarge(): boolean {
     return this.size === 'large';
   }
 }

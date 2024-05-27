@@ -1,13 +1,13 @@
 @mixin align() {
-  &.baf-align-left {
+  &.align-left {
     text-align: left;
   }
 
-  &.baf-align-center {
+  &.align-center {
     text-align: center;
   }
 
-  &.baf-align-right {
+  &.align-right {
     text-align: right;
   }
 }

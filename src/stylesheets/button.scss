@@ -1,6 +1,6 @@
 @mixin disabled() {
   &[disabled],
-  &.baf-is-disabled {
+  &.is-disabled {
     cursor: not-allowed;
     pointer-events: none;
     opacity: 0.5;
@@ -12,29 +12,28 @@
 @mixin common-size($size, $height, $radius, $paddingLeft, $paddingRight: $paddingLeft) {
   font-size: $size;
   height: $height;
-  //border-radius: $radius;
   padding-left: $paddingLeft;
   padding-right: $paddingRight;
 }
 
 @mixin sizes() {
-  &.baf-size-xsmall {
+  &.size-xsmall {
     @include common-size(75%, 30px, 15px, 18px);
   }
 
-  &.baf-size-small {
+  &.size-small {
     @include common-size(90%, 36px, 18px, 22px);
   }
 
-  &.baf-size-medium {
+  &.size-medium {
     @include common-size(110%, 44px, 22px, 26px);
   }
 
-  &.baf-size-large {
+  &.size-large {
     @include common-size(125%, 50px, 25px, 30px);
   }
 
-  &.baf-size-xlarge {
+  &.size-xlarge {
     @include common-size(150%, 60px, 30px, 36px);
   }
 }
@@ -48,7 +47,7 @@
   }
 
   &:hover,
-  &.baf-is-active {
+  &.is-active {
     background-color: var(#{$backgroundActive});
   }
 }

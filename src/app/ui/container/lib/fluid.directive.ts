@@ -9,7 +9,7 @@ import { Directive, HostBinding, Input } from '@angular/core';
 export class FluidDirective {
   @Input() fluid: boolean | string | undefined | null;
 
-  @HostBinding('class.baf-fluid') get isFluid() {
+  @HostBinding('class.fluid') get isFluid() {
     return coerceBooleanProperty(this.fluid);
   }
 }

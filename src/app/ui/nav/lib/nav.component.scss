@@ -4,5 +4,20 @@
   gap: 1rem;
 }
 
-.nav-link {
+a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+
+  border-radius: 0.125rem;
+
+  &:hover,
+  &.is-active {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+  }
 }
