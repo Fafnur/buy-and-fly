@@ -1,5 +1,5 @@
 @for (link of links; track link.label) {
-  <a [routerLink]="link.route | path: link.params">
+  <a routerLinkActive="is-active" [routerLink]="link.route | path: link.params">
     {{ link.label }}
     @if (link.suffix) {
       <span class="nav-suffix">{{ link.suffix }}</span>

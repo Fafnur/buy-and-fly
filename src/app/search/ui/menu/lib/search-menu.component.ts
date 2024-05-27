@@ -21,14 +21,17 @@ export class SearchMenuComponent {
     {
       label: 'Hotels',
       route: PATHS.searchHotel,
+      suffix: '10%',
     },
     {
       label: 'Tours',
       route: PATHS.searchTour,
+      suffix: '4%',
     },
     {
       label: 'Railway',
       route: PATHS.searchRailway,
+      suffix: '5%',
     },
   ];
 }
