@@ -26,11 +26,11 @@
   }
 
   &.size-medium {
-    @include common-size(110%, 44px, 22px, 26px);
+    @include common-size(110%, 48px, 22px, 26px);
   }
 
   &.size-large {
-    @include common-size(125%, 50px, 25px, 30px);
+    @include common-size(125%, 54px, 25px, 30px);
   }
 
   &.size-xlarge {
