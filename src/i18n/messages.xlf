@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="7199909457158125944" datatype="html">
+        <source>Page not found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/errors/not-found/page/lib/not-found-page.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Not Found</note>
+      </trans-unit>
+      <trans-unit id="3302429194793252562" datatype="html">
+        <source>Permission denied</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/errors/permission-denied/page/lib/permission-denied-page.component.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Permission Denied</note>
+      </trans-unit>
+      <trans-unit id="5822027910086725602" datatype="html">
+        <source>Internal Server Error</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/errors/server-error/page/lib/server-error-page.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Server Error</note>
+      </trans-unit>
+      <trans-unit id="130332167948491283" datatype="html">
+        <source>Please try again, if the problem persists, contact us support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/errors/server-error/page/lib/server-error-page.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+        <note priority="1" from="description">Contact us support</note>
+        <note priority="1" from="meaning">Server Error</note>
+      </trans-unit>
+      <trans-unit id="7779914580422913976" datatype="html">
+        <source>Perhaps you were looking for pages</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/errors/ui/links/lib/errors-link.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+        <note priority="1" from="description">Perhaps you were looking for pages</note>
+        <note priority="1" from="meaning">Not Found</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -4,6 +4,11 @@ export const PATHS = {
   terms: 'terms',
   documents: 'documents',
   faq: 'faq',
+
+  notFound: 'not-found',
+  serverError: 'server-error',
+  permissionDenied: 'permission-denied',
+
   search: 'search',
   searchAvia: 'search/avia',
   searchHotel: 'search/hotel',

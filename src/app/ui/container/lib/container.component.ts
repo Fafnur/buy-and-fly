@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 
 import { FluidDirective } from './fluid.directive';
 import { MobileDirective } from './mobile.directive';
+import { AlignDirective } from '@baf/ui/utils';
 
 @Component({
   selector: 'baf-container',
@@ -22,6 +23,10 @@ import { MobileDirective } from './mobile.directive';
     {
       directive: MobileDirective,
       inputs: ['mobile'],
+    },
+    {
+      directive: AlignDirective,
+      inputs: ['align'],
     },
   ],
 })

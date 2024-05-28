@@ -19,11 +19,15 @@ export const routes: Routes = [
       },
       {
         path: '',
-        loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
+        loadChildren: () => import('./routes/home.routes').then((m) => m.homeRoutes),
       },
       {
         path: 'search',
-        loadComponent: () => import('@baf/search/page').then((m) => m.SearchPageComponent),
+        loadChildren: () => import('./routes/search.routes').then((m) => m.searchRoutes),
+      },
+      {
+        path: '',
+        loadChildren: () => import('./routes/errors.routes').then((m) => m.errorsRoutes),
       },
     ],
   },
