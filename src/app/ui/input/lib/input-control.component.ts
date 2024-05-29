@@ -2,7 +2,7 @@ import {
   AfterViewInit,
   ChangeDetectionStrategy,
   Component,
-  ContentChild,
+  contentChild,
   DestroyRef,
   ElementRef,
   inject,
@@ -32,61 +32,66 @@ export class InputControlComponent implements AfterViewInit, OnDestroy {
   readonly elementRef: ElementRef<HTMLInputElement> = inject(ElementRef);
   readonly renderer = inject(Renderer2);
 
-  @ContentChild(LabelComponent) label?: LabelComponent;
-  @ContentChild(InputComponent) input!: InputComponent;
+  readonly label = contentChild<LabelComponent>(LabelComponent);
+  readonly input = contentChild.required<InputComponent>(InputComponent);
 
   private isDisabled = false;
 
   ngAfterViewInit(): void {
-    if (this.input) {
-      this.input.elementRef.nativeElement.addEventListener('click', this.onFocusin);
-      this.input.elementRef.nativeElement.addEventListener('focusout', this.onFocusout);
-      this.input.elementRef.nativeElement.addEventListener('input', this.onInput);
-      this.input.elementRef.nativeElement.addEventListener('change', this.onInput);
-      this.onInput({ target: this.input.elementRef.nativeElement });
-
-      this.input.ngControl.control?.events
-        .pipe(
-          filter((event) => event instanceof TouchedChangeEvent),
-          tap(() => this.check()),
-          takeUntilDestroyed(this.destroyRef),
-        )
-        .subscribe();
-
-      this.input.ngControl.valueChanges
-        ?.pipe(
-          tap(() => {
-            if (!this.input?.ngControl.value && this.elementRef.nativeElement.classList.contains('is-value')) {
-              this.renderer.removeClass(this.elementRef.nativeElement, 'is-value');
-            }
-            this.onInput({ target: this.input.elementRef.nativeElement });
-          }),
-          takeUntilDestroyed(this.destroyRef),
-        )
-        .subscribe();
-
-      this.input.ngControl.statusChanges
-        ?.pipe(
-          startWith(this.input.ngControl.status),
-          tap((status: FormControlStatus) => {
-            this.isDisabled = status === 'DISABLED';
-            this.disable();
-          }),
-          takeUntilDestroyed(this.destroyRef),
-        )
-        .subscribe();
-    } else {
+    const input = this.input();
+    if (!input) {
       console.warn('Input[baf-input] not found. Add child <input baf-input /> in <baf-input-control></baf-input-control>');
+      return;
     }
+
+    input.elementRef.nativeElement.addEventListener('click', this.onFocusin);
+    input.elementRef.nativeElement.addEventListener('focusout', this.onFocusout);
+    input.elementRef.nativeElement.addEventListener('input', this.onInput);
+    input.elementRef.nativeElement.addEventListener('change', this.onInput);
+    this.onInput({ target: input.elementRef.nativeElement });
+
+    input.ngControl.control?.events
+      .pipe(
+        filter((event) => event instanceof TouchedChangeEvent),
+        tap(() => this.check()),
+        takeUntilDestroyed(this.destroyRef),
+      )
+      .subscribe();
+
+    input.ngControl.valueChanges
+      ?.pipe(
+        tap(() => {
+          if (!input.ngControl.value && this.elementRef.nativeElement.classList.contains('is-value')) {
+            this.renderer.removeClass(this.elementRef.nativeElement, 'is-value');
+          }
+          this.onInput({ target: input.elementRef.nativeElement });
+        }),
+        takeUntilDestroyed(this.destroyRef),
+      )
+      .subscribe();
+
+    input.ngControl.statusChanges
+      ?.pipe(
+        startWith(input.ngControl.status),
+        tap((status: FormControlStatus) => {
+          this.isDisabled = status === 'DISABLED';
+          this.disable();
+        }),
+        takeUntilDestroyed(this.destroyRef),
+      )
+      .subscribe();
   }
 
   ngOnDestroy(): void {
-    if (this.input) {
-      this.input.elementRef.nativeElement.removeEventListener('click', this.onFocusin);
-      this.input.elementRef.nativeElement.removeEventListener('focusout', this.onFocusout);
-      this.input.elementRef.nativeElement.removeEventListener('input', this.onInput);
-      this.input.elementRef.nativeElement.removeEventListener('change', this.onInput);
+    const input = this.input();
+    if (!input) {
+      return;
     }
+
+    input.elementRef.nativeElement.removeEventListener('click', this.onFocusin);
+    input.elementRef.nativeElement.removeEventListener('focusout', this.onFocusout);
+    input.elementRef.nativeElement.removeEventListener('input', this.onInput);
+    input.elementRef.nativeElement.removeEventListener('change', this.onInput);
   }
 
   private onFocusin = () => {
@@ -125,8 +130,8 @@ export class InputControlComponent implements AfterViewInit, OnDestroy {
   }
 
   private check(): void {
-    if (this.input?.ngControl.touched) {
-      if (this.input.ngControl.errors) {
+    if (this.input().ngControl.touched) {
+      if (this.input().ngControl.errors) {
         this.renderer.addClass(this.elementRef.nativeElement, 'is-invalid');
       } else {
         this.renderer.removeClass(this.elementRef.nativeElement, 'is-invalid');

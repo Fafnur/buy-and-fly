@@ -1,5 +1,5 @@
 import { AsyncPipe, DatePipe } from '@angular/common';
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 
 import { IconButtonComponent } from '@baf/ui/buttons';
 import { ChevronLeftComponent, ChevronRightComponent } from '@baf/ui/icons';
@@ -30,19 +30,23 @@ export interface CalendarSelected {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CalendarComponent {
-  @Input() set startDate(date: string | null | undefined) {
-    let startDate: Date;
-    if (date && date.length === 10) {
-      const parts = date.split('.');
-      startDate = new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0]));
-    } else {
-      startDate = new Date();
-    }
+  readonly startDate = input.required<Date, string | null | undefined>({
+    transform: (date) => {
+      let startDate: Date;
+      if (date && date.length === 10) {
+        const parts = date.split('.');
+        startDate = new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0]));
+      } else {
+        startDate = new Date();
+      }
 
-    this.config = this.getConfig(startDate, startDate.getDate());
-  }
+      this.config = this.getConfig(startDate, startDate.getDate());
 
-  @Output() selected = new EventEmitter<CalendarSelected>();
+      return startDate;
+    },
+  });
+
+  readonly selected = output<CalendarSelected>();
 
   config: CalendarConfig = this.getConfig();
 

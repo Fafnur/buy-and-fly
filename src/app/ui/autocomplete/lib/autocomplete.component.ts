@@ -1,6 +1,6 @@
 import { CdkConnectedOverlay, CdkOverlayOrigin } from '@angular/cdk/overlay';
 import { AsyncPipe, NgForOf } from '@angular/common';
-import { ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, Output, signal, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, input, output, Signal, signal, viewChild } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Observable, take, tap } from 'rxjs';
 
@@ -42,20 +42,20 @@ export interface AutocompleteOptions {
   },
 })
 export class AutocompleteComponent {
-  @Input({ required: true }) control!: FormControl<string | AutocompleteVariant>;
-  @Input({ required: true }) options!: AutocompleteOptions;
-  @Output() changed = new EventEmitter<string>();
-  @Output() opened = new EventEmitter<void>();
-  @Output() closed = new EventEmitter<void>();
+  readonly control = input.required<FormControl<string | AutocompleteVariant>>();
+  readonly options = input.required<AutocompleteOptions>();
+  readonly data = input.required<Observable<AutocompleteVariant[]>>();
 
-  @Input({ required: true }) data!: Observable<AutocompleteVariant[]>;
+  readonly changed = output<string>();
+  readonly opened = output();
+  readonly closed = output();
 
-  @ViewChild('input', { read: ElementRef, static: true }) input!: ElementRef<HTMLInputElement>;
+  readonly input: Signal<ElementRef<HTMLInputElement>> = viewChild.required('input', { read: ElementRef<HTMLInputElement> });
 
   readonly open = signal<boolean>(false);
 
   get width(): string {
-    return this.input?.nativeElement.clientWidth > 200 ? `${this.input.nativeElement.clientWidth}px` : '200px';
+    return this.input().nativeElement.clientWidth > 200 ? `${this.input().nativeElement.clientWidth}px` : '200px';
   }
 
   onOpen(): void {
@@ -69,16 +69,16 @@ export class AutocompleteComponent {
     this.closed.emit();
     this.open.set(false);
 
-    this.data
+    this.data()
       .pipe(
         take(1),
         tap((options) => {
           if (
             options.length &&
-            this.control.value &&
-            (typeof this.control.value === 'string' || JSON.stringify(this.control.value) !== JSON.stringify(options[0]))
+            this.control().value &&
+            (typeof this.control().value === 'string' || JSON.stringify(this.control().value) !== JSON.stringify(options[0]))
           ) {
-            this.control.patchValue(options[0], { emitEvent: false });
+            this.control().patchValue(options[0], { emitEvent: false });
           }
         }),
       )
@@ -90,7 +90,7 @@ export class AutocompleteComponent {
   }
 
   onSelect(option: AutocompleteVariant): void {
-    this.control.patchValue(option, { emitEvent: false });
+    this.control().patchValue(option, { emitEvent: false });
     this.closed.emit();
     this.open.set(false);
   }
