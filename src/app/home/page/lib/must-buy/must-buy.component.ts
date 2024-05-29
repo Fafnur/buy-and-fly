@@ -3,11 +3,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { HeadlineComponent } from '@baf/ui/headline';
 
 @Component({
-  selector: 'baf-must-take',
+  selector: 'baf-must-buy',
   standalone: true,
   imports: [HeadlineComponent],
-  templateUrl: './must-take.component.html',
-  styleUrl: './must-take.component.scss',
+  templateUrl: './must-buy.component.html',
+  styleUrl: './must-buy.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MustTakeComponent {}
+export class MustBuyComponent {}

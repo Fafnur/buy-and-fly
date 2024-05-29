@@ -33,7 +33,6 @@
       "@baf/search/ui/fields": ["src/app/search/ui/fields/index.ts"],
       "@baf/search/ui/form": ["src/app/search/ui/form/index.ts"],
       "@baf/search/ui/layout": ["src/app/search/ui/layout/index.ts"],
-      "@baf/search/ui/tabs": ["src/app/search/ui/tabs/index.ts"],
       "@baf/ui/autocomplete": ["src/app/ui/autocomplete/index.ts"],
       "@baf/ui/buttons": ["src/app/ui/buttons/index.ts"],
       "@baf/ui/container": ["src/app/ui/container/index.ts"],
