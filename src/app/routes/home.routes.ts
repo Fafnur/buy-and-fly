@@ -7,7 +7,7 @@ export const homeRoutes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('@baf/search/ui/form').then((m) => m.SearchFormComponent),
+        loadComponent: () => import('@baf/search/avia/ui/form').then((m) => m.SearchAviaFormComponent),
         outlet: 'form',
       },
     ],
@@ -15,34 +15,16 @@ export const homeRoutes: Routes = [
   {
     path: 'hotels',
     loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
-    children: [
-      {
-        path: '',
-        loadComponent: () => import('@baf/search/ui/form').then((m) => m.SearchFormComponent),
-        outlet: 'form',
-      },
-    ],
+    children: [],
   },
   {
     path: 'tours',
     loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
-    children: [
-      {
-        path: '',
-        loadComponent: () => import('@baf/search/ui/form').then((m) => m.SearchFormComponent),
-        outlet: 'form',
-      },
-    ],
+    children: [],
   },
   {
     path: 'railways',
     loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
-    children: [
-      {
-        path: '',
-        loadComponent: () => import('@baf/search/ui/form').then((m) => m.SearchFormComponent),
-        outlet: 'form',
-      },
-    ],
+    children: [],
   },
 ];

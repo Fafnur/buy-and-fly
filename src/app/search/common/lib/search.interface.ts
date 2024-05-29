@@ -1,7 +1,3 @@
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-
-import { FormFor } from '@baf/core';
-
 export enum SearchType {
   Avia = 'avia',
   Hotel = 'hotel',
@@ -50,35 +46,11 @@ export interface SearchCityOrAirport {
 }
 /* eslint-enable @typescript-eslint/naming-convention */
 
-export interface SearchForm {
-  readonly from: string | SearchCityOrAirport;
-  readonly to: string | SearchCityOrAirport;
-  readonly startDate: string;
-  readonly endDate: string;
-  readonly passengers: number;
-}
-
-export type SearchFormGroup = FormGroup<FormFor<SearchForm>>;
-
-export const initialSearchForm: SearchFormGroup = new FormGroup({
-  from: new FormControl<string | SearchCityOrAirport>('', {
-    nonNullable: true,
-    validators: [Validators.required],
-  }),
-  to: new FormControl<string | SearchCityOrAirport>('', {
-    nonNullable: true,
-    validators: [Validators.required],
-  }),
-  startDate: new FormControl<string>('', {
-    nonNullable: true,
-    validators: [Validators.required],
-  }),
-  endDate: new FormControl<string>('', {
-    nonNullable: true,
-    validators: [],
-  }),
-  passengers: new FormControl<number>(1, {
-    nonNullable: true,
-    validators: [Validators.required, Validators.min(1), Validators.max(20)],
-  }),
-});
+export type SearchFormOptions<T> = {
+  readonly [P in keyof T]: {
+    readonly [key: string]: unknown;
+    readonly id: string;
+    readonly label: string;
+    readonly placeholder?: string;
+  };
+};

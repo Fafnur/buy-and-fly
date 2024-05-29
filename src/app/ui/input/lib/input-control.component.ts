@@ -10,8 +10,8 @@ import {
   Renderer2,
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { FormControlStatus } from '@angular/forms';
-import { startWith, tap } from 'rxjs';
+import { FormControlStatus, TouchedChangeEvent } from '@angular/forms';
+import { filter, startWith, tap } from 'rxjs';
 
 import { LabelComponent } from '@baf/ui/label';
 
@@ -44,6 +44,14 @@ export class InputControlComponent implements AfterViewInit, OnDestroy {
       this.input.elementRef.nativeElement.addEventListener('input', this.onInput);
       this.input.elementRef.nativeElement.addEventListener('change', this.onInput);
       this.onInput({ target: this.input.elementRef.nativeElement });
+
+      this.input.ngControl.control?.events
+        .pipe(
+          filter((event) => event instanceof TouchedChangeEvent),
+          tap(() => this.check()),
+          takeUntilDestroyed(this.destroyRef),
+        )
+        .subscribe();
 
       this.input.ngControl.valueChanges
         ?.pipe(

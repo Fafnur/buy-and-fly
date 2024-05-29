@@ -1,4 +1,4 @@
 <baf-input-control>
-  <label baf-label for="passengers">Пассажиры</label>
-  <input id="passengers" baf-input type="number" [formControl]="control" />
+  <label baf-label [attr.for]="options.id">{{ options.label }}</label>
+  <input [id]="options.id" baf-input type="number" [formControl]="control" [placeholder]="options.placeholder ?? ''" />
 </baf-input-control>

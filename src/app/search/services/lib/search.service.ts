@@ -4,7 +4,9 @@ import { Observable } from 'rxjs';
 
 import { SearchCityOrAirport } from '@baf/search/common';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class SearchService {
   private readonly httpClient = inject(HttpClient);
 

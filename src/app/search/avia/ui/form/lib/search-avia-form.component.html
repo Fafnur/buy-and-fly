@@ -1,0 +1,14 @@
+<baf-search-form [form]="form">
+  <baf-search-group mode="destination">
+    <baf-search-destination [control]="form.controls.from" [options]="options.from" />
+    <baf-search-reverse [form]="form" />
+    <baf-search-destination [control]="form.controls.to" [options]="options.to" />
+  </baf-search-group>
+  <baf-search-group mode="line">
+    <baf-search-group mode="date">
+      <baf-search-date [control]="form.controls.startDate" [options]="options.startDate" />
+      <baf-search-date [control]="form.controls.endDate" [options]="options.endDate" />
+    </baf-search-group>
+    <baf-search-passengers [control]="form.controls.passengers" [options]="options.passengers" />
+  </baf-search-group>
+</baf-search-form>

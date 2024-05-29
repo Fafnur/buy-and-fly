@@ -1,36 +1,27 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
-import { initialSearchForm } from '@baf/search/common';
-import { SearchService } from '@baf/search/services';
-import {
-  SearchDateComponent,
-  SearchDestinationComponent,
-  SearchGroupComponent,
-  SearchPassengersComponent,
-  SearchReverseComponent,
-} from '@baf/search/ui/fields';
+import { SearchGroupComponent } from '@baf/search/ui/fields';
 import { ButtonComponent } from '@baf/ui/buttons';
 
 @Component({
   selector: 'baf-search-form',
   standalone: true,
-  imports: [
-    SearchGroupComponent,
-    SearchDestinationComponent,
-    SearchReverseComponent,
-    SearchDateComponent,
-    SearchPassengersComponent,
-    ButtonComponent,
-  ],
+  imports: [SearchGroupComponent, ButtonComponent, ReactiveFormsModule],
   templateUrl: './search-form.component.html',
   styleUrl: './search-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [SearchService],
 })
 export class SearchFormComponent {
-  private readonly searchService = inject(SearchService);
+  readonly form = input.required<FormGroup>();
+  readonly submitted = signal<boolean>(false);
 
-  readonly form = initialSearchForm;
+  onSubmit(): void {
+    this.form().markAllAsTouched();
 
-  onSubmit(): void {}
+    if (this.form().invalid) {
+      return;
+    }
+    this.submitted.set(true);
+  }
 }

@@ -27,6 +27,8 @@
       "@baf/errors/server-error/page": ["src/app/errors/server-error/page/index.ts"],
       "@baf/errors/ui/links": ["src/app/errors/ui/links/index.ts"],
       "@baf/home/page": ["src/app/home/page/index.ts"],
+      "@baf/search/avia/common": ["src/app/search/avia/common/index.ts"],
+      "@baf/search/avia/ui/form": ["src/app/search/avia/ui/form/index.ts"],
       "@baf/search/common": ["src/app/search/common/index.ts"],
       "@baf/search/page": ["src/app/search/page/index.ts"],
       "@baf/search/services": ["src/app/search/services/index.ts"],
