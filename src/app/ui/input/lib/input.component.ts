@@ -6,7 +6,7 @@ import { NgControl } from '@angular/forms';
   selector: 'input[baf-input]',
   standalone: true,
   imports: [],
-  template: '<ng-content></ng-content>',
+  template: '<ng-content/>',
   styleUrl: './input.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

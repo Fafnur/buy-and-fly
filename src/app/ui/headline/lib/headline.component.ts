@@ -5,7 +5,7 @@ import { AlignDirective, SizeDirective } from '@baf/ui/utils';
 @Component({
   selector: 'baf-headline,[baf-headline]',
   standalone: true,
-  template: '<ng-content></ng-content>',
+  template: '<ng-content/>',
   styleUrl: './headline.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {

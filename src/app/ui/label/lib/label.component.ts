@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, inject } from '@angular
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'baf-label,label[baf-label]',
   standalone: true,
-  template: '<ng-content></ng-content>',
+  template: '<ng-content/>',
   styleUrl: './label.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
