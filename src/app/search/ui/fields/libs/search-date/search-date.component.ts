@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 import { DatepickerComponent } from '@baf/ui/datepicker';
@@ -19,22 +19,22 @@ export interface SearchDateOptions {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchDateComponent {
-  @Input({ required: true }) control!: FormControl<string>;
-  @Input({ required: true }) options!: SearchDateOptions;
+  readonly control = input.required<FormControl<string>>();
+  readonly options = input.required<SearchDateOptions>();
 
   @HostBinding('class.is-hide') get isHide() {
-    return this.options.startDate?.invalid;
+    return this.options().startDate?.invalid;
   }
 
   @HostBinding('class.is-valid') get isValid() {
-    return this.control.valid;
+    return this.control().valid;
   }
 
   @HostBinding('class.is-start-date') get isFrom() {
-    return this.options.id === 'startDate';
+    return this.options().id === 'startDate';
   }
 
   @HostBinding('class.is-end-date') get isTo() {
-    return this.options.id === 'endDate';
+    return this.options().id === 'endDate';
   }
 }

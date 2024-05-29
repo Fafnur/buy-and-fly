@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { NavigationLink, PathPipe } from '@baf/core';
@@ -12,5 +12,5 @@ import { NavigationLink, PathPipe } from '@baf/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavComponent {
-  @Input({ required: true }) links!: NavigationLink[];
+  readonly links = input.required<NavigationLink[]>();
 }

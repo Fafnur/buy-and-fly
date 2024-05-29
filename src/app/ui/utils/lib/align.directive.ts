@@ -1,4 +1,4 @@
-import { Directive, HostBinding, Input } from '@angular/core';
+import { Directive, HostBinding, input } from '@angular/core';
 
 import { Align } from './types';
 
@@ -8,17 +8,17 @@ import { Align } from './types';
   standalone: true,
 })
 export class AlignDirective {
-  @Input() align: Align = 'left';
+  readonly align = input<Align>('left');
 
   @HostBinding('class.align-left') get isLeft(): boolean {
-    return this.align === 'left';
+    return this.align() === 'left';
   }
 
   @HostBinding('class.align-center') get isCenter(): boolean {
-    return this.align === 'center';
+    return this.align() === 'center';
   }
 
   @HostBinding('class.align-right') get isRight(): boolean {
-    return this.align === 'right';
+    return this.align() === 'right';
   }
 }

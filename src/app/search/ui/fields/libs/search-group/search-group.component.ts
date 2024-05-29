@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, input } from '@angular/core';
 
 @Component({
   selector: 'baf-search-group',
@@ -9,21 +9,21 @@ import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchGroupComponent {
-  @Input() mode?: 'destination' | 'date' | 'line' | 'submit';
+  readonly mode = input<'destination' | 'date' | 'line' | 'submit'>();
 
   @HostBinding('class.is-destination') get isDestination() {
-    return this.mode === 'destination';
+    return this.mode() === 'destination';
   }
 
   @HostBinding('class.is-date') get isDate() {
-    return this.mode === 'date';
+    return this.mode() === 'date';
   }
 
   @HostBinding('class.is-line') get isLine() {
-    return this.mode === 'line';
+    return this.mode() === 'line';
   }
 
   @HostBinding('class.is-submit') get isSubmit() {
-    return this.mode === 'submit';
+    return this.mode() === 'submit';
   }
 }

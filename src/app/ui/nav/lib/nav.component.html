@@ -1,4 +1,4 @@
-@for (link of links; track link.label) {
+@for (link of links(); track link.label) {
   <a routerLinkActive="is-active" [routerLink]="link.route | path: link.params">
     {{ link.label }}
     @if (link.suffix) {

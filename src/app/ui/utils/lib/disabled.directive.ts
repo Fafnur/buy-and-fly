@@ -1,5 +1,5 @@
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { Directive, HostBinding, Input } from '@angular/core';
+import { Directive, HostBinding, input } from '@angular/core';
 
 @Directive({
   // eslint-disable-next-line @angular-eslint/directive-selector
@@ -7,9 +7,9 @@ import { Directive, HostBinding, Input } from '@angular/core';
   standalone: true,
 })
 export class DisabledDirective {
-  @Input() disabled: string | boolean | null | undefined;
+  readonly disabled = input<string | boolean | null | undefined>();
 
   @HostBinding('class.is-disabled') get isSmall(): boolean {
-    return coerceBooleanProperty(this.disabled);
+    return coerceBooleanProperty(this.disabled());
   }
 }
