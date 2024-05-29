@@ -6,6 +6,27 @@ export const searchRoutes: Routes = [
   {
     path: '',
     component: SearchLayoutComponent,
-    children: [],
+    children: [
+      {
+        path: 'avia',
+        loadComponent: () => import('@baf/search/page').then((m) => m.SearchPageComponent),
+        children: [],
+      },
+      {
+        path: 'hotels',
+        loadComponent: () => import('@baf/search/page').then((m) => m.SearchPageComponent),
+        children: [],
+      },
+      {
+        path: 'tours',
+        loadComponent: () => import('@baf/search/page').then((m) => m.SearchPageComponent),
+        children: [],
+      },
+      {
+        path: 'railways',
+        loadComponent: () => import('@baf/search/page').then((m) => m.SearchPageComponent),
+        children: [],
+      },
+    ],
   },
 ];
