@@ -1,0 +1,10 @@
+<baf-search-form [form]="form">
+  <baf-search-destination [control]="form.controls.city" [options]="options.city" />
+  <baf-search-group mode="line">
+    <baf-search-group mode="date">
+      <baf-search-date [control]="form.controls.startDate" [options]="options.startDate" />
+      <baf-search-date [control]="form.controls.endDate" [options]="options.endDate" />
+    </baf-search-group>
+    <baf-search-passengers [control]="form.controls.passengers" [options]="options.passengers" />
+  </baf-search-group>
+</baf-search-form>

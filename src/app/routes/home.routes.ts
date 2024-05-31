@@ -15,7 +15,13 @@ export const homeRoutes: Routes = [
   {
     path: 'hotels',
     loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
-    children: [],
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('@baf/search/hotels/ui/form').then((m) => m.SearchHotelFormComponent),
+        outlet: 'form',
+      },
+    ],
   },
   {
     path: 'tours',

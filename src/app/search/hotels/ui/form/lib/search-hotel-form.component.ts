@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { initialSearchAviaFormGroup, SearchAviaForm } from '@baf/search/avia/common';
 import { SearchFormOptions } from '@baf/search/common';
+import { initialSearchHotelFormGroup, SearchHotelForm } from '@baf/search/hotels/common';
 import {
   SearchDateComponent,
   SearchDestinationComponent,
@@ -13,7 +13,7 @@ import { SearchFormComponent } from '@baf/search/ui/form';
 import { ButtonComponent } from '@baf/ui/buttons';
 
 @Component({
-  selector: 'baf-search-avia-form',
+  selector: 'baf-search-hotel-form',
   standalone: true,
   imports: [
     SearchFormComponent,
@@ -24,16 +24,15 @@ import { ButtonComponent } from '@baf/ui/buttons';
     SearchPassengersComponent,
     ButtonComponent,
   ],
-  templateUrl: './search-avia-form.component.html',
-  styleUrl: './search-avia-form.component.scss',
+  templateUrl: './search-hotel-form.component.html',
+  styleUrl: './search-hotel-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchAviaFormComponent {
-  readonly form = initialSearchAviaFormGroup;
+export class SearchHotelFormComponent {
+  readonly form = initialSearchHotelFormGroup;
 
-  readonly options: SearchFormOptions<SearchAviaForm> = {
-    from: { label: 'Откуда', id: 'from' },
-    to: { label: 'Куда', id: 'to' },
+  readonly options: SearchFormOptions<SearchHotelForm> = {
+    city: { label: 'Город', id: 'city' },
     startDate: { label: 'Когда', id: 'startDate' },
     endDate: { label: 'Обратно', id: 'endDate', startDate: this.form.controls.startDate },
     passengers: { label: 'Пассажиры', id: 'passengers' },
