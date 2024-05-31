@@ -10,6 +10,9 @@ import { NavigationLink, PathPipe } from '@baf/core';
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'baf-nav',
+  },
 })
 export class NavComponent {
   readonly links = input.required<NavigationLink[]>();
