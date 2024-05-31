@@ -1,5 +1,7 @@
 <baf-search-form [form]="form">
-  <baf-search-destination [control]="form.controls.city" [options]="options.city" />
+  <baf-search-group mode="single">
+    <baf-search-destination [control]="form.controls.city" [options]="options.city" />
+  </baf-search-group>
   <baf-search-group mode="line">
     <baf-search-group mode="date">
       <baf-search-date [control]="form.controls.startDate" [options]="options.startDate" />

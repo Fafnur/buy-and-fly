@@ -31,6 +31,12 @@ export const homeRoutes: Routes = [
   {
     path: 'railways',
     loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
-    children: [],
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('@baf/search/railways/ui/form').then((m) => m.SearchRailwayFormComponent),
+        outlet: 'form',
+      },
+    ],
   },
 ];

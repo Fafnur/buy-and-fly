@@ -1,6 +1,8 @@
 @use 'src/stylesheets/device' as device;
 
 :host {
+  width: 100%;
+
   &.is-hide {
     display: none;
   }
@@ -11,7 +13,8 @@
 
   @include device.media-web() {
     &.is-hide {
-      display: block;
+      display: flex;
+      flex-grow: 1;
     }
 
     &.is-start-date,

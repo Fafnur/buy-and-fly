@@ -1,6 +1,8 @@
 @use 'src/stylesheets/device' as device;
 
 :host {
+  width: 100%;
+
   &.is-from {
     border-bottom: 1px solid var(--md-sys-color-background);
   }

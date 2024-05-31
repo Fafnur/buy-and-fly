@@ -9,7 +9,7 @@ import { ChangeDetectionStrategy, Component, HostBinding, input } from '@angular
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchGroupComponent {
-  readonly mode = input<'destination' | 'date' | 'line' | 'submit'>();
+  readonly mode = input<'destination' | 'date' | 'line' | 'submit' | 'single'>();
 
   @HostBinding('class.is-destination') get isDestination() {
     return this.mode() === 'destination';
@@ -25,5 +25,9 @@ export class SearchGroupComponent {
 
   @HostBinding('class.is-submit') get isSubmit() {
     return this.mode() === 'submit';
+  }
+
+  @HostBinding('class.is-single') get isSingle() {
+    return this.mode() === 'single';
   }
 }

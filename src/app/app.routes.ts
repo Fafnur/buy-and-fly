@@ -1,20 +1,18 @@
 import { Routes } from '@angular/router';
 
-import { FooterComponent, HeaderComponent, LayoutComponent } from '@baf/ui/layout';
-
 export const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    loadComponent: () => import('@baf/ui/layout').then((m) => m.LayoutComponent),
     children: [
       {
         path: '',
-        component: HeaderComponent,
+        loadComponent: () => import('@baf/ui/layout').then((m) => m.HeaderComponent),
         outlet: 'header',
       },
       {
         path: '',
-        component: FooterComponent,
+        loadComponent: () => import('@baf/ui/layout').then((m) => m.FooterComponent),
         outlet: 'footer',
       },
       {
