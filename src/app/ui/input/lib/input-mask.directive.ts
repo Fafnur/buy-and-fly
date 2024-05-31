@@ -1,4 +1,4 @@
-import { Directive, ElementRef, forwardRef, HostListener, inject, InjectionToken, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, forwardRef, HostListener, inject, InjectionToken, input, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { ChangeFn, TouchedFn } from '@baf/core';
@@ -34,7 +34,7 @@ export class InputMaskDirective implements ControlValueAccessor, OnInit {
     })
     .join('|')})`;
 
-  @Input({ required: true }) mask!: string;
+  readonly mask = input.required<string>();
 
   onChange!: ChangeFn;
   onTouched!: TouchedFn;
@@ -72,7 +72,7 @@ export class InputMaskDirective implements ControlValueAccessor, OnInit {
       return value;
     }
 
-    const masked = this.valueToFormat(value, this.mask, this.lastValue ? this.lastValue.length > value.length : false, this.lastValue);
+    const masked = this.valueToFormat(value, this.mask(), this.lastValue ? this.lastValue.length > value.length : false, this.lastValue);
     this.lastValue = masked;
 
     return masked;
