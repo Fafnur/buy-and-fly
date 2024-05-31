@@ -62,13 +62,13 @@ export class InputMaskDirective implements ControlValueAccessor, OnInit {
   }
 
   ngOnInit(): void {
-    if (!this.mask) {
+    if (!this.mask()) {
       console.warn(`Property mask should not be empty for input:`, this.elementRef.nativeElement);
     }
   }
 
   getMaskedValue(value: string | undefined | null): string | undefined | null {
-    if (!this.mask || !value || value === this.lastValue) {
+    if (!this.mask() || !value || value === this.lastValue) {
       return value;
     }
 

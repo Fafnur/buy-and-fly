@@ -1,3 +1,4 @@
+@use 'src/stylesheets/align' as align;
 @use 'src/stylesheets/size' as size;
 @use 'src/stylesheets/typography' as typography;
 
@@ -11,4 +12,5 @@
       @include typography.headline-large();
     }
   }
+  @include align.make-align();
 }

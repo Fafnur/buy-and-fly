@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, ElementRef } from '@angular/core';
 
-import { DisabledDirective, ExtraSizeDirective, ModeDirective } from '@baf/ui/utils';
+import { DisabledDirective, ExtraSizeDirective, ModeDirective, WidthDirective } from '@baf/ui/utils';
 
 import { AnchorBase, ButtonBase } from '../base/button-base';
 
@@ -27,6 +27,10 @@ import { AnchorBase, ButtonBase } from '../base/button-base';
     {
       directive: DisabledDirective,
       inputs: ['disabled'],
+    },
+    {
+      directive: WidthDirective,
+      inputs: ['width'],
     },
   ],
 })
@@ -59,6 +63,10 @@ export class ButtonComponent extends ButtonBase {
     {
       directive: DisabledDirective,
       inputs: ['disabled'],
+    },
+    {
+      directive: WidthDirective,
+      inputs: ['width'],
     },
   ],
 })

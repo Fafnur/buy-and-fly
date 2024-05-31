@@ -4,3 +4,4 @@ export * from './lib/extra-size.directive';
 export * from './lib/mode.directive';
 export * from './lib/size.directive';
 export * from './lib/types';
+export * from './lib/width.directive';
