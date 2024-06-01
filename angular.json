@@ -29,8 +29,9 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-builders/custom-esbuild:application",
           "options": {
+            "indexHtmlTransformer": "./esbuild/html.transformer.ts",
             "outputPath": "dist/buy-and-fly",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -79,7 +80,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-esbuild:dev-server",
           "options": {
             "proxyConfig": "src/proxy.conf.json"
           },
