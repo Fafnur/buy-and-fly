@@ -32,9 +32,9 @@ export class SearchRailwayFormComponent {
   readonly form = initialSearchRailwayFormGroup;
 
   readonly options: SearchFormOptions<SearchRailwayForm> = {
-    from: { label: 'Станция отправления', id: 'from' },
-    to: { label: 'Станция прибытия', id: 'to' },
-    startDate: { label: 'Когда', id: 'startDate' },
-    passengers: { label: 'Пассажиры', id: 'passengers' },
+    from: { label: $localize`Search Field:Departure station`, id: 'from' },
+    to: { label: $localize`Search Field:Arrival station`, id: 'to' },
+    startDate: { label: $localize`Search Field:When`, id: 'startDate' },
+    passengers: { label: $localize`Search Field:Passengers`, id: 'passengers' },
   };
 }

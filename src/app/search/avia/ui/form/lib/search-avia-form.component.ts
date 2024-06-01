@@ -32,10 +32,10 @@ export class SearchAviaFormComponent {
   readonly form = initialSearchAviaFormGroup;
 
   readonly options: SearchFormOptions<SearchAviaForm> = {
-    from: { label: 'Откуда', id: 'from' },
-    to: { label: 'Куда', id: 'to' },
-    startDate: { label: 'Когда', id: 'startDate' },
-    endDate: { label: 'Обратно', id: 'endDate', startDate: this.form.controls.startDate },
-    passengers: { label: 'Пассажиры', id: 'passengers' },
+    from: { label: $localize`Search Field:Where from`, id: 'from' },
+    to: { label: $localize`Search Field:Where to`, id: 'to' },
+    startDate: { label: $localize`Search Field:When`, id: 'startDate' },
+    endDate: { label: $localize`Search Field:When back`, id: 'endDate', startDate: this.form.controls.startDate },
+    passengers: { label: $localize`Search Field:Passengers`, id: 'passengers' },
   };
 }
