@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AlignDirective, SizeDirective } from '@baf/ui/utils';
 
 @Component({
-  selector: 'baf-headline,[baf-headline]',
+  selector: 'baf-headline,[baf-headline],[bafHeadline]',
   standalone: true,
   template: '<ng-content/>',
   styleUrl: './headline.component.scss',
@@ -14,11 +14,11 @@ import { AlignDirective, SizeDirective } from '@baf/ui/utils';
   hostDirectives: [
     {
       directive: SizeDirective,
-      inputs: ['size'],
+      inputs: ['bafSize'],
     },
     {
       directive: AlignDirective,
-      inputs: ['align'],
+      inputs: ['bafAlign'],
     },
   ],
 })

@@ -17,11 +17,11 @@ import { AnchorBase, ButtonBase } from '../base/button-base';
   hostDirectives: [
     {
       directive: ModeDirective,
-      inputs: ['mode'],
+      inputs: ['bafMode'],
     },
     {
       directive: ExtraSizeDirective,
-      inputs: ['size'],
+      inputs: ['bafSize'],
     },
     {
       directive: DisabledDirective,
@@ -29,7 +29,7 @@ import { AnchorBase, ButtonBase } from '../base/button-base';
     },
     {
       directive: WidthDirective,
-      inputs: ['width'],
+      inputs: ['bafWidth'],
     },
   ],
 })
@@ -52,11 +52,11 @@ export class ButtonComponent extends ButtonBase {
   hostDirectives: [
     {
       directive: ModeDirective,
-      inputs: ['mode'],
+      inputs: ['bafMode'],
     },
     {
       directive: ExtraSizeDirective,
-      inputs: ['size'],
+      inputs: ['bafSize'],
     },
     {
       directive: DisabledDirective,
@@ -64,7 +64,7 @@ export class ButtonComponent extends ButtonBase {
     },
     {
       directive: WidthDirective,
-      inputs: ['width'],
+      inputs: ['bafWidth'],
     },
   ],
 })

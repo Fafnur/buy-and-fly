@@ -3,12 +3,11 @@ import { Directive, HostBinding, input } from '@angular/core';
 import { Width } from './types';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
-  selector: '[width]',
+  selector: '[bafWidth]',
   standalone: true,
 })
 export class WidthDirective {
-  readonly width = input<Width>();
+  readonly width = input<Width>(undefined, { alias: 'bafWidth' });
 
   @HostBinding('class.width-max') get isLeft(): boolean {
     return this.width() === 'max';

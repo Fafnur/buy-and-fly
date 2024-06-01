@@ -17,11 +17,11 @@ import { AnchorBase, ButtonBase } from '../base/button-base';
   hostDirectives: [
     {
       directive: ModeDirective,
-      inputs: ['mode'],
+      inputs: ['bafMode'],
     },
     {
       directive: ExtraSizeDirective,
-      inputs: ['size'],
+      inputs: ['bafSize'],
     },
     {
       directive: DisabledDirective,
@@ -48,7 +48,11 @@ export class IconButtonComponent extends ButtonBase {
   hostDirectives: [
     {
       directive: ModeDirective,
-      inputs: ['mode'],
+      inputs: ['bafMode'],
+    },
+    {
+      directive: ExtraSizeDirective,
+      inputs: ['bafSize'],
     },
     {
       directive: DisabledDirective,

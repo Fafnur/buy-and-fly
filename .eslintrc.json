@@ -60,6 +60,14 @@
           {
             "selector": "enumMember",
             "format": ["PascalCase"]
+          },
+          {
+            "selector": "property",
+            "format": null,
+            "filter": {
+              "regex": "^(host)$",
+              "match": false
+            }
           }
         ],
         "complexity": "error",

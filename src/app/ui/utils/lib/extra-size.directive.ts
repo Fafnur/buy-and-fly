@@ -3,12 +3,11 @@ import { Directive, HostBinding, input } from '@angular/core';
 import { ExtraSize } from './types';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
-  selector: '[size]',
+  selector: '[bafSize]',
   standalone: true,
 })
 export class ExtraSizeDirective {
-  readonly size = input<ExtraSize>('medium');
+  readonly size = input<ExtraSize>(undefined, { alias: 'bafSize' });
 
   @HostBinding('class.size-xsmall') get isXSmall(): boolean {
     return this.size() === 'xsmall';

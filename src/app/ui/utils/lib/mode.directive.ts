@@ -3,12 +3,11 @@ import { Directive, HostBinding, input } from '@angular/core';
 import { ButtonMode } from './types';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
-  selector: '[mode]',
+  selector: '[bafMode]',
   standalone: true,
 })
 export class ModeDirective {
-  readonly mode = input<ButtonMode>('primary');
+  readonly mode = input<ButtonMode>('primary', { alias: 'bafMode' });
 
   @HostBinding('class.mode-primary') get isModePrimary() {
     return this.mode() === 'primary';

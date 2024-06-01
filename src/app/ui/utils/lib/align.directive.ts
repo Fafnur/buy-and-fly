@@ -3,12 +3,11 @@ import { Directive, HostBinding, input } from '@angular/core';
 import { Align } from './types';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
-  selector: '[align]',
+  selector: '[bafAlign]',
   standalone: true,
 })
 export class AlignDirective {
-  readonly align = input<Align>('left');
+  readonly align = input<Align>(undefined, { alias: 'bafAlign' });
 
   @HostBinding('class.align-left') get isLeft(): boolean {
     return this.align() === 'left';

@@ -1,3 +1,4 @@
+@use 'src/stylesheets/align' as align;
 @use 'src/stylesheets/device' as device;
 
 :host {
@@ -15,6 +16,8 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  @include align.make-align();
 
   @include device.media-tablet-portrait() {
     &:not(.fluid) {

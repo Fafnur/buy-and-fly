@@ -27,7 +27,7 @@ import { MobileDirective } from './mobile.directive';
     },
     {
       directive: AlignDirective,
-      inputs: ['align'],
+      inputs: ['bafAlign'],
     },
   ],
 })
