@@ -1,5 +1,8 @@
+import { Route } from '@angular/router';
+
 export const PATHS = {
   home: '',
+  homeAvia: '',
   homeHotels: 'hotels',
   homeTours: 'tours',
   homeRailways: 'railways',
@@ -35,4 +38,51 @@ export interface NavigationLink<T extends PathValues = PathValues> {
   readonly route: T;
   readonly params?: GetPathParams<T>;
   readonly suffix?: string;
+}
+
+export interface NavigationChild {
+  readonly path: PathValues;
+  readonly redirectTo?: string;
+}
+
+export function getRoute<T extends PathValues>(path: T, params: Record<string, string | number> = {}): (string | number)[] {
+  const segments = path.split('/').filter((value) => value?.length);
+  const routeWithParams: (string | number)[] = ['/'];
+
+  for (const segment of segments) {
+    if (segment.charAt(0) === ':') {
+      const paramName = segment.slice(1);
+      if (params && params[paramName]) {
+        routeWithParams.push(params[paramName]);
+      } else {
+        routeWithParams.push(paramName);
+      }
+    } else {
+      routeWithParams.push(segment);
+    }
+  }
+
+  return routeWithParams;
+}
+
+export function getChildPath(path: PathValues, parent: PathValues): string {
+  return path.substring(parent.length + 1);
+}
+
+export function childNavigation(route: NavigationChild, parent: PathValues): Route {
+  const redirectTo = route.redirectTo ? `/${route.redirectTo}` : undefined;
+
+  if (!route.path.length || route.path.length < parent.length + 1) {
+    return { ...route, redirectTo };
+  }
+
+  return {
+    ...route,
+    redirectTo,
+    path: getChildPath(route.path, parent),
+  };
+}
+
+export function withChildNavigation(parent: PathValues): (route: NavigationChild) => Route {
+  return (route: NavigationChild) => childNavigation(route, parent);
 }

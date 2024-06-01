@@ -1,13 +1,15 @@
 import { Routes } from '@angular/router';
 
+import { PATHS } from '@baf/core';
+
 export const errorsRoutes: Routes = [
   {
-    path: 'permission-denied',
+    path: PATHS.permissionDenied,
     title: 'Permission Denied',
     loadComponent: () => import('@baf/errors/permission-denied/page').then((m) => m.PermissionDeniedPageComponent),
   },
   {
-    path: 'server-error',
+    path: PATHS.serverError,
     title: 'Internal Server Error',
     loadComponent: () => import('@baf/errors/server-error/page').then((m) => m.ServerErrorPageComponent),
   },

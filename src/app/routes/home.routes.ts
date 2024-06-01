@@ -1,8 +1,11 @@
 import { Routes } from '@angular/router';
 
+import { PATHS } from '@baf/core';
+
 export const homeRoutes: Routes = [
   {
     path: '',
+    title: $localize`:Home Title:Buy & Fly - Flights with 10% cashback`,
     loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
     children: [
       {
@@ -13,7 +16,8 @@ export const homeRoutes: Routes = [
     ],
   },
   {
-    path: 'hotels',
+    path: PATHS.homeHotels,
+    title: $localize`:Home Title:Buy & Fly - Hotels with 10% cashback`,
     loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
     children: [
       {
@@ -24,12 +28,14 @@ export const homeRoutes: Routes = [
     ],
   },
   {
-    path: 'tours',
+    path: PATHS.homeTours,
+    title: $localize`:Home Title:Buy & Fly - Tours with 10% cashback`,
     loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
     children: [],
   },
   {
-    path: 'railways',
+    path: PATHS.homeRailways,
+    title: $localize`:Home Title:Buy & Fly - Railways with 5% cashback`,
     loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
     children: [
       {

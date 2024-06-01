@@ -1,12 +1,14 @@
 import { Routes } from '@angular/router';
 
+import { PATHS, withChildNavigation } from '@baf/core';
+
 export const searchRoutes: Routes = [
   {
     path: '',
     loadComponent: () => import('@baf/search/ui/layout').then((m) => m.SearchLayoutComponent),
     children: [
       {
-        path: 'avia',
+        path: PATHS.searchAvia,
         loadComponent: () => import('@baf/search/page').then((m) => m.SearchPageComponent),
         children: [
           {
@@ -17,7 +19,7 @@ export const searchRoutes: Routes = [
         ],
       },
       {
-        path: 'hotels',
+        path: PATHS.searchHotel,
         loadComponent: () => import('@baf/search/page').then((m) => m.SearchPageComponent),
         children: [
           {
@@ -28,12 +30,12 @@ export const searchRoutes: Routes = [
         ],
       },
       {
-        path: 'tours',
+        path: PATHS.searchTour,
         loadComponent: () => import('@baf/search/page').then((m) => m.SearchPageComponent),
         children: [],
       },
       {
-        path: 'railways',
+        path: PATHS.searchRailway,
         loadComponent: () => import('@baf/search/page').then((m) => m.SearchPageComponent),
         children: [
           {
@@ -43,6 +45,6 @@ export const searchRoutes: Routes = [
           },
         ],
       },
-    ],
+    ].map(withChildNavigation(PATHS.search)),
   },
 ];

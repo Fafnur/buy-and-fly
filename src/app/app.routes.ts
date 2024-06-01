@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 
+import { PATHS } from '@baf/core';
+
 export const routes: Routes = [
   {
     path: '',
@@ -20,7 +22,7 @@ export const routes: Routes = [
         loadChildren: () => import('./routes/home.routes').then((m) => m.homeRoutes),
       },
       {
-        path: 'search',
+        path: PATHS.search,
         loadChildren: () => import('./routes/search.routes').then((m) => m.searchRoutes),
       },
       {
