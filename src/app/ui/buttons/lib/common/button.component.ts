@@ -8,8 +8,7 @@ import { AnchorBase, ButtonBase } from '../base/button-base';
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'button[baf-button]',
   standalone: true,
-  imports: [],
-  templateUrl: './button.component.html',
+  template: '<ng-content />',
   styleUrl: './button.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
@@ -43,11 +42,10 @@ export class ButtonComponent extends ButtonBase {
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'a[baf-button]',
-  templateUrl: './button.component.html',
+  standalone: true,
+  template: '<ng-content />',
   styleUrls: ['./button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
     class: 'baf-button',
   },
