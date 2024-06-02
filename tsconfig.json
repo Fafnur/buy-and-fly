@@ -22,6 +22,7 @@
     "baseUrl": ".",
     "paths": {
       "@baf/core": ["src/app/core/index.ts"],
+      "@baf/development/page": ["src/app/development/page/index.ts"],
       "@baf/errors/not-found/page": ["src/app/errors/not-found/page/index.ts"],
       "@baf/errors/permission-denied/page": ["src/app/errors/permission-denied/page/index.ts"],
       "@baf/errors/server-error/page": ["src/app/errors/server-error/page/index.ts"],
