@@ -52,12 +52,42 @@
         <note priority="1" from="description">Perhaps you were looking for pages</note>
         <note priority="1" from="meaning">Not Found</note>
       </trans-unit>
+      <trans-unit id="8547234452468048431" datatype="html">
+        <source>Avia cashback 10%</source>
+        <target state="translated">Кэшбэк 10% за авиа</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/must-buy/must-buy-avia/must-buy-avia.component.html</context>
+          <context context-type="linenumber">1733,1734</context>
+        </context-group>
+        <note priority="1" from="description">Avia Title</note>
+        <note priority="1" from="meaning">Must Buy</note>
+      </trans-unit>
+      <trans-unit id="1913693057193175386" datatype="html">
+        <source>Hotels cashback 10%</source>
+        <target state="translated">Кэшбэк 10% за отели</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/must-buy/must-buy-hotel/must-buy-hotel.component.html</context>
+          <context context-type="linenumber">1948,1949</context>
+        </context-group>
+        <note priority="1" from="description">Hotel Title</note>
+        <note priority="1" from="meaning">Must Buy</note>
+      </trans-unit>
+      <trans-unit id="5984803957501853253" datatype="html">
+        <source>Tour cashback 4%</source>
+        <target state="translated">Кэшбэк 4% за туры</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/must-buy/must-buy-tour/must-buy-tour.component.html</context>
+          <context context-type="linenumber">1623,1624</context>
+        </context-group>
+        <note priority="1" from="description">Tour Title</note>
+        <note priority="1" from="meaning">Must Buy</note>
+      </trans-unit>
       <trans-unit id="9025760594611774289" datatype="html">
         <source>Must buy</source>
         <target state="translated">Надо брать</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/page/lib/must-buy/must-buy.component.html</context>
-          <context context-type="linenumber">1,2</context>
+          <context context-type="linenumber">1,3</context>
         </context-group>
         <note priority="1" from="description">Title</note>
         <note priority="1" from="meaning">Home Must Buy</note>
