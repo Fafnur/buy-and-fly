@@ -158,6 +158,46 @@
         </context-group>
         <note priority="1" from="description">Home Nav</note>
       </trans-unit>
+      <trans-unit id="596338390709170052" datatype="html">
+        <source>For advantageous travel</source>
+        <target state="translated">Для выгодных путешествий</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/traveling/traveling.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Home Traveling</note>
+      </trans-unit>
+      <trans-unit id="7957483041651404821" datatype="html">
+        <source>Credit card with cashback up to 10%</source>
+        <target state="translated">Карта Alfa Travel c кэшбэком до 10%</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/traveling/traveling.component.html</context>
+          <context context-type="linenumber">2762,2763</context>
+        </context-group>
+        <note priority="1" from="description">Credit Card</note>
+        <note priority="1" from="meaning">Home Traveling</note>
+      </trans-unit>
+      <trans-unit id="319729900013920986" datatype="html">
+        <source>Traveling with a card will be even more profitable</source>
+        <target state="translated">С картой путешествия будут еще выгоднее</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/traveling/traveling.component.html</context>
+          <context context-type="linenumber">2763,2766</context>
+        </context-group>
+        <note priority="1" from="description">Credit Card Hint</note>
+        <note priority="1" from="meaning">Home Traveling</note>
+      </trans-unit>
+      <trans-unit id="2304716733612789082" datatype="html">
+        <source>Order a card</source>
+        <target state="translated">Заказать карту</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/traveling/traveling.component.html</context>
+          <context context-type="linenumber">2766,2769</context>
+        </context-group>
+        <note priority="1" from="description">Order</note>
+        <note priority="1" from="meaning">Home Traveling</note>
+      </trans-unit>
       <trans-unit id="7496212309624327441" datatype="html">
         <source>Rules for using the site</source>
         <target state="translated">Правила пользования сайтом</target>

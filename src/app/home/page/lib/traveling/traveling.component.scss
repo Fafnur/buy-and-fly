@@ -1,9 +1,16 @@
-:host {
+@use 'src/stylesheets/device' as device;
+
+.traveling-info {
   position: relative;
 }
 
-//.traveling-info {
-//  position: absolute;
-//  top: 1rem;
-//  left: 2rem;
-//}
+.traveling-card {
+  text-shadow: rgba(0, 0, 0, 0.3) 0 0;
+
+  @include device.media-tablet-up() {
+    position: absolute;
+    top: 4rem;
+    left: 2rem;
+    z-index: 1;
+  }
+}
