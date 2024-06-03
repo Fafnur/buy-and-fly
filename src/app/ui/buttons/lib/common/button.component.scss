@@ -12,6 +12,7 @@
   box-shadow: none;
   border-radius: 3px;
   cursor: pointer;
+  text-decoration: none;
 
   &.mode-primary {
     @include button.mode(--md-sys-color-primary-container, --md-sys-color-on-primary, --md-sys-color-primary);

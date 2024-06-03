@@ -11,6 +11,7 @@ export const PATHS = {
   terms: 'terms',
   documents: 'documents',
   faq: 'faq',
+  cards: 'cards',
 
   notFound: 'not-found',
   serverError: 'server-error',

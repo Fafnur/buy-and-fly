@@ -23,4 +23,9 @@ export const documentsRoutes: Routes = [
     title: $localize`:Documents FAQ:FAQ`,
     loadComponent: () => import('@baf/development/page').then((m) => m.DevelopmentPageComponent),
   },
+  {
+    path: PATHS.cards,
+    title: $localize`:Cards:Application`,
+    loadComponent: () => import('@baf/development/page').then((m) => m.DevelopmentPageComponent),
+  },
 ];

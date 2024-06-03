@@ -30,6 +30,10 @@ export const routes: Routes = [
         loadChildren: () => import('./routes/search.routes').then((m) => m.searchRoutes),
       },
       {
+        path: PATHS.cards,
+        loadChildren: () => import('./routes/search.routes').then((m) => m.searchRoutes),
+      },
+      {
         path: '',
         loadChildren: () => import('./routes/errors.routes').then((m) => m.errorsRoutes),
       },

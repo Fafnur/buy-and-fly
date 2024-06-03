@@ -1,15 +1,19 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
-import { ButtonComponent } from '@baf/ui/buttons';
+import { PathPipe, PATHS } from '@baf/core';
+import { AnchorComponent } from '@baf/ui/buttons';
 import { HeadlineComponent } from '@baf/ui/headline';
 import { TitleComponent } from '@baf/ui/title';
 
 @Component({
   selector: 'baf-traveling',
   standalone: true,
-  imports: [TitleComponent, HeadlineComponent, ButtonComponent],
+  imports: [TitleComponent, HeadlineComponent, AnchorComponent, RouterLink, PathPipe],
   templateUrl: './traveling.component.html',
   styleUrl: './traveling.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TravelingComponent {}
+export class TravelingComponent {
+  readonly paths = PATHS;
+}
