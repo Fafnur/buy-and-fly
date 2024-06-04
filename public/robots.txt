@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /api
+
+User-agent: Yandex
+Disallow: /api
+Clean-param: bonus&utm_source&utm_medium&utm_campaign&utm_term&utm_content&click_id&appstore&platform
+
+Host: https://buy-and-fly.fafn.ru
+Sitemap: https://buy-and-fly.fafn.ru/sitemap.xml

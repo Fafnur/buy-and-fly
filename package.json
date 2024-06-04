@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "extract-i18n": "ng extract-i18n --out-file=src/i18n/source.xlf",
-    "serve:ssr:buy-and-fly": "node dist/buy-and-fly/server/server.mjs",
+    "serve": "node dist/buy-and-fly/server/ru/server.mjs",
     "lint": "ng lint"
   },
   "private": true,
