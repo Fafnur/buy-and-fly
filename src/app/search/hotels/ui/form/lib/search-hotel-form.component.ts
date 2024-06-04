@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, output } from '@angular/core';
 
-import { SearchFormOptions } from '@baf/search/common';
+import { PATHS } from '@baf/core';
+import { SearchFormOptions, SearchFormSubmit } from '@baf/search/common';
 import { initialSearchHotelFormGroup, SearchHotelForm } from '@baf/search/hotels/common';
 import {
   SearchDateComponent,
@@ -28,8 +29,11 @@ import { ButtonComponent } from '@baf/ui/buttons';
   styleUrl: './search-hotel-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchHotelFormComponent {
+export class SearchHotelFormComponent implements SearchFormSubmit {
   readonly form = initialSearchHotelFormGroup;
+  readonly submitted = output<SearchHotelForm>();
+
+  readonly redirectTo = PATHS.searchHotel;
 
   readonly options: SearchFormOptions<SearchHotelForm> = {
     city: { label: $localize`:Search Field:City`, id: 'city' },
@@ -37,4 +41,8 @@ export class SearchHotelFormComponent {
     endDate: { label: $localize`:Search Field:When back`, id: 'endDate', startDate: this.form.controls.startDate },
     passengers: { label: $localize`:Search Field:Guests`, id: 'passengers' },
   };
+
+  onSubmit(): void {
+    this.submitted.emit(this.form.getRawValue());
+  }
 }

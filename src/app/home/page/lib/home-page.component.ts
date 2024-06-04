@@ -1,6 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
 
+import { getRoute } from '@baf/core';
+import { SearchFormSubmit } from '@baf/search/common';
 import { ContainerComponent } from '@baf/ui/container';
 import { SectionComponent } from '@baf/ui/section';
 
@@ -29,4 +31,13 @@ import { TravelingComponent } from './traveling/traveling.component';
   styleUrl: './home-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomePageComponent {}
+export class HomePageComponent {
+  private readonly router = inject(Router);
+
+  onActivate(component: SearchFormSubmit): void {
+    component.submitted.subscribe((form) => {
+      console.log(form);
+      this.router.navigate(getRoute(component.redirectTo, {}));
+    });
+  }
+}

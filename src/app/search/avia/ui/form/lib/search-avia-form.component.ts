@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, output } from '@angular/core';
 
+import { PATHS } from '@baf/core';
 import { initialSearchAviaFormGroup, SearchAviaForm } from '@baf/search/avia/common';
-import { SearchFormOptions } from '@baf/search/common';
+import { SearchFormOptions, SearchFormSubmit } from '@baf/search/common';
 import {
   SearchDateComponent,
   SearchDestinationComponent,
@@ -28,8 +29,11 @@ import { ButtonComponent } from '@baf/ui/buttons';
   styleUrl: './search-avia-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchAviaFormComponent {
+export class SearchAviaFormComponent implements SearchFormSubmit {
   readonly form = initialSearchAviaFormGroup;
+  readonly submitted = output<SearchAviaForm>();
+
+  readonly redirectTo = PATHS.searchAvia;
 
   readonly options: SearchFormOptions<SearchAviaForm> = {
     from: { label: $localize`:Search Field:Where from`, id: 'from' },
@@ -38,4 +42,8 @@ export class SearchAviaFormComponent {
     endDate: { label: $localize`:Search Field:When back`, id: 'endDate', startDate: this.form.controls.startDate },
     passengers: { label: $localize`:Search Field:Passengers`, id: 'passengers' },
   };
+
+  onSubmit(): void {
+    this.submitted.emit(this.form.getRawValue());
+  }
 }

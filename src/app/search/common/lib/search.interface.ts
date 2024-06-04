@@ -1,3 +1,7 @@
+import { OutputEmitterRef } from '@angular/core';
+
+import { PathValues } from '@baf/core';
+
 export enum SearchType {
   Avia = 'avia',
   Hotel = 'hotel',
@@ -54,3 +58,8 @@ export type SearchFormOptions<T> = {
     readonly placeholder?: string;
   };
 };
+
+export interface SearchFormSubmit {
+  readonly submitted: OutputEmitterRef<unknown>;
+  readonly redirectTo: PathValues;
+}
