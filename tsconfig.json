@@ -51,6 +51,7 @@
       "@baf/ui/label": ["src/app/ui/label/index.ts"],
       "@baf/ui/layout": ["src/app/ui/layout/index.ts"],
       "@baf/ui/nav": ["src/app/ui/nav/index.ts"],
+      "@baf/ui/section": ["src/app/ui/section/index.ts"],
       "@baf/ui/title": ["src/app/ui/title/index.ts"],
       "@baf/ui/utils": ["src/app/ui/utils/index.ts"]
     }
