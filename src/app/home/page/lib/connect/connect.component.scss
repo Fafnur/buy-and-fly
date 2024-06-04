@@ -1,0 +1,15 @@
+@use 'src/stylesheets/device' as device;
+
+.baf-card {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include device.media-tablet-up() {
+    flex-direction: row;
+    justify-content: space-between;
+
+    svg {
+      max-width: 10rem;
+    }
+  }
+}
