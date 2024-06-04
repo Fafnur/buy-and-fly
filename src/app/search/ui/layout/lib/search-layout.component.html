@@ -1,6 +1,10 @@
-<aside>
-  <router-outlet name="aside" />
-</aside>
-<div>
-  <router-outlet />
-</div>
+<baf-container>
+  <router-outlet name="form" />
+
+  <div class="row">
+    <div class="column"><router-outlet name="aside" /></div>
+    <div class="column">
+      <router-outlet />
+    </div>
+  </div>
+</baf-container>

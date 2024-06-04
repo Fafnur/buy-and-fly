@@ -1,0 +1,29 @@
+@use 'src/stylesheets/device' as device;
+
+.row {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include device.media-tablet-up() {
+    flex-direction: row;
+  }
+}
+
+.column {
+  @include device.media-tablet-up() {
+    &:first-child {
+      width: 33.333%;
+    }
+    &:last-child {
+      width: 66.667%;
+    }
+  }
+  @include device.media-web() {
+    &:first-child {
+      width: 25%;
+    }
+    &:last-child {
+      width: 75%;
+    }
+  }
+}
