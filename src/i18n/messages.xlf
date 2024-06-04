@@ -72,6 +72,96 @@
         <note priority="1" from="description">Perhaps you were looking for pages</note>
         <note priority="1" from="meaning">Not Found</note>
       </trans-unit>
+      <trans-unit id="4765559492707899151" datatype="html">
+        <source>It&apos;s convenient with us</source>
+        <target state="translated">С нами удобно</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="722877757859226979" datatype="html">
+        <source>Get cashback for everything</source>
+        <target state="translated">Получайте кэшбэк за всё</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+        <note priority="1" from="description">Cashback Title</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="8742444336658803495" datatype="html">
+        <source>In dollars or miles - if you have a Travel card</source>
+        <target state="translated">В рублях или милях — если есть карта Travel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">19,22</context>
+        </context-group>
+        <note priority="1" from="description">Cashback Desctiption</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="6142286865668191740" datatype="html">
+        <source>Earn airline miles</source>
+        <target state="translated">Копите мили авиакомпаний</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+        <note priority="1" from="description">Miles Title</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="3037781987174724684" datatype="html">
+        <source>Add a bonus card to earn miles</source>
+        <target state="translated">Добавьте бонусную карту, чтобы получать мили</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">33,36</context>
+        </context-group>
+        <note priority="1" from="description">Miles Desctiption</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="3635382804250537108" datatype="html">
+        <source>Pay as you want</source>
+        <target state="translated">Платите как хотите</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+        <note priority="1" from="description">Pay Title</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="639588811535151606" datatype="html">
+        <source>Any trip can be paid for immediately or in installments</source>
+        <target state="translated">Любую поездку можно оплатить сразу или частями</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">47,50</context>
+        </context-group>
+        <note priority="1" from="description">Pay Desctiption</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="8805274365156137733" datatype="html">
+        <source>How everything works here</source>
+        <target state="translated">Как тут всё устроено</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <note priority="1" from="description">Work Title</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="7017771624109993275" datatype="html">
+        <source>We tell you how to travel with maximum benefit</source>
+        <target state="translated">Рассказываем, как путешествовать с максимальной выгодой</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">57,60</context>
+        </context-group>
+        <note priority="1" from="description">Work Desctiption</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
       <trans-unit id="8547234452468048431" datatype="html">
         <source>Avia cashback 10%</source>
         <target state="translated">Кэшбэк 10% за авиа</target>
@@ -170,7 +260,7 @@
       </trans-unit>
       <trans-unit id="7957483041651404821" datatype="html">
         <source>Credit card with cashback up to 10%</source>
-        <target state="translated">Карта Alfa Travel c кэшбэком до 10%</target>
+        <target state="translated">Карта c кэшбэком до 10%</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/page/lib/traveling/traveling.component.html</context>
           <context context-type="linenumber">2762,2763</context>
