@@ -47,6 +47,7 @@ export interface SearchCityOrAirport {
   readonly name: string;
   readonly country_name: string;
   readonly city_name: string;
+  readonly value: string;
 }
 /* eslint-enable @typescript-eslint/naming-convention */
 

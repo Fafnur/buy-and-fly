@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 
 import { getRoute } from '@baf/core';
+import { SearchAviaForm } from '@baf/search/avia/common';
 import { SearchFormSubmit } from '@baf/search/common';
 import { ContainerComponent } from '@baf/ui/container';
 import { SectionComponent } from '@baf/ui/section';
@@ -36,8 +37,15 @@ export class HomePageComponent {
 
   onActivate(component: SearchFormSubmit): void {
     component.submitted.subscribe((form) => {
-      console.log(form);
-      this.router.navigate(getRoute(component.redirectTo, {}));
+      // SearchAviaForm - all variants fields
+      const formMapped = form as SearchAviaForm;
+
+      const queryParams = {
+        ...(form as Record<string, string>),
+        from: typeof formMapped.from !== 'string' ? formMapped.from.value : formMapped.from,
+        to: typeof formMapped.to !== 'string' ? formMapped.to.value : formMapped.to,
+      };
+      void this.router.navigate(getRoute(component.redirectTo), { queryParams });
     });
   }
 }
