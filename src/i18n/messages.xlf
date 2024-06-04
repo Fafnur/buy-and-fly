@@ -288,6 +288,88 @@
         </context-group>
         <note priority="1" from="description">Home Nav</note>
       </trans-unit>
+      <trans-unit id="4125067935202080912" datatype="html">
+        <source>Frequently asked questions</source>
+        <target state="translated">Частые вопросы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/questions/questions.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Questions</note>
+      </trans-unit>
+      <trans-unit id="5994687670026853096" datatype="html">
+        <source>When will cashback arrive?</source>
+        <target state="translated">Когда придет кэшбэк</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Questions Get Title</note>
+      </trans-unit>
+      <trans-unit id="2577818589657315381" datatype="html">
+        <source>Cashback for purchases in the Travel service will be credited on the 10th of the next month after your flight or stay. For example, if the flight was on August 29, then the cashback will be credited on September 10.</source>
+        <target state="translated">Кэшбэк за покупки в сервисе начислим 10 числа следующего месяца после перелета или проживания. Например, если перелет был 29 августа, то кэшбэк начислим 10 сентября.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Questions Get Description</note>
+      </trans-unit>
+      <trans-unit id="3466386795790118650" datatype="html">
+        <source>What is the maximum cashback for a purchase in the service?</source>
+        <target state="translated">Максимальный кэшбэк за покупку в сервисе</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Questions Cashback Title</note>
+      </trans-unit>
+      <trans-unit id="5002372331012054876" datatype="html">
+        <source>Cashback for purchases in the Alpha Travel service is unlimited. The cashback amount is shown before purchase under the price of a ticket or hotel. For example, if an air ticket cost 1,000 dollars, we will credit you with a cashback of 100 dollars or miles.</source>
+        <target state="translated">Кэшбэк за покупки в сервисе не ограничен. Размер кэшбэка показываем ещё до покупки под ценой билета или отеля. Например, если авиабилет стоил 100 000 рублей, начислим кэшбэк 10 000 рублей или миль.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Questions Cashback Description</note>
+      </trans-unit>
+      <trans-unit id="1564247502165299899" datatype="html">
+        <source>Exchange or refund of air tickets</source>
+        <target state="translated">Обмен или возврат авиабилетов</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Questions Exchange Title</note>
+      </trans-unit>
+      <trans-unit id="6117276997544387633" datatype="html">
+        <source>To return a ticket, use the feedback form. Please note that processing a return requires additional processing time - at least three hours. Therefore, the processing time for the registration procedure should be added to the allowable return period specified by the airline in the fare rules.</source>
+        <target state="translated">Для возврата билета воспользуйтесь формой обратной связи. Обращаем Ваше внимание, что на оформление возврата требуется дополнительное технологическое время - не менее 3 (трёх) часов. Поэтому к допустимому сроку проведения возврата, указанному авиакомпанией в правилах тарифа, следует прибавлять технологическое время на процедуру оформления.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Questions Exchange Description</note>
+      </trans-unit>
+      <trans-unit id="758902945117763023" datatype="html">
+        <source>How to pay for a ticket or accommodation with miles</source>
+        <target state="translated">Как оплатить билет или проживание за мили</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Questions Pay Title</note>
+      </trans-unit>
+      <trans-unit id="4879776168468036333" datatype="html">
+        <source>With miles accrued for paying with a Travel card, you can pay up to 100% of the order value. The minimum number of miles you can spend on one order is 10$. Select the desired flight and enter passenger information → Book and proceed to payment. On the next page, in the payment methods, select Only with miles or Card + miles.</source>
+        <target state="translated">Милями, начисленными за оплату картой Travel, вы можете оплатить до 100% от стоимости заказа. Минимальное количество миль, которое вы можете потратить на один заказ — 1000 рублей. Выберите нужный рейс и введите данные о пассажире → Бронировать и перейти к оплате. На следующей странице в способах оплаты выберите Tолько милями или Картой + милями.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/page/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Questions Pay Description</note>
+      </trans-unit>
       <trans-unit id="596338390709170052" datatype="html">
         <source>For advantageous travel</source>
         <target state="translated">Для выгодных путешествий</target>

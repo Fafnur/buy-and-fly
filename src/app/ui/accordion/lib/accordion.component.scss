@@ -1,0 +1,23 @@
+.accordion {
+  display: block;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--md-sys-color-surface-variant);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.accordion-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  line-height: 1;
+  user-select: none;
+}
+
+.accordion-body {
+  padding: 1rem 1rem 0 2rem;
+}
