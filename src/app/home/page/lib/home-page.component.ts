@@ -3,7 +3,7 @@ import { Router, RouterOutlet } from '@angular/router';
 
 import { getRoute } from '@baf/core';
 import { SearchAviaForm } from '@baf/search/avia/common';
-import { SearchFormSubmit } from '@baf/search/common';
+import { CanSubmit } from '@baf/search/common';
 import { ContainerComponent } from '@baf/ui/container';
 import { SectionComponent } from '@baf/ui/section';
 
@@ -35,17 +35,19 @@ import { TravelingComponent } from './traveling/traveling.component';
 export class HomePageComponent {
   private readonly router = inject(Router);
 
-  onActivate(component: SearchFormSubmit): void {
-    component.submitted.subscribe((form) => {
-      // SearchAviaForm - all variants fields
-      const formMapped = form as SearchAviaForm;
+  onActivate(component: CanSubmit | object): void {
+    if ('submitted' in component) {
+      component.submitted.subscribe((form) => {
+        // SearchAviaForm - all variants fields
+        const formMapped = form as SearchAviaForm;
 
-      const queryParams = {
-        ...(form as Record<string, string>),
-        from: typeof formMapped.from !== 'string' ? formMapped.from.value : formMapped.from,
-        to: typeof formMapped.to !== 'string' ? formMapped.to.value : formMapped.to,
-      };
-      void this.router.navigate(getRoute(component.redirectTo), { queryParams });
-    });
+        const queryParams = {
+          ...(form as Record<string, string>),
+          from: typeof formMapped.from !== 'string' ? formMapped.from.value : formMapped.from,
+          to: typeof formMapped.to !== 'string' ? formMapped.to.value : formMapped.to,
+        };
+        void this.router.navigate(getRoute(component.redirectTo), { queryParams });
+      });
+    }
   }
 }

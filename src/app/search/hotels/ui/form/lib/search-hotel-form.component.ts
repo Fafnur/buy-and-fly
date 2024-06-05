@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, output } from '@angular/core';
 
 import { PATHS } from '@baf/core';
-import { SearchFormOptions, SearchFormSubmit } from '@baf/search/common';
+import { CanSubmit, SearchFormOptions } from '@baf/search/common';
 import { initialSearchHotelFormGroup, SearchHotelForm } from '@baf/search/hotels/common';
 import {
   SearchDateComponent,
@@ -29,7 +29,7 @@ import { ButtonComponent } from '@baf/ui/buttons';
   styleUrl: './search-hotel-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchHotelFormComponent implements SearchFormSubmit {
+export class SearchHotelFormComponent implements CanSubmit {
   readonly form = initialSearchHotelFormGroup;
   readonly submitted = output<SearchHotelForm>();
 

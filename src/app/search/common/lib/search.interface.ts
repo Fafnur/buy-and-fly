@@ -60,7 +60,7 @@ export type SearchFormOptions<T> = {
   };
 };
 
-export interface SearchFormSubmit {
+export interface CanSubmit {
   readonly submitted: OutputEmitterRef<unknown>;
   readonly redirectTo: PathValues;
 }

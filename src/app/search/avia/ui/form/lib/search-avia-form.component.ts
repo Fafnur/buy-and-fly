@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, output } from '@angular/core';
 
 import { PATHS } from '@baf/core';
 import { initialSearchAviaFormGroup, SearchAviaForm } from '@baf/search/avia/common';
-import { SearchFormOptions, SearchFormSubmit } from '@baf/search/common';
+import { CanSubmit, SearchFormOptions } from '@baf/search/common';
 import {
   SearchDateComponent,
   SearchDestinationComponent,
@@ -29,7 +29,7 @@ import { ButtonComponent } from '@baf/ui/buttons';
   styleUrl: './search-avia-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchAviaFormComponent implements SearchFormSubmit {
+export class SearchAviaFormComponent implements CanSubmit {
   readonly form = initialSearchAviaFormGroup;
   readonly submitted = output<SearchAviaForm>();
 

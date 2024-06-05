@@ -4,7 +4,7 @@ import { PATHS } from '@baf/core';
 
 export const homeRoutes: Routes = [
   {
-    path: '',
+    path: PATHS.homeAvia,
     title: $localize`:Home Title:Buy & Fly - Flights with 10% cashback`,
     loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
     children: [
