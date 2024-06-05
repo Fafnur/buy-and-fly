@@ -4,11 +4,11 @@ import { RouterOutlet } from '@angular/router';
 import { ContainerComponent } from '@baf/ui/container';
 
 @Component({
-  selector: 'baf-search-layout',
+  selector: 'baf-search-results',
   standalone: true,
   imports: [RouterOutlet, ContainerComponent],
-  templateUrl: './search-layout.component.html',
-  styleUrl: './search-layout.component.scss',
+  templateUrl: './search-results.component.html',
+  styleUrl: './search-results.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchLayoutComponent {}
+export class SearchResultsComponent {}

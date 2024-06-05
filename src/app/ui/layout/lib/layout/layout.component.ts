@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'baf-layout',
+  selector: 'baf-results',
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './layout.component.html',

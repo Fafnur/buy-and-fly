@@ -26,9 +26,9 @@ export const PATHS = {
 
 export type PathValues = (typeof PATHS)[keyof typeof PATHS];
 
-type Split<Value extends string> = Value extends `${infer LValue}/${infer RValue}` ? Filter<LValue> | Split<RValue> : Filter<Value>;
-
 type Filter<T extends string> = T extends `:${infer Param}` ? Param : never;
+
+type Split<Value extends string> = Value extends `${infer LValue}/${infer RValue}` ? Filter<LValue> | Split<RValue> : Filter<Value>;
 
 export type GetPathParams<T extends string> = {
   [key in Split<T>]: string | number;
