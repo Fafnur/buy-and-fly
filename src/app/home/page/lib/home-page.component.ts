@@ -2,17 +2,18 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 
 import { getRoute } from '@baf/core';
+import {
+  ConnectComponent,
+  ConvenientWithUsComponent,
+  MustBuyComponent,
+  PromoComponent,
+  QuestionsComponent,
+  TravelingComponent,
+} from '@baf/home/ui/widgets';
 import { SearchAviaForm } from '@baf/search/avia/common';
 import { CanSubmit } from '@baf/search/common';
 import { ContainerComponent } from '@baf/ui/container';
 import { SectionComponent } from '@baf/ui/section';
-
-import { ConnectComponent } from './connect/connect.component';
-import { ConvenientWithUsComponent } from './convenient-with-us/convenient-with-us.component';
-import { MustBuyComponent } from './must-buy/must-buy.component';
-import { PromoComponent } from './promo/promo.component';
-import { QuestionsComponent } from './questions/questions.component';
-import { TravelingComponent } from './traveling/traveling.component';
 
 @Component({
   selector: 'baf-home-page',
