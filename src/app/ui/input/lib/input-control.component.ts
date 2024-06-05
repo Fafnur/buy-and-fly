@@ -24,7 +24,7 @@ import { InputComponent } from './input.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   host: {
-    class: 'baf-input-control is-value',
+    class: 'baf-input-control',
   },
 })
 export class InputControlComponent implements AfterViewInit, OnDestroy {
