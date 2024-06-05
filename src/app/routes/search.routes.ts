@@ -19,7 +19,7 @@ export const searchRoutes: Routes = [
       },
       {
         path: '',
-        loadComponent: () => import('@baf/search/ui/filters').then((m) => m.SearchFiltersComponent),
+        loadComponent: () => import('@baf/search/avia/ui/filters').then((m) => m.SearchFiltersAviaComponent),
         outlet: 'filters',
       },
     ],

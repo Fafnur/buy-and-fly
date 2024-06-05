@@ -64,3 +64,7 @@ export interface CanSubmit {
   readonly submitted: OutputEmitterRef<unknown>;
   readonly redirectTo: PathValues;
 }
+
+export interface CanFilter {
+  onReset(): void;
+}

@@ -1,1 +1,6 @@
 <p>search-filters works!</p>
+<ng-content />
+<div class="search-filters-actions">
+  <button type="button" baf-button bafMode="primary" bafSize="medium" bafWidth="max">Применить фильтры</button>
+  <button type="button" baf-button bafMode="tertiary" bafSize="medium" bafWidth="max" (click)="onReset()">Сбросить фильтры</button>
+</div>
