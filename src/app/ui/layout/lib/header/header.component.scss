@@ -17,7 +17,14 @@
   align-items: center;
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 a {
+  display: block;
   fill: var(--md-sys-color-secondary);
   color: var(--md-sys-color-secondary);
 
@@ -25,10 +32,4 @@ a {
     fill: var(--md-sys-color-on-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
   }
-}
-
-nav a {
-  display: flex;
-  flex-direction: row;
-  padding: 1rem;
 }

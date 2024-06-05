@@ -49,5 +49,6 @@
   &:hover,
   &.is-active {
     background-color: var(#{$backgroundActive});
+    color: var(#{$color});
   }
 }

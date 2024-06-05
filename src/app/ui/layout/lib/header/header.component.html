@@ -1,6 +1,7 @@
 <baf-container>
-  <a routerLink="/" aria-label="Buy & fly"><baf-icon-logo /></a>
+  <a [routerLink]="paths.home | path" aria-label="Buy & fly"><baf-icon-logo /></a>
   <nav>
-    <a routerLink="/">Главная</a>
+    <a i18n="Header|Login" [routerLink]="paths.login | path">Sign in</a>
+    <a i18n="Header|Registration" [routerLink]="paths.registration | path">Sign up</a>
   </nav>
 </baf-container>

@@ -28,4 +28,14 @@ export const documentsRoutes: Routes = [
     title: $localize`:Cards:Application`,
     loadComponent: () => import('@baf/development/page').then((m) => m.DevelopmentPageComponent),
   },
+  {
+    path: PATHS.login,
+    title: $localize`:Login Title:Sign in`,
+    loadComponent: () => import('@baf/development/page').then((m) => m.DevelopmentPageComponent),
+  },
+  {
+    path: PATHS.registration,
+    title: $localize`:Registration Title:Sign up`,
+    loadComponent: () => import('@baf/development/page').then((m) => m.DevelopmentPageComponent),
+  },
 ];
