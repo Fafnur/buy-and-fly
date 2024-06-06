@@ -33,10 +33,7 @@ export class ExtraClassDirective implements OnInit {
   ngOnInit(): void {
     this.valueChanges
       ?.pipe(
-        tap(() => {
-          console.log('valueChanges');
-          this.update();
-        }),
+        tap(() => this.update()),
         takeUntilDestroyed(this.destroyRef),
       )
       .subscribe();
