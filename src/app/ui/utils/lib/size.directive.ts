@@ -1,23 +1,23 @@
-import { Directive, HostBinding, input } from '@angular/core';
+import { Directive, inject, input } from '@angular/core';
+
+import { ExtraClassService, toClass } from '@baf/core';
 
 import { Size } from './types';
 
 @Directive({
   selector: '[bafSize]',
   standalone: true,
+  providers: [ExtraClassService],
 })
 export class SizeDirective {
-  readonly size = input<Size>('medium', { alias: 'bafSize' });
+  private readonly extraClassService = inject(ExtraClassService);
 
-  @HostBinding('class.size-small') get isSmall(): boolean {
-    return this.size() === 'small';
-  }
+  readonly size = input<Size, Size>('medium', {
+    alias: 'bafSize',
+    transform: (value) => {
+      this.extraClassService.update('size', toClass(value, 'size'));
 
-  @HostBinding('class.size-medium') get isMedium(): boolean {
-    return this.size() === 'medium';
-  }
-
-  @HostBinding('class.size-large') get isLarge(): boolean {
-    return this.size() === 'large';
-  }
+      return value;
+    },
+  });
 }

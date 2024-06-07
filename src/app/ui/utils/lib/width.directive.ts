@@ -1,15 +1,23 @@
-import { Directive, HostBinding, input } from '@angular/core';
+import { Directive, inject, input } from '@angular/core';
+
+import { ExtraClassService, toClass } from '@baf/core';
 
 import { Width } from './types';
 
 @Directive({
   selector: '[bafWidth]',
   standalone: true,
+  providers: [ExtraClassService],
 })
 export class WidthDirective {
-  readonly width = input<Width>(undefined, { alias: 'bafWidth' });
+  private readonly extraClassService = inject(ExtraClassService, { self: true });
 
-  @HostBinding('class.width-max') get isLeft(): boolean {
-    return this.width() === 'max';
-  }
+  readonly width = input<Width, Width>(undefined, {
+    alias: 'bafWidth',
+    transform: (value) => {
+      this.extraClassService.update('width', toClass(value, 'width'));
+
+      return value;
+    },
+  });
 }

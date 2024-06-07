@@ -1,15 +1,22 @@
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { Directive, HostBinding, input } from '@angular/core';
+import { Directive, inject, input } from '@angular/core';
+
+import { CoerceBoolean, ExtraClassService } from '@baf/core';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
-  selector: 'baf-container[fluid]',
+  selector: 'baf-container[bafFluid]',
   standalone: true,
+  providers: [ExtraClassService],
 })
 export class FluidDirective {
-  readonly fluid = input<boolean | string | undefined | null>();
+  private readonly extraClassService = inject(ExtraClassService);
 
-  @HostBinding('class.fluid') get isFluid() {
-    return coerceBooleanProperty(this.fluid());
-  }
+  readonly fluid = input<CoerceBoolean, CoerceBoolean>(undefined, {
+    alias: 'bafFluid',
+    transform: (value) => {
+      this.extraClassService.patch('fluid', coerceBooleanProperty(value));
+
+      return value;
+    },
+  });
 }

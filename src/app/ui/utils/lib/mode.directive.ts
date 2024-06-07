@@ -1,23 +1,23 @@
-import { Directive, HostBinding, input } from '@angular/core';
+import { Directive, inject, input } from '@angular/core';
+
+import { ExtraClassService, toClass } from '@baf/core';
 
 import { ButtonMode } from './types';
 
 @Directive({
   selector: '[bafMode]',
   standalone: true,
+  providers: [ExtraClassService],
 })
 export class ModeDirective {
-  readonly mode = input<ButtonMode>('primary', { alias: 'bafMode' });
+  private readonly extraClassService = inject(ExtraClassService);
 
-  @HostBinding('class.mode-primary') get isModePrimary() {
-    return this.mode() === 'primary';
-  }
+  readonly mode = input<ButtonMode, ButtonMode>(undefined, {
+    alias: 'bafMode',
+    transform: (value) => {
+      this.extraClassService.update('mode', toClass(value, 'mode'));
 
-  @HostBinding('class.mode-secondary') get isModeSecondary(): boolean {
-    return this.mode() === 'secondary';
-  }
-
-  @HostBinding('class.mode-tertiary') get isModeTertiary(): boolean {
-    return this.mode() === 'tertiary';
-  }
+      return value;
+    },
+  });
 }

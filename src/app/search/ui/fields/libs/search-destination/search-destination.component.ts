@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, HostBinding, inject, input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, input, OnInit } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormControl } from '@angular/forms';
 import { BehaviorSubject, debounceTime, EMPTY, of, switchMap, tap } from 'rxjs';
 
+import { ExtraClassService, toClass } from '@baf/core';
 import { SearchCityOrAirport } from '@baf/search/common';
 import { SearchService } from '@baf/search/services';
 import { AutocompleteComponent, AutocompleteOptions } from '@baf/ui/autocomplete';
@@ -21,14 +22,18 @@ export interface SearchDestinationOptions {
   templateUrl: './search-destination.component.html',
   styleUrl: './search-destination.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [ExtraClassService],
 })
 export class SearchDestinationComponent implements OnInit {
   private readonly destroyRef = inject(DestroyRef);
   private readonly searchService = inject(SearchService);
+  private readonly extraClassService = inject(ExtraClassService);
 
   readonly control = input.required<FormControl<string | SearchCityOrAirport>>();
   readonly options = input.required<AutocompleteOptions, SearchDestinationOptions>({
     transform: (options) => {
+      this.extraClassService.update('options', toClass(options.id));
+
       return {
         ...options,
         key: 'code',
@@ -48,14 +53,6 @@ export class SearchDestinationComponent implements OnInit {
       };
     },
   });
-
-  @HostBinding('class.is-from') get isFrom() {
-    return this.options().id === 'from';
-  }
-
-  @HostBinding('class.is-to') get isTo() {
-    return this.options().id === 'to';
-  }
 
   readonly data$ = new BehaviorSubject<SearchCityOrAirport[]>([]);
 

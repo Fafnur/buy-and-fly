@@ -2,7 +2,7 @@ import { DestroyRef, Directive, ElementRef, inject, input, OnInit, Renderer2 } f
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 import { Observable, tap } from 'rxjs';
 
-import { StyleFn } from '../form/form';
+import { StyleFn } from '../types/type';
 
 @Directive({
   selector: '[bafExtraClass]',
@@ -13,7 +13,7 @@ export class ExtraClassDirective implements OnInit {
   private readonly render = inject(Renderer2);
   private readonly elementRef: ElementRef<HTMLElement> = inject(ElementRef);
 
-  readonly extra = input.required<unknown>();
+  readonly extra = input<unknown>();
 
   valueChanges?: Observable<unknown>;
 

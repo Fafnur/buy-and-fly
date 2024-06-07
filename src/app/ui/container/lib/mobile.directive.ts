@@ -1,15 +1,23 @@
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { Directive, HostBinding, input } from '@angular/core';
+import { Directive, inject, input } from '@angular/core';
+
+import { CoerceBoolean, ExtraClassService } from '@baf/core';
 
 @Directive({
   // eslint-disable-next-line @angular-eslint/directive-selector
-  selector: 'baf-container[mobile]',
+  selector: 'baf-container[bafMobile]',
   standalone: true,
+  providers: [ExtraClassService],
 })
 export class MobileDirective {
-  readonly mobile = input<boolean | string | undefined | null>();
+  private readonly extraClassService = inject(ExtraClassService);
 
-  @HostBinding('class.mobile-no-gutter') get isMobile() {
-    return coerceBooleanProperty(this.mobile());
-  }
+  readonly mobile = input<CoerceBoolean, CoerceBoolean>(undefined, {
+    alias: 'bafMobile',
+    transform: (value) => {
+      this.extraClassService.patch('mobile-no-gutter', coerceBooleanProperty(value));
+
+      return value;
+    },
+  });
 }

@@ -1,23 +1,23 @@
-import { Directive, HostBinding, input } from '@angular/core';
+import { Directive, inject, input } from '@angular/core';
+
+import { ExtraClassService, toClass } from '@baf/core';
 
 import { Align } from './types';
 
 @Directive({
   selector: '[bafAlign]',
   standalone: true,
+  providers: [ExtraClassService],
 })
 export class AlignDirective {
-  readonly align = input<Align>(undefined, { alias: 'bafAlign' });
+  private readonly extraClassService = inject(ExtraClassService);
 
-  @HostBinding('class.align-left') get isLeft(): boolean {
-    return this.align() === 'left';
-  }
+  readonly align = input<Align, Align>(undefined, {
+    alias: 'bafAlign',
+    transform: (value) => {
+      this.extraClassService.update('align', toClass(value, 'align'));
 
-  @HostBinding('class.align-center') get isCenter(): boolean {
-    return this.align() === 'center';
-  }
-
-  @HostBinding('class.align-right') get isRight(): boolean {
-    return this.align() === 'right';
-  }
+      return value;
+    },
+  });
 }

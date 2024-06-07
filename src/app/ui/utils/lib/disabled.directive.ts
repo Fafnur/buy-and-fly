@@ -1,5 +1,7 @@
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { Directive, HostBinding, input } from '@angular/core';
+import { Directive, inject, input } from '@angular/core';
+
+import { CoerceBoolean, ExtraClassService } from '@baf/core';
 
 /**
  * Important: This is a special attribute for HTML and Angular uses this property in a special way.
@@ -9,11 +11,16 @@ import { Directive, HostBinding, input } from '@angular/core';
   // eslint-disable-next-line @angular-eslint/directive-selector
   selector: '[disabled]',
   standalone: true,
+  providers: [ExtraClassService],
 })
 export class DisabledDirective {
-  readonly disabled = input<string | boolean | null | undefined>();
+  private readonly extraClassService = inject(ExtraClassService);
 
-  @HostBinding('class.is-disabled') get isSmall(): boolean {
-    return coerceBooleanProperty(this.disabled());
-  }
+  readonly disabled = input<CoerceBoolean, CoerceBoolean>(undefined, {
+    transform: (value) => {
+      this.extraClassService.patch('is-disabled', coerceBooleanProperty(value));
+
+      return value;
+    },
+  });
 }

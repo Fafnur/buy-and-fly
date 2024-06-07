@@ -19,11 +19,11 @@ import { MobileDirective } from './mobile.directive';
   hostDirectives: [
     {
       directive: FluidDirective,
-      inputs: ['fluid'],
+      inputs: ['bafFluid'],
     },
     {
       directive: MobileDirective,
-      inputs: ['mobile'],
+      inputs: ['bafMobile'],
     },
     {
       directive: AlignDirective,

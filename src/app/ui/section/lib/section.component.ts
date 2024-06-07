@@ -1,21 +1,26 @@
-import { ChangeDetectionStrategy, Component, HostBinding, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
+
+import { ExtraClassService, toClass } from '@baf/core';
 
 export type SectionColor = 'smoke' | undefined;
 
 @Component({
   selector: 'baf-section',
   standalone: true,
-  imports: [],
   template: '<ng-content/>',
   styleUrl: './section.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [ExtraClassService],
 })
 export class SectionComponent {
-  readonly color = input<SectionColor>(undefined, {
-    alias: 'bafColor',
-  });
+  private readonly extraClassService = inject(ExtraClassService);
 
-  @HostBinding('class.color-smoke') get isColor() {
-    return this.color() === 'smoke';
-  }
+  readonly color = input<SectionColor, SectionColor>(undefined, {
+    alias: 'bafColor',
+    transform: (value) => {
+      this.extraClassService.update('color', toClass(value, 'color'));
+
+      return value;
+    },
+  });
 }

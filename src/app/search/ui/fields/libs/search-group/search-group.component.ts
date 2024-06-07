@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 
-import { ExtraClassDirective } from '@baf/core';
+import { ExtraClassService, toClass } from '@baf/core';
 
 export type SearchGroupType = 'destination' | 'date' | 'line' | 'submit' | 'single' | undefined;
 
@@ -11,17 +11,16 @@ export type SearchGroupType = 'destination' | 'date' | 'line' | 'submit' | 'sing
   template: '<ng-content/>',
   styleUrl: './search-group.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  hostDirectives: [
-    {
-      directive: ExtraClassDirective,
-      inputs: ['extra: mode'],
-    },
-  ],
+  providers: [ExtraClassService],
 })
 export class SearchGroupComponent {
-  readonly mode = input<SearchGroupType>();
+  private readonly extraClassService = inject(ExtraClassService);
 
-  constructor() {
-    inject(ExtraClassDirective).styleFn = (value: SearchGroupType) => (value ? `is-${value}` : '');
-  }
+  readonly mode = input<SearchGroupType, SearchGroupType>(undefined, {
+    transform: (value) => {
+      this.extraClassService.update('mode', toClass(value));
+
+      return value;
+    },
+  });
 }
