@@ -1,3 +1,4 @@
-<div bafSearchFilter (clear)="onReset()">
-  <p>search-filter-baggage works!</p>
-</div>
+<p>
+  <button (click)="onToggle()">Добавить багаж</button>
+  <span>{{ control().value ? 'да' : 'нет' }}</span>
+</p>

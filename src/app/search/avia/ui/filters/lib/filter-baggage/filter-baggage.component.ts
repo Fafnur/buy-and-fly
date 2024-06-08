@@ -1,27 +1,26 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
-import { CanFilter } from '@baf/search/common';
-import { SearchFilterDirective } from '@baf/search/ui/filters';
+import { ExtractChangesDirective } from '@baf/core';
 
 @Component({
   selector: 'baf-filter-baggage',
   standalone: true,
-  imports: [SearchFilterDirective],
+  imports: [],
   templateUrl: './filter-baggage.component.html',
   styleUrl: './filter-baggage.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    '(clear)': 'onReset()',
-  },
   hostDirectives: [
     {
-      directive: SearchFilterDirective,
-      outputs: ['clear'],
+      directive: ExtractChangesDirective,
+      inputs: ['control'],
     },
   ],
 })
-export class FilterBaggageComponent implements CanFilter {
-  onReset(): void {
-    console.log('fuck');
+export class FilterBaggageComponent {
+  readonly control = input.required<FormControl<boolean>>();
+
+  onToggle(): void {
+    this.control().patchValue(!this.control().value);
   }
 }

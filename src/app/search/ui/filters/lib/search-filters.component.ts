@@ -1,8 +1,7 @@
-import { ChangeDetectionStrategy, Component, contentChildren } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, input, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 import { ButtonComponent } from '@baf/ui/buttons';
-
-import { SearchFilterDirective } from './search-filter.directive';
 
 @Component({
   selector: 'baf-search-filters',
@@ -12,10 +11,21 @@ import { SearchFilterDirective } from './search-filter.directive';
   styleUrl: './search-filters.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchFiltersComponent {
-  readonly filters = contentChildren(SearchFilterDirective);
+export class SearchFiltersComponent implements OnInit {
+  private readonly destroyRef = inject(DestroyRef);
+
+  readonly form = input.required<FormGroup>();
+
+  ngOnInit(): void {
+    // this.form()
+    //   .valueChanges.pipe(
+    //     tap((value) => console.log(value)),
+    //     takeUntilDestroyed(this.destroyRef),
+    //   )
+    //   .subscribe();
+  }
 
   onReset(): void {
-    this.filters().map((filter) => filter.clear.emit());
+    this.form().reset();
   }
 }

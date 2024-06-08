@@ -1,3 +1,4 @@
+export * from './lib/form/extract-changes.directive';
 export * from './lib/form/form';
 export * from './lib/interceptors/provide';
 export * from './lib/navigation/navigation';

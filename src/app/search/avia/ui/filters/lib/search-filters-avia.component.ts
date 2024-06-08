@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 import { SearchFiltersComponent } from '@baf/search/ui/filters';
 
@@ -12,4 +13,8 @@ import { FilterBaggageComponent } from './filter-baggage/filter-baggage.componen
   styleUrl: './search-filters-avia.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchFiltersAviaComponent {}
+export class SearchFiltersAviaComponent {
+  readonly form = new FormGroup({
+    baggage: new FormControl(false, { nonNullable: true, validators: [] }),
+  });
+}
