@@ -1,4 +1,4 @@
-import { Directive, ElementRef, forwardRef, HostListener, inject, InjectionToken, input, OnInit } from '@angular/core';
+import { Directive, ElementRef, forwardRef, inject, InjectionToken, input, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { ChangeFn, TouchedFn } from '@baf/core';
@@ -9,8 +9,7 @@ export const INPUT_MASK_VALUES = new InjectionToken<Record<string, RegExp>>('INP
 const DEFAULT_INPUT_MASK_VALUES: Record<string, RegExp> = { 0: /[0-9]/, a: /[a-z]/, A: /[A-Z]/, B: /[a-zA-Z]/ };
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
-  selector: 'input[formControlName][mask],input[formControl][mask]',
+  selector: 'input[formControlName][bafInputMask],input[formControl][bafInputMask]',
   standalone: true,
   providers: [
     {
@@ -19,6 +18,10 @@ const DEFAULT_INPUT_MASK_VALUES: Record<string, RegExp> = { 0: /[0-9]/, a: /[a-z
       multi: true,
     },
   ],
+  host: {
+    '(blur)': 'onTouched()',
+    '(input)': 'onInput($event)',
+  },
 })
 export class InputMaskDirective implements ControlValueAccessor, OnInit {
   private readonly maskValues = inject(INPUT_MASK_VALUES, { optional: true }) ?? DEFAULT_INPUT_MASK_VALUES;
@@ -34,7 +37,7 @@ export class InputMaskDirective implements ControlValueAccessor, OnInit {
     })
     .join('|')})`;
 
-  readonly mask = input.required<string>();
+  readonly mask = input.required<string>({ alias: 'bafInputMask' });
 
   onChange!: ChangeFn;
   onTouched!: TouchedFn;
@@ -51,11 +54,7 @@ export class InputMaskDirective implements ControlValueAccessor, OnInit {
     this.elementRef.nativeElement.value = this.getMaskedValue(value);
   }
 
-  @HostListener('blur') onBlur(): void {
-    this.onTouched();
-  }
-
-  @HostListener('input', ['$event']) onInput(event: Event): void {
+  onInput(event: Event): void {
     const { value } = event.target as HTMLInputElement;
     this.elementRef.nativeElement.value = this.getMaskedValue(value);
     this.onChange(value);

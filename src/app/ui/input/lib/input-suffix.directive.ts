@@ -1,10 +1,8 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
-  selector: '[input-suffix]',
+  selector: '[bafInputSuffix]',
   standalone: true,
-  /* eslint-disable @typescript-eslint/naming-convention */
   host: {
     class: 'baf-input-suffix',
     '[style.margin-right]': '"12px"',

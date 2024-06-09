@@ -1,11 +1,10 @@
-import { Directive, ElementRef, forwardRef, HostListener, inject, input } from '@angular/core';
+import { Directive, ElementRef, forwardRef, inject, input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { ChangeFn, DisplayFn, TouchedFn } from '@baf/core';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
-  selector: 'input[formControlName][display],input[formControl][display]',
+  selector: 'input[formControlName][bafInputDisplay],input[formControl][bafInputDisplay]',
   standalone: true,
   providers: [
     {
@@ -14,10 +13,14 @@ import { ChangeFn, DisplayFn, TouchedFn } from '@baf/core';
       multi: true,
     },
   ],
+  host: {
+    '(blur)': 'onTouched()',
+    '(input)': 'onInput($event)',
+  },
 })
 export class InputDisplayDirective implements ControlValueAccessor {
   private readonly elementRef = inject(ElementRef<HTMLInputElement>);
-  readonly display = input.required<DisplayFn>();
+  readonly display = input.required<DisplayFn>({ alias: 'bafInputDisplay' });
 
   onChange!: ChangeFn;
   onTouched!: TouchedFn;
@@ -30,16 +33,11 @@ export class InputDisplayDirective implements ControlValueAccessor {
     this.onTouched = fn;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  writeValue(value: any): void {
+  writeValue(value: unknown): void {
     this.elementRef.nativeElement.value = this.display()(value);
   }
 
-  @HostListener('blur') onBlur(): void {
-    this.onTouched();
-  }
-
-  @HostListener('input', ['$event']) onInput(event: Event): void {
+  onInput(event: Event): void {
     const { value } = event.target as HTMLInputElement;
     this.elementRef.nativeElement.value = this.display()(value);
     this.onChange(value);
