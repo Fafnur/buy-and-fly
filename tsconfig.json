@@ -47,6 +47,7 @@
       "@baf/ui/autocomplete": ["src/app/ui/autocomplete/index.ts"],
       "@baf/ui/buttons": ["src/app/ui/buttons/index.ts"],
       "@baf/ui/cards": ["src/app/ui/cards/index.ts"],
+      "@baf/ui/checkbox": ["src/app/ui/checkbox/index.ts"],
       "@baf/ui/container": ["src/app/ui/container/index.ts"],
       "@baf/ui/datepicker": ["src/app/ui/datepicker/index.ts"],
       "@baf/ui/headline": ["src/app/ui/headline/index.ts"],
