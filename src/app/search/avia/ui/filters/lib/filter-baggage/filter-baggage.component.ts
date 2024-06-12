@@ -2,7 +2,12 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 import { ExtractChangesDirective } from '@baf/core';
+import { SearchFieldOptions } from '@baf/search/common';
 import { CheckboxComponent } from '@baf/ui/checkbox';
+
+export interface FilterBaggageOptions extends SearchFieldOptions {
+  readonly name?: string;
+}
 
 @Component({
   selector: 'baf-filter-baggage',
@@ -20,8 +25,5 @@ import { CheckboxComponent } from '@baf/ui/checkbox';
 })
 export class FilterBaggageComponent {
   readonly control = input.required<FormControl<boolean>>();
-
-  onToggle(): void {
-    this.control().patchValue(!this.control().value);
-  }
+  readonly options = input.required<FilterBaggageOptions>();
 }

@@ -51,13 +51,15 @@ export interface SearchCityOrAirport {
 }
 /* eslint-enable @typescript-eslint/naming-convention */
 
+export interface SearchFieldOptions {
+  readonly [key: string]: unknown;
+  readonly id: string;
+  readonly label: string;
+  readonly placeholder?: string;
+}
+
 export type SearchFormOptions<T> = {
-  readonly [P in keyof T]: {
-    readonly [key: string]: unknown;
-    readonly id: string;
-    readonly label: string;
-    readonly placeholder?: string;
-  };
+  readonly [P in keyof T]: SearchFieldOptions;
 };
 
 export interface CanSubmit {
