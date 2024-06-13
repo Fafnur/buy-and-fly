@@ -1,5 +1,8 @@
+<h4 baf-title i18n="Search Filters|Filters">Filters</h4>
 <ng-content />
-<div class="search-filters-actions">
-  <button type="button" baf-button bafMode="primary" bafSize="medium" bafWidth="max">Применить фильтры</button>
-  <button type="button" baf-button bafMode="tertiary" bafSize="medium" bafWidth="max" (click)="onReset()">Сбросить фильтры</button>
-</div>
+<button type="button" baf-button bafMode="primary" bafSize="medium" bafWidth="max" i18n="Search Filters|Apply" (click)="onApply()">
+  Apply
+</button>
+<button type="button" baf-button bafMode="tertiary" bafSize="medium" bafWidth="max" i18n="Search Filters|Reset" (click)="onReset()">
+  Reset
+</button>

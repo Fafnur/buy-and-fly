@@ -6,11 +6,12 @@ import { startWith, tap, withLatestFrom } from 'rxjs';
 
 import { castQueryParams } from '@baf/core';
 import { ButtonComponent } from '@baf/ui/buttons';
+import { TitleComponent } from '@baf/ui/title';
 
 @Component({
   selector: 'baf-search-filters',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, TitleComponent],
   templateUrl: './search-filters.component.html',
   styleUrl: './search-filters.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -44,6 +45,10 @@ export class SearchFiltersComponent implements OnInit {
         takeUntilDestroyed(this.destroyRef),
       )
       .subscribe();
+  }
+
+  onApply(): void {
+    // TODO: Adding apply logic
   }
 
   onReset(): void {

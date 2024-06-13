@@ -5,14 +5,14 @@ import { ExtractChangesDirective } from '@baf/core';
 import { SearchFieldOptions } from '@baf/search/common';
 import { CheckboxComponent } from '@baf/ui/checkbox';
 
-export type FilterBaggageOptions = SearchFieldOptions;
+export type FilterDirectOptions = SearchFieldOptions;
 
 @Component({
-  selector: 'baf-filter-baggage',
+  selector: 'baf-filter-direct',
   standalone: true,
   imports: [CheckboxComponent],
-  templateUrl: './filter-baggage.component.html',
-  styleUrl: './filter-baggage.component.scss',
+  templateUrl: './filter-direct.component.html',
+  styleUrl: './filter-direct.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   hostDirectives: [
     {
@@ -21,7 +21,7 @@ export type FilterBaggageOptions = SearchFieldOptions;
     },
   ],
 })
-export class FilterBaggageComponent {
+export class FilterDirectComponent {
   readonly control = input.required<FormControl<boolean>>();
-  readonly options = input.required<FilterBaggageOptions>();
+  readonly options = input.required<FilterDirectOptions>();
 }
