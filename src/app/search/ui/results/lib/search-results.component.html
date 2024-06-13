@@ -1,1 +1,5 @@
-<p>search results works!</p>
+@if (results$ | async; as results) {
+  @for (result of results; track result) {
+    <p>{{ result }}</p>
+  }
+}

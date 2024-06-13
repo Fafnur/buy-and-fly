@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 
 import { PATHS, withChildNavigation } from '@baf/core';
+import { SearchType } from '@baf/search/common';
+import { provideSearchType } from '@baf/search/ui/results';
 
 export const searchRoutes: Routes = [
   {
@@ -14,6 +16,7 @@ export const searchRoutes: Routes = [
       },
       {
         path: '',
+        providers: [provideSearchType(SearchType.Avia)],
         loadComponent: () => import('@baf/search/ui/results').then((m) => m.SearchResultsComponent),
         outlet: 'results',
       },

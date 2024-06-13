@@ -48,7 +48,12 @@ export class SearchFiltersComponent implements OnInit {
   }
 
   onApply(): void {
-    // TODO: Adding apply logic
+    void this.router.navigate([], {
+      queryParams: {
+        ...this.activatedRoute.snapshot.queryParams,
+        refresh: new Date().toISOString(),
+      },
+    });
   }
 
   onReset(): void {

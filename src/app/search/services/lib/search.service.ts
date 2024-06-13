@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { EMPTY, map, Observable } from 'rxjs';
 
-import { SearchDestination } from '@baf/search/common';
+import { SearchDestination, SearchType } from '@baf/search/common';
 
 @Injectable({
   providedIn: 'root',
@@ -21,5 +21,9 @@ export class SearchService {
           })),
         ),
       );
+  }
+
+  getResults(type: SearchType, queryParams: Record<string, unknown>): Observable<any> {
+    return EMPTY;
   }
 }

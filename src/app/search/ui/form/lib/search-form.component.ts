@@ -4,6 +4,7 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { tap } from 'rxjs';
 
+import { castQueryParams } from '@baf/core';
 import { SearchGroupComponent } from '@baf/search/ui/fields';
 import { ButtonComponent } from '@baf/ui/buttons';
 
@@ -26,7 +27,10 @@ export class SearchFormComponent implements OnInit {
     this.activatedRoute.queryParams
       .pipe(
         tap((queryParams) => {
-          this.form().patchValue(queryParams);
+          const formData = castQueryParams(queryParams, Object.keys(this.form().controls));
+          if (Object.keys(formData).length) {
+            this.form().patchValue(formData);
+          }
         }),
         takeUntilDestroyed(this.destroyRef),
       )
