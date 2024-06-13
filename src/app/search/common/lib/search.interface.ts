@@ -39,7 +39,7 @@ export interface SearchCityOrAirportDTO {
   readonly main_airport_name: string | null;
 }
 
-export interface SearchCityOrAirport {
+export interface SearchDestination {
   readonly [key: string]: unknown;
   readonly id: string;
   readonly type: string;
@@ -55,6 +55,7 @@ export interface SearchFieldOptions {
   readonly [key: string]: unknown;
   readonly id: string;
   readonly label: string;
+  readonly name?: string;
   readonly placeholder?: string;
 }
 

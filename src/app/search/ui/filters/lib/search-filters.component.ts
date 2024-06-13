@@ -23,7 +23,11 @@ export class SearchFiltersComponent implements OnInit {
   readonly form = input.required<FormGroup>();
 
   ngOnInit(): void {
-    this.form().patchValue(castQueryParams(this.activatedRoute.snapshot.queryParams));
+    const formData = castQueryParams(this.activatedRoute.snapshot.queryParams, Object.keys(this.form().controls));
+
+    if (Object.keys(formData).length) {
+      this.form().patchValue(formData);
+    }
 
     this.form()
       .valueChanges.pipe(

@@ -13,9 +13,11 @@
   @include device.media-tablet-up() {
     &:first-child {
       width: 33.333%;
+      padding-right: 0.5rem;
     }
     &:last-child {
       width: 66.667%;
+      padding-left: 0.5rem;
     }
   }
   @include device.media-web() {

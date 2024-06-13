@@ -1,10 +1,10 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { FormFor } from '@baf/core';
-import { SearchCityOrAirport } from '@baf/search/common';
+import { SearchDestination } from '@baf/search/common';
 
 export interface SearchHotelForm {
-  readonly city: string | SearchCityOrAirport;
+  readonly city: string | SearchDestination;
   readonly startDate: string;
   readonly endDate: string;
   readonly passengers: number | undefined;
@@ -13,7 +13,7 @@ export interface SearchHotelForm {
 export type SearchHotelFormGroup = FormGroup<FormFor<SearchHotelForm>>;
 
 export const initialSearchHotelFormGroup: SearchHotelFormGroup = new FormGroup({
-  city: new FormControl<string | SearchCityOrAirport>('', {
+  city: new FormControl<string | SearchDestination>('', {
     nonNullable: true,
     validators: [Validators.required],
   }),

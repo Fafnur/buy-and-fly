@@ -8,10 +8,14 @@ export type FormWithSubFor<T> = {
   [P in keyof T]: T[P] extends Record<string, unknown> ? FormGroup<FormFor<T[P]>> : FormControl<T[P]>;
 };
 
-export function castQueryParams(queryParams: Record<string, unknown>): Record<string, unknown> {
+export function castQueryParams(queryParams: Record<string, unknown>, props?: string[]): Record<string, unknown> {
   const mapped: Record<string, unknown> = {};
 
-  for (const [key, value] of Object.entries(queryParams)) {
+  const keys = props ?? Object.keys(queryParams);
+
+  for (const key of keys) {
+    const value = queryParams[key];
+
     if (typeof value === 'string' && value.length > 0) {
       if (['true', 'false'].includes(value)) {
         mapped[key] = value === 'true';

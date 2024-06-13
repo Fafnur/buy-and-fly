@@ -1,14 +1,11 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
+import { SearchFieldOptions } from '@baf/search/common';
 import { InputComponent, InputControlComponent } from '@baf/ui/input';
 import { LabelComponent } from '@baf/ui/label';
 
-export interface SearchPassengersOptions {
-  readonly label: string;
-  readonly placeholder?: string;
-  readonly id: string;
-}
+export type SearchPassengersOptions = SearchFieldOptions;
 
 @Component({
   selector: 'baf-search-passengers',

@@ -36,7 +36,7 @@ export class SearchHotelFormComponent implements CanSubmit {
   readonly redirectTo = PATHS.searchHotel;
 
   readonly options: SearchFormOptions<SearchHotelForm> = {
-    city: { label: $localize`:Search Field:City`, id: 'city' },
+    city: { label: $localize`:Search Field:City`, id: 'city', types: ['city'] },
     startDate: { label: $localize`:Search Field:When`, id: 'startDate' },
     endDate: { label: $localize`:Search Field:When back`, id: 'endDate', startDate: this.form.controls.startDate },
     passengers: { label: $localize`:Search Field:Guests`, id: 'passengers' },

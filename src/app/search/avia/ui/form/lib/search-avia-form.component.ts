@@ -36,8 +36,8 @@ export class SearchAviaFormComponent implements CanSubmit {
   readonly redirectTo = PATHS.searchAvia;
 
   readonly options: SearchFormOptions<SearchAviaForm> = {
-    from: { label: $localize`:Search Field:Where from`, id: 'from' },
-    to: { label: $localize`:Search Field:Where to`, id: 'to' },
+    from: { label: $localize`:Search Field:Where from`, id: 'from', types: ['city', 'airport'] },
+    to: { label: $localize`:Search Field:Where to`, id: 'to', types: ['city', 'airport'] },
     startDate: { label: $localize`:Search Field:When`, id: 'startDate' },
     endDate: { label: $localize`:Search Field:When back`, id: 'endDate', startDate: this.form.controls.startDate },
     passengers: { label: $localize`:Search Field:Passengers`, id: 'passengers' },

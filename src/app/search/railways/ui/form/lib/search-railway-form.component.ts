@@ -36,8 +36,8 @@ export class SearchRailwayFormComponent implements CanSubmit {
   readonly redirectTo = PATHS.searchRailway;
 
   readonly options: SearchFormOptions<SearchRailwayForm> = {
-    from: { label: $localize`:Search Field:Departure station`, id: 'from' },
-    to: { label: $localize`:Search Field:Arrival station`, id: 'to' },
+    from: { label: $localize`:Search Field:Departure station`, id: 'from', types: ['city'] },
+    to: { label: $localize`:Search Field:Arrival station`, id: 'to', types: ['city'] },
     startDate: { label: $localize`:Search Field:When`, id: 'startDate' },
     passengers: { label: $localize`:Search Field:Passengers`, id: 'passengers' },
   };

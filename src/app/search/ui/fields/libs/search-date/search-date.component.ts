@@ -3,11 +3,9 @@ import { FormControl } from '@angular/forms';
 
 import { camelCaseToHumanize, ExtraClassService } from '@baf/core';
 import { DatepickerComponent } from '@baf/ui/datepicker';
+import { SearchFieldOptions } from '@baf/search/common';
 
-export interface SearchDateOptions {
-  readonly label: string;
-  readonly placeholder?: string;
-  readonly id: string;
+export interface SearchDateOptions extends SearchFieldOptions {
   readonly startDate?: FormControl<string>;
 }
 

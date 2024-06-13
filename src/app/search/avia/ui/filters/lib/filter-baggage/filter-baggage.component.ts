@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 import { ExtractChangesDirective } from '@baf/core';
