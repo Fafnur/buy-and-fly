@@ -42,6 +42,7 @@
             "stylePreprocessorOptions": {
               "includePaths": ["node_modules", "./"]
             },
+            "allowedCommonJsDependencies": ["dotenv"],
             "assets": [
               {
                 "glob": "**/*",

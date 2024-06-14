@@ -1,11 +1,11 @@
 import { APP_INITIALIZER, makeStateKey, TransferState } from '@angular/core';
-import * as process from 'node:process';
+import process from 'node:process';
 
 export const ENV_KEY = makeStateKey<Environment>('Environment');
 
 export interface Environment {
-  readonly apiUrl: string;
-  readonly apiToken: string;
+  readonly aviasalesToken: string;
+  readonly hotellookToken: string;
 }
 
 export function provideEnv() {
@@ -15,8 +15,8 @@ export function provideEnv() {
       useFactory: (transferState: TransferState) => {
         return () => {
           transferState.set<Environment>(ENV_KEY, {
-            apiUrl: process.env['API_URL'] ?? '',
-            apiToken: process.env['API_TOKEN'] ?? '',
+            aviasalesToken: process.env['AVIASALES_TOKEN'] ?? '',
+            hotellookToken: process.env['HOTELLOOK_TOKEN'] ?? '',
           });
         };
       },

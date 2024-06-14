@@ -71,3 +71,85 @@ export interface CanSubmit {
 export interface CanFilter {
   onReset(): void;
 }
+
+export interface SearchFlightOptions {
+  readonly [key: string]: unknown;
+
+  readonly currency: string;
+  readonly origin: string;
+  readonly destination: string;
+  readonly departure_at: string;
+  readonly return_at?: string;
+  readonly one_way?: string;
+  readonly direct?: boolean;
+  readonly unique?: boolean;
+  readonly limit?: number;
+  readonly page?: number;
+}
+
+export interface SearchFlightResponse {
+  readonly success: boolean;
+  readonly data: [
+    {
+      readonly origin: string;
+      readonly destination: string;
+      readonly origin_airport: string;
+      readonly destination_airport: string;
+      readonly price: number;
+      readonly airline: string;
+      readonly flight_number: string;
+      readonly departure_at: string;
+      readonly return_at: string;
+      readonly transfers: number;
+      readonly return_transfers: number;
+      readonly duration: number;
+      readonly duration_to: number;
+      readonly duration_back: number;
+      readonly link: string;
+    },
+  ];
+  readonly currency: string;
+}
+
+export interface SearchHotelsOptions {
+  readonly query: string;
+  readonly lang: string;
+  readonly limit: number;
+  readonly lookFor: string[];
+  readonly convertCase: 1 | 0;
+}
+
+export interface SearchHotelsResponse {
+  readonly results: {
+    readonly locations: [
+      {
+        readonly cityName: string;
+        readonly fullName: string;
+        readonly countryCode: string;
+        readonly countryName: string;
+        readonly iata: string[];
+        readonly id: string;
+        readonly hotelsCount: string;
+        readonly location: {
+          readonly lat: string;
+          readonly lon: string;
+        };
+        readonly _score: number;
+      },
+    ];
+    readonly hotels: [
+      {
+        readonly label: string;
+        readonly locationName: string;
+        readonly locationId: string;
+        readonly id: string;
+        readonly fullName: string;
+        readonly location: {
+          readonly lat: string;
+          readonly lon: string;
+        };
+      },
+    ];
+  };
+  readonly status: string;
+}

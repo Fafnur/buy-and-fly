@@ -1,9 +1,17 @@
 {
-  "/api/autocomplete": {
+  "/autocomplete": {
     "target": "https://autocomplete.travelpayouts.com",
     "secure": false,
     "pathRewrite": {
-      "^/api/autocomplete": ""
+      "^/autocomplete": ""
+    },
+    "changeOrigin": true
+  },
+  "/api": {
+    "target": "https://api.travelpayouts.com",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
     },
     "changeOrigin": true
   }
