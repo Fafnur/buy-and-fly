@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core
 import { FormControl } from '@angular/forms';
 
 import { camelCaseToHumanize, ExtraClassService } from '@baf/core';
-import { DatepickerComponent } from '@baf/ui/datepicker';
 import { SearchFieldOptions } from '@baf/search/common';
+import { DatepickerComponent, DatepickerOptions } from '@baf/ui/datepicker';
 
 export interface SearchDateOptions extends SearchFieldOptions {
   readonly startDate?: FormControl<string>;
@@ -31,7 +31,7 @@ export class SearchDateComponent {
     },
   });
 
-  readonly options = input.required<SearchDateOptions, SearchDateOptions>({
+  readonly options = input.required<DatepickerOptions, SearchDateOptions>({
     transform: (value) => {
       this.extraClassService.update('options', value.id ? `is-${camelCaseToHumanize(value.id)}` : '');
 
@@ -41,7 +41,20 @@ export class SearchDateComponent {
         });
       }
 
-      return value;
+      return {
+        ...value,
+        mask: '00.00.0000',
+        maskTo: (val: string) => {
+          const [year, month, day] = val.split('-');
+
+          return `${day}.${month}.${year}`;
+        },
+        maskForm: (val: string) => {
+          const [day, month, year] = val.split('.');
+
+          return `${year}-${month}-${day}`;
+        },
+      };
     },
   });
 }

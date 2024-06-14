@@ -1,12 +1,14 @@
 import { Directive, ElementRef, forwardRef, inject, InjectionToken, input, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
-import { ChangeFn, TouchedFn } from '@baf/core';
+import { ChangeFn, MaskFn, TouchedFn } from '@baf/core';
 
 export const INPUT_MASK_VALUES = new InjectionToken<Record<string, RegExp>>('INPUT_MASK_VALUES');
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 const DEFAULT_INPUT_MASK_VALUES: Record<string, RegExp> = { 0: /[0-9]/, a: /[a-z]/, A: /[A-Z]/, B: /[a-zA-Z]/ };
+
+export const DEFAULT_MASK_FN: MaskFn = (value) => value;
 
 @Directive({
   selector: 'input[formControlName][bafInputMask],input[formControl][bafInputMask]',
@@ -38,6 +40,8 @@ export class InputMaskDirective implements ControlValueAccessor, OnInit {
     .join('|')})`;
 
   readonly mask = input.required<string>({ alias: 'bafInputMask' });
+  readonly maskFrom = input<MaskFn>(DEFAULT_MASK_FN, { alias: 'bafInputMaskFrom' });
+  readonly maskTo = input<MaskFn>(DEFAULT_MASK_FN, { alias: 'bafInputMaskTo' });
 
   onChange!: ChangeFn;
   onTouched!: TouchedFn;
@@ -51,13 +55,14 @@ export class InputMaskDirective implements ControlValueAccessor, OnInit {
   }
 
   writeValue(value: string | undefined | null): void {
-    this.elementRef.nativeElement.value = this.getMaskedValue(value);
+    this.elementRef.nativeElement.value = this.getMaskedValue(this.maskTo()(value));
   }
 
   onInput(event: Event): void {
     const { value } = event.target as HTMLInputElement;
-    this.elementRef.nativeElement.value = this.getMaskedValue(value);
-    this.onChange(value);
+    const masked = this.getMaskedValue(value);
+    this.elementRef.nativeElement.value = masked;
+    this.onChange(this.maskFrom()(masked));
   }
 
   ngOnInit(): void {

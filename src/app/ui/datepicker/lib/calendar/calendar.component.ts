@@ -34,8 +34,7 @@ export class CalendarComponent {
     transform: (date) => {
       let startDate: Date;
       if (date && date.length === 10) {
-        const parts = date.split('.');
-        startDate = new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0]));
+        startDate = new Date(date);
       } else {
         startDate = new Date();
       }
@@ -100,7 +99,7 @@ export class CalendarComponent {
     this.selected.emit({
       day,
       date,
-      format: `${res.day.toString().padStart(2, '0')}.${res.month.toString().padStart(2, '0')}.${res.year}`,
+      format: `${res.year}-${res.month.toString().padStart(2, '0')}-${res.day.toString().padStart(2, '0')}`,
     });
   }
 }

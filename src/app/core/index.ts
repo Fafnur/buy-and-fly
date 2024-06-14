@@ -1,3 +1,4 @@
+export * from './lib/currency/currency';
 export * from './lib/env/environment';
 export * from './lib/form/extract-changes.directive';
 export * from './lib/form/form';
