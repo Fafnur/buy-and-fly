@@ -1,8 +1,6 @@
 import { Routes } from '@angular/router';
 
 import { PATHS, withChildNavigation } from '@baf/core';
-import { SearchType } from '@baf/search/common';
-import { provideSearchType } from '@baf/search/ui/results';
 
 export const searchRoutes: Routes = [
   {
@@ -16,8 +14,7 @@ export const searchRoutes: Routes = [
       },
       {
         path: '',
-        providers: [provideSearchType(SearchType.Avia)],
-        loadComponent: () => import('@baf/search/ui/results').then((m) => m.SearchResultsComponent),
+        loadComponent: () => import('@baf/search/avia/ui/results').then((m) => m.SearchResultsAviaComponent),
         outlet: 'results',
       },
       {
@@ -36,11 +33,11 @@ export const searchRoutes: Routes = [
         loadComponent: () => import('@baf/search/hotels/ui/form').then((m) => m.SearchHotelFormComponent),
         outlet: 'form',
       },
-      {
-        path: '',
-        loadComponent: () => import('@baf/search/ui/results').then((m) => m.SearchResultsComponent),
-        outlet: 'results',
-      },
+      // {
+      //   path: '',
+      //   loadComponent: () => import('@baf/search/ui/results').then((m) => m.SearchResultsAviaComponent),
+      //   outlet: 'results',
+      // },
       {
         path: '',
         loadComponent: () => import('@baf/search/ui/filters').then((m) => m.SearchFiltersComponent),
@@ -52,11 +49,11 @@ export const searchRoutes: Routes = [
     path: PATHS.searchTour,
     loadComponent: () => import('@baf/search/page').then((m) => m.SearchPageComponent),
     children: [
-      {
-        path: '',
-        loadComponent: () => import('@baf/search/ui/results').then((m) => m.SearchResultsComponent),
-        outlet: 'results',
-      },
+      // {
+      //   path: '',
+      //   loadComponent: () => import('@baf/search/ui/results').then((m) => m.SearchResultsAviaComponent),
+      //   outlet: 'results',
+      // },
       {
         path: '',
         loadComponent: () => import('@baf/search/ui/filters').then((m) => m.SearchFiltersComponent),
@@ -73,11 +70,11 @@ export const searchRoutes: Routes = [
         loadComponent: () => import('@baf/search/railways/ui/form').then((m) => m.SearchRailwayFormComponent),
         outlet: 'form',
       },
-      {
-        path: '',
-        loadComponent: () => import('@baf/search/ui/results').then((m) => m.SearchResultsComponent),
-        outlet: 'results',
-      },
+      // {
+      //   path: '',
+      //   loadComponent: () => import('@baf/search/ui/results').then((m) => m.SearchResultsAviaComponent),
+      //   outlet: 'results',
+      // },
       {
         path: '',
         loadComponent: () => import('@baf/search/ui/filters').then((m) => m.SearchFiltersComponent),

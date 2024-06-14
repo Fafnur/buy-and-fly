@@ -85,6 +85,7 @@ export interface SearchFlightOptions {
   readonly unique?: boolean;
   readonly limit?: number;
   readonly page?: number;
+  readonly soring?: string;
 
   readonly token: string;
 }
