@@ -8,6 +8,11 @@ export interface Environment {
   readonly hotellookToken: string;
 }
 
+export const ENV_DEFAULT: Environment = {
+  aviasalesToken: '',
+  hotellookToken: '',
+};
+
 export function provideEnv() {
   return [
     {
@@ -15,8 +20,8 @@ export function provideEnv() {
       useFactory: (transferState: TransferState) => {
         return () => {
           transferState.set<Environment>(ENV_KEY, {
-            aviasalesToken: process.env['AVIASALES_TOKEN'] ?? '',
-            hotellookToken: process.env['HOTELLOOK_TOKEN'] ?? '',
+            aviasalesToken: process.env['AVIASALES_TOKEN'] ?? ENV_DEFAULT.aviasalesToken,
+            hotellookToken: process.env['HOTELLOOK_TOKEN'] ?? ENV_DEFAULT.hotellookToken,
           });
         };
       },

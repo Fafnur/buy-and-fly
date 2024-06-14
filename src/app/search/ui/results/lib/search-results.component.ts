@@ -1,7 +1,7 @@
 import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, InjectionToken, Provider } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
-import { switchMap } from 'rxjs';
+import { EMPTY, of, switchMap } from 'rxjs';
 
 import { SearchType } from '@baf/search/common';
 import { SearchService } from '@baf/search/services';
@@ -30,6 +30,10 @@ export class SearchResultsComponent {
   private readonly type = inject(SEARCH_RESULTS_TYPE);
 
   readonly results$ = this.activatedRoute.queryParams.pipe(
-    switchMap((queryParams) => this.searchService.getResults(this.type, queryParams)),
+    switchMap((queryParams) => {
+      // this.searchService.getResults(this.type, queryParams)
+      console.log(queryParams);
+      return of([]);
+    }),
   );
 }

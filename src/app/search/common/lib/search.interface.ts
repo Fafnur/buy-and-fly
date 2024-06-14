@@ -85,29 +85,31 @@ export interface SearchFlightOptions {
   readonly unique?: boolean;
   readonly limit?: number;
   readonly page?: number;
+
+  readonly token: string;
+}
+
+export interface SearchFlight {
+  readonly origin: string;
+  readonly destination: string;
+  readonly origin_airport: string;
+  readonly destination_airport: string;
+  readonly price: number;
+  readonly airline: string;
+  readonly flight_number: string;
+  readonly departure_at: string;
+  readonly return_at: string;
+  readonly transfers: number;
+  readonly return_transfers: number;
+  readonly duration: number;
+  readonly duration_to: number;
+  readonly duration_back: number;
+  readonly link: string;
 }
 
 export interface SearchFlightResponse {
   readonly success: boolean;
-  readonly data: [
-    {
-      readonly origin: string;
-      readonly destination: string;
-      readonly origin_airport: string;
-      readonly destination_airport: string;
-      readonly price: number;
-      readonly airline: string;
-      readonly flight_number: string;
-      readonly departure_at: string;
-      readonly return_at: string;
-      readonly transfers: number;
-      readonly return_transfers: number;
-      readonly duration: number;
-      readonly duration_to: number;
-      readonly duration_back: number;
-      readonly link: string;
-    },
-  ];
+  readonly data: SearchFlight[];
   readonly currency: string;
 }
 

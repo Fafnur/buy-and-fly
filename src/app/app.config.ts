@@ -3,7 +3,7 @@ import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideRouter, withComponentInputBinding, withEnabledBlockingInitialNavigation, withInMemoryScrolling } from '@angular/router';
 
-import { httpInterceptors } from '@baf/core';
+import { httpInterceptors, provideCurrency } from '@baf/core';
 
 import { routes } from './app.routes';
 
@@ -21,5 +21,6 @@ export const appConfig: ApplicationConfig = {
     ),
     provideHttpClient(withFetch(), withInterceptors(httpInterceptors)),
     provideClientHydration(),
+    provideCurrency('RUB'),
   ],
 };
