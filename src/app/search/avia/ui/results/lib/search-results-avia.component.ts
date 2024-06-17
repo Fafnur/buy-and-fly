@@ -1,16 +1,16 @@
 import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { ActivatedRoute, RouterOutlet } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs';
 
 import { SearchService } from '@baf/search/services';
-import { CardComponent } from '@baf/ui/cards';
-import { ContainerComponent } from '@baf/ui/container';
+
+import { SearchAviaCardComponent } from './search-avia-card/search-avia-card.component';
 
 @Component({
   selector: 'baf-search-results-avia',
   standalone: true,
-  imports: [AsyncPipe, RouterOutlet, ContainerComponent, CardComponent],
+  imports: [AsyncPipe, SearchAviaCardComponent],
   templateUrl: './search-results-avia.component.html',
   styleUrl: './search-results-avia.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,9 +1,5 @@
-@if (results$ | async; as results) {
-  @for (result of results; track result) {
-    <baf-card>
-      <p>{{ result.airline }} - {{ result.airline }}</p>
-      <p>{{ result.destination_airport }}</p>
-      <p>{{ result.price }}</p>
-    </baf-card>
+@if (results$ | async; as flights) {
+  @for (flight of flights; track flight.link) {
+    <baf-search-avia-card [flight]="flight" />
   }
 }
