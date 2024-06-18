@@ -1,0 +1,26 @@
+@use 'src/stylesheets/device' as device;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flight-price {
+  font-size: 1rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+
+  @include device.media-tablet-up() {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  @include device.media-web() {
+    font-size: 1.5rem;
+    display: flex;
+    height: 7rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

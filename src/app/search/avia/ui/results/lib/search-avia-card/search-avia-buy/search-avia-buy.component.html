@@ -1,0 +1,6 @@
+@if (searchFlight(); as flight) {
+  <div class="flight-price">{{ flight.price | currency }}</div>
+  <a baf-button bafMode="tertiary" [href]="flight.link | searchAviaLink" target="_blank" rel="nofollow" i18n="Search Avia Buy|Select">
+    Select
+  </a>
+}

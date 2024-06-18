@@ -1,10 +1,6 @@
-@if (flight(); as searchFlight) {
+@if (searchFlight(); as flight) {
   <baf-card>
-    <p>{{ searchFlight.airline }} - {{ searchFlight.airline }}</p>
-    <p>{{ searchFlight.destination_airport }}</p>
-    <p>{{ searchFlight.price }}</p>
-    <p>
-      <a [href]="searchFlight.link | searchAviaLink" target="_blank" rel="nofollow" i18n="Search Avia Card|Read more">Read more</a>
-    </p>
+    <baf-search-avia-lines [searchFlight]="flight" />
+    <baf-search-avia-buy [searchFlight]="flight" />
   </baf-card>
 }

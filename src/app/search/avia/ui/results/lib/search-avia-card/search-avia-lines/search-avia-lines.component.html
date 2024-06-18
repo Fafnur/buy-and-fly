@@ -1,0 +1,7 @@
+@if (searchFlight(); as flight) {
+  <baf-search-avia-companies [airline]="flight.airline" />
+  <baf-search-avia-line [searchLine]="flight | searchAviaLine"></baf-search-avia-line>
+  @if (flight.return_at) {
+    <baf-search-avia-line [searchLine]="flight | searchAviaLine: true"></baf-search-avia-line>
+  }
+}

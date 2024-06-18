@@ -1,5 +1,5 @@
 @if (results$ | async; as flights) {
   @for (flight of flights; track flight.link) {
-    <baf-search-avia-card [flight]="flight" />
+    <baf-search-avia-card [searchFlight]="flight" />
   }
 }

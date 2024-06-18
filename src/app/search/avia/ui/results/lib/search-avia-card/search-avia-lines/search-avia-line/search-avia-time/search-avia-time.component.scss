@@ -1,0 +1,45 @@
+@use '../../../../../../../../../../stylesheets/align' as align;
+@use '../../../../../../../../../../stylesheets/device' as device;
+
+:host {
+  width: 25%;
+  flex-grow: 1;
+
+  @include align.make-align();
+}
+
+.flight-time {
+  font-size: 1rem;
+
+  @include device.media-tablet-up() {
+    font-size: 1.5rem;
+  }
+}
+
+.flight-date,
+.flight-place {
+  font-size: 0.8rem;
+
+  @include device.media-tablet-up() {
+    font-size: 0.9rem;
+  }
+  @include device.media-web() {
+    font-size: 1rem;
+  }
+}
+
+.is-short {
+  display: block;
+
+  @include device.media-tablet-up() {
+    display: none;
+  }
+}
+
+.is-full {
+  display: none;
+
+  @include device.media-tablet-up() {
+    display: block;
+  }
+}
