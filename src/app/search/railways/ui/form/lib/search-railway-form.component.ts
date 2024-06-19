@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { PATHS } from '@baf/core';
-import { CanSubmit, SearchFormOptions } from '@baf/search/common';
+import { SearchFormOptions } from '@baf/search/common';
 import { initialSearchRailwayFormGroup, SearchRailwayForm } from '@baf/search/railways/common';
 import {
   SearchDateComponent,
@@ -29,10 +29,8 @@ import { ButtonComponent } from '@baf/ui/buttons';
   styleUrl: './search-railway-form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SearchRailwayFormComponent implements CanSubmit {
+export class SearchRailwayFormComponent {
   readonly form = initialSearchRailwayFormGroup;
-  readonly submitted = output<SearchRailwayForm>();
-
   readonly redirectTo = PATHS.searchRailway;
 
   readonly options: SearchFormOptions<SearchRailwayForm> = {
@@ -41,8 +39,4 @@ export class SearchRailwayFormComponent implements CanSubmit {
     startDate: { label: $localize`:Search Field:When`, id: 'startDate' },
     passengers: { label: $localize`:Search Field:Passengers`, id: 'passengers' },
   };
-
-  onSubmit(): void {
-    this.submitted.emit(this.form.getRawValue());
-  }
 }

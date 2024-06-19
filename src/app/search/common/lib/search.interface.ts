@@ -156,3 +156,21 @@ export interface SearchHotelsResponse {
   };
   readonly status: string;
 }
+
+export function getSearchQueryParams(form: unknown): Record<string, unknown> {
+  // SearchAviaForm - all variants fields
+  const formMapped = form as {
+    readonly [key: string]: string | number | boolean | Record<string, unknown>;
+
+    readonly from: string | { value: string; city_name: string };
+    readonly to: string | { value: string; city_name: string };
+  };
+
+  return {
+    ...(form as Record<string, string>),
+    from: typeof formMapped.from === 'string' ? formMapped.from : formMapped.from.value,
+    fromName: typeof formMapped.from === 'string' ? undefined : formMapped.from.city_name,
+    to: typeof formMapped.to === 'string' ? formMapped.to : formMapped.to.value,
+    toName: typeof formMapped.to === 'string' ? undefined : formMapped.to.city_name,
+  };
+}

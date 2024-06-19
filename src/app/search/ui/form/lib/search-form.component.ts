@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, inject, input, OnInit, output } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { tap } from 'rxjs';
 
-import { castQueryParams } from '@baf/core';
+import { castQueryParams, getRoute, PATHS, PathValues } from '@baf/core';
+import { getSearchQueryParams } from '@baf/search/common';
 import { SearchGroupComponent } from '@baf/search/ui/fields';
 import { ButtonComponent } from '@baf/ui/buttons';
 
@@ -17,10 +18,12 @@ import { ButtonComponent } from '@baf/ui/buttons';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchFormComponent implements OnInit {
+  private readonly router = inject(Router);
   private readonly activatedRoute = inject(ActivatedRoute);
   private readonly destroyRef = inject(DestroyRef);
 
   readonly form = input.required<FormGroup>();
+  readonly redirectTo = input.required<PathValues>();
   readonly submitted = output();
 
   ngOnInit(): void {
@@ -44,5 +47,8 @@ export class SearchFormComponent implements OnInit {
       return;
     }
     this.submitted.emit();
+
+    // Note: Auto redirect
+    void this.router.navigate(getRoute(PATHS.searchAvia), { queryParams: getSearchQueryParams(this.form().getRawValue()) });
   }
 }

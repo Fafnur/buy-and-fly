@@ -1,4 +1,4 @@
-<baf-search-form [form]="form" (submitted)="onSubmit()">
+<baf-search-form [redirectTo]="redirectTo" [form]="form">
   <baf-search-group mode="destination">
     <baf-search-destination [control]="form.controls.from" [options]="options.from" />
     <baf-search-reverse [form]="form" />
