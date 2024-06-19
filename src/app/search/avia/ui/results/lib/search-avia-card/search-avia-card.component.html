@@ -1,6 +1,20 @@
 @if (searchFlight(); as flight) {
   <baf-card>
-    <baf-search-avia-lines [searchFlight]="flight" />
-    <baf-search-avia-buy [searchFlight]="flight" />
+    <div class="row is-price">
+      <div class="column">
+        <baf-search-avia-price [price]="flight.price"></baf-search-avia-price>
+      </div>
+      <div class="column">
+        <baf-search-avia-companies [airline]="flight.airline" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <baf-search-avia-lines [searchFlight]="flight" />
+      </div>
+      <div class="column">
+        <baf-search-avia-buy [searchFlight]="flight" />
+      </div>
+    </div>
   </baf-card>
 }

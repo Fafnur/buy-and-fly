@@ -7,12 +7,11 @@ import { CardComponent } from '@baf/ui/cards';
 
 import { SearchAviaLinePipe } from './search-avia-line.pipe';
 import { SearchAviaLineComponent } from './search-avia-line/search-avia-line.component';
-import { SearchAviaCompaniesComponent } from './search-avia-companies/search-avia-companies.component';
 
 @Component({
   selector: 'baf-search-avia-lines',
   standalone: true,
-  imports: [SearchAviaLinePipe, SearchAviaLineComponent, AnchorComponent, CardComponent, CurrencyPipe, SearchAviaCompaniesComponent],
+  imports: [SearchAviaLinePipe, SearchAviaLineComponent, AnchorComponent, CardComponent, CurrencyPipe],
   templateUrl: './search-avia-lines.component.html',
   styleUrl: './search-avia-lines.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

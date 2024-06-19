@@ -1,12 +1,42 @@
 @use 'src/stylesheets/device' as device;
 
-.baf-card {
+.row {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 
+  &.is-price {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   @include device.media-web() {
     flex-direction: row;
     gap: 2rem;
+
+    &.is-price {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.column {
+  display: flex;
+
+  @include device.media-web() {
+    &:first-child {
+      width: 75%;
+    }
+    &:last-child {
+      width: 25%;
+    }
+
+    .is-price &:first-child {
+      width: 25%;
+    }
+    .is-price &:last-child {
+      width: 25%;
+    }
   }
 }
