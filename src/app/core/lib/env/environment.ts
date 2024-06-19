@@ -1,5 +1,5 @@
 import { APP_INITIALIZER, makeStateKey, TransferState } from '@angular/core';
-import process from 'node:process';
+// import process from 'node:process';
 
 export const ENV_KEY = makeStateKey<Environment>('Environment');
 
