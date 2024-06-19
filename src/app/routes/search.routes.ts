@@ -40,7 +40,7 @@ export const searchRoutes: Routes = [
       // },
       {
         path: '',
-        loadComponent: () => import('@baf/search/ui/filters').then((m) => m.SearchFiltersComponent),
+        loadComponent: () => import('@baf/search/hotels/ui/filters').then((m) => m.SearchFiltersHotelsComponent),
         outlet: 'filters',
       },
     ],
@@ -54,11 +54,11 @@ export const searchRoutes: Routes = [
       //   loadComponent: () => import('@baf/search/ui/results').then((m) => m.SearchResultsAviaComponent),
       //   outlet: 'results',
       // },
-      {
-        path: '',
-        loadComponent: () => import('@baf/search/ui/filters').then((m) => m.SearchFiltersComponent),
-        outlet: 'filters',
-      },
+      // {
+      //   path: '',
+      //   loadComponent: () => import('@baf/search/ui/filters').then((m) => m.SearchFiltersComponent),
+      //   outlet: 'filters',
+      // },
     ],
   },
   {
@@ -75,11 +75,11 @@ export const searchRoutes: Routes = [
       //   loadComponent: () => import('@baf/search/ui/results').then((m) => m.SearchResultsAviaComponent),
       //   outlet: 'results',
       // },
-      {
-        path: '',
-        loadComponent: () => import('@baf/search/ui/filters').then((m) => m.SearchFiltersComponent),
-        outlet: 'filters',
-      },
+      // {
+      //   path: '',
+      //   loadComponent: () => import('@baf/search/ui/filters').then((m) => m.SearchFiltersComponent),
+      //   outlet: 'filters',
+      // },
     ],
   },
 ].map(withChildNavigation(PATHS.search));

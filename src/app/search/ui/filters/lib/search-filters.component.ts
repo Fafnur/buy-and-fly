@@ -25,6 +25,10 @@ export class SearchFiltersComponent implements OnInit {
   readonly form = input.required<FormGroup>();
 
   ngOnInit(): void {
+    if (!this.form()) {
+      console.warn('Filters is empty');
+      return;
+    }
     const formData = castQueryParams(this.activatedRoute.snapshot.queryParams, Object.keys(this.form().controls));
 
     if (Object.keys(formData).length) {

@@ -4,7 +4,7 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { tap } from 'rxjs';
 
-import { castQueryParams, getRoute, PATHS, PathValues } from '@baf/core';
+import { castQueryParams, getRoute, PathValues } from '@baf/core';
 import { getSearchQueryParams } from '@baf/search/common';
 import { SearchGroupComponent } from '@baf/search/ui/fields';
 import { ButtonComponent } from '@baf/ui/buttons';
@@ -49,6 +49,8 @@ export class SearchFormComponent implements OnInit {
     this.submitted.emit();
 
     // Note: Auto redirect
-    void this.router.navigate(getRoute(PATHS.searchAvia), { queryParams: getSearchQueryParams(this.form().getRawValue()) });
+    void this.router.navigate(getRoute(this.redirectTo()), {
+      queryParams: getSearchQueryParams({ ...this.activatedRoute.snapshot.queryParams, ...this.form().getRawValue() }),
+    });
   }
 }

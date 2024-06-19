@@ -157,20 +157,21 @@ export interface SearchHotelsResponse {
   readonly status: string;
 }
 
-export function getSearchQueryParams(form: unknown): Record<string, unknown> {
-  // SearchAviaForm - all variants fields
-  const formMapped = form as {
-    readonly [key: string]: string | number | boolean | Record<string, unknown>;
+export function getSearchQueryParams(form: {
+  readonly [key: string]: string | number | boolean | Record<string, unknown>;
+}): Record<string, unknown> {
+  const params: Record<string, unknown> = {};
 
-    readonly from: string | { value: string; city_name: string };
-    readonly to: string | { value: string; city_name: string };
-  };
+  for (const [key, value] of Object.entries(form)) {
+    console.log(value);
 
-  return {
-    ...(form as Record<string, string>),
-    from: typeof formMapped.from === 'string' ? formMapped.from : formMapped.from.value,
-    fromName: typeof formMapped.from === 'string' ? undefined : formMapped.from.city_name,
-    to: typeof formMapped.to === 'string' ? formMapped.to : formMapped.to.value,
-    toName: typeof formMapped.to === 'string' ? undefined : formMapped.to.city_name,
-  };
+    if (!!value && typeof value === 'object') {
+      params[key] = 'value' in value ? value['value'] : undefined;
+      params[`${key}Name`] = 'city_name' in value ? value['city_name'] : undefined;
+    } else {
+      params[key] = value;
+    }
+  }
+
+  return params;
 }

@@ -644,6 +644,33 @@
         <note priority="1" from="description">Cashback</note>
         <note priority="1" from="meaning">Search Avia Price</note>
       </trans-unit>
+      <trans-unit id="5310530945730171806" datatype="html">
+        <source>Breakfast</source>
+        <target state="translated">Завтрак</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/filters/lib/search-filters-hotels.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Search Filter</note>
+      </trans-unit>
+      <trans-unit id="2094402497544625996" datatype="html">
+        <source>Five Stars</source>
+        <target state="translated">5 звезд</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/filters/lib/search-filters-hotels.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Search Filter</note>
+      </trans-unit>
+      <trans-unit id="7031769989941096340" datatype="html">
+        <source>Free Cancellation</source>
+        <target state="translated">Бесплатная отмена</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/filters/lib/search-filters-hotels.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Search Filter</note>
+      </trans-unit>
       <trans-unit id="2314075913167237221" datatype="html">
         <source>City</source>
         <target state="translated">Город</target>
