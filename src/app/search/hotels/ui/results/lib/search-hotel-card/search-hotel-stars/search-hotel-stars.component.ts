@@ -1,9 +1,11 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
+import { StarComponent } from '@baf/ui/icons';
+
 @Component({
   selector: 'baf-search-hotel-stars',
   standalone: true,
-  imports: [],
+  imports: [StarComponent],
   templateUrl: './search-hotel-stars.component.html',
   styleUrl: './search-hotel-stars.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

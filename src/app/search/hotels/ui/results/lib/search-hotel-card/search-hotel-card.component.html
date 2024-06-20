@@ -1,5 +1,6 @@
 @if (searchHotel(); as hotel) {
   <baf-card>
+    <baf-search-hotel-stars [stars]="hotel.stars" />
     <p>{{ hotel.hotelName }}</p>
     <p>от {{ hotel.priceAvg | currency }}</p>
   </baf-card>
