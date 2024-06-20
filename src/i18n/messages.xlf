@@ -509,6 +509,42 @@
         </context-group>
         <note priority="1" from="description">Home Title</note>
       </trans-unit>
+      <trans-unit id="3909775635246512011" datatype="html">
+        <source>Search for cheap flights</source>
+        <target state="translated">Поиск дешевых рейсов</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/search.routes.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Search Page</note>
+      </trans-unit>
+      <trans-unit id="6112289020719627140" datatype="html">
+        <source>Search for cheap hotels</source>
+        <target state="translated">Поиск дешевых отелей</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/search.routes.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Search Page</note>
+      </trans-unit>
+      <trans-unit id="5156864544581050078" datatype="html">
+        <source>Search for cheap tours</source>
+        <target state="translated">Поиск дешевых туров</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/search.routes.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <note priority="1" from="description">Search Page</note>
+      </trans-unit>
+      <trans-unit id="1554268565498690332" datatype="html">
+        <source>Search for cheap railways</source>
+        <target state="translated">Поиск дешевых ж/д билетов</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/search.routes.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">Search Page</note>
+      </trans-unit>
       <trans-unit id="6903250500086446905" datatype="html">
         <source>Baggage</source>
         <target state="translated">Багаж</target>
@@ -532,7 +568,7 @@
         <target state="translated">Откуда</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/search/avia/ui/form/lib/search-avia-form.component.ts</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">38</context>
         </context-group>
         <note priority="1" from="description">Search Field</note>
       </trans-unit>
@@ -541,7 +577,7 @@
         <target state="translated">Куда</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/search/avia/ui/form/lib/search-avia-form.component.ts</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">39</context>
         </context-group>
         <note priority="1" from="description">Search Field</note>
       </trans-unit>
@@ -550,15 +586,15 @@
         <target state="translated">Когда</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/search/avia/ui/form/lib/search-avia-form.component.ts</context>
-          <context context-type="linenumber">41</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/search/hotels/ui/form/lib/search-hotel-form.component.ts</context>
           <context context-type="linenumber">40</context>
         </context-group>
         <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/form/lib/search-hotel-form.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
           <context context-type="sourcefile">src/app/search/railways/ui/form/lib/search-railway-form.component.ts</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">39</context>
         </context-group>
         <note priority="1" from="description">Search Field</note>
       </trans-unit>
@@ -567,11 +603,11 @@
         <target state="translated">Обратно</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/search/avia/ui/form/lib/search-avia-form.component.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">41</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/search/hotels/ui/form/lib/search-hotel-form.component.ts</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">39</context>
         </context-group>
         <note priority="1" from="description">Search Field</note>
       </trans-unit>
@@ -580,11 +616,11 @@
         <target state="translated">Пассажиры</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/search/avia/ui/form/lib/search-avia-form.component.ts</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">42</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/search/railways/ui/form/lib/search-railway-form.component.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">40</context>
         </context-group>
         <note priority="1" from="description">Search Field</note>
       </trans-unit>
@@ -676,7 +712,7 @@
         <target state="translated">Город</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/search/hotels/ui/form/lib/search-hotel-form.component.ts</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">37</context>
         </context-group>
         <note priority="1" from="description">Search Field</note>
       </trans-unit>
@@ -685,16 +721,74 @@
         <target state="translated">Гости</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/search/hotels/ui/form/lib/search-hotel-form.component.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">40</context>
         </context-group>
         <note priority="1" from="description">Search Field</note>
+      </trans-unit>
+      <trans-unit id="2185986856139725238" datatype="html">
+        <source>from</source>
+        <target state="translated">от</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/results/lib/search-hotel-card/search-hotel-price/search-hotel-price.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">From</note>
+        <note priority="1" from="meaning">Search Hotel Price</note>
+      </trans-unit>
+      <trans-unit id="2474656936426935374" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {day} =1 {1 day} other {<x id="INTERPOLATION"/> days}}</source>
+        <target state="translated">{VAR_PLURAL, plural, =0 {день} =1 {1 день} =2 {2 дня} =3 {3 дня} =4 {4 дня} other {<x id="INTERPOLATION"/> дней}}</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/results/lib/search-hotel-card/search-hotel-price/search-hotel-price.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4785822252795944426" datatype="html">
+        <source><x id="ICU" equiv-text="{days, plural, =0 {day} =1 {1 day} other {{{days | number}} days}}" xid="989274420041699558"/>,</source>
+        <target state="translated"><x id="ICU" equiv-text="{days, plural, =0 {day} =1 {1 day} other {{{days | number}} days}}" xid="989274420041699558"/>,</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/results/lib/search-hotel-card/search-hotel-price/search-hotel-price.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">Days</note>
+        <note priority="1" from="meaning">Search Hotel Price</note>
+      </trans-unit>
+      <trans-unit id="7951250920631984904" datatype="html">
+        <source>per night</source>
+        <target state="translated">за ночь</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/results/lib/search-hotel-card/search-hotel-price/search-hotel-price.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+        <note priority="1" from="description">Per Night</note>
+        <note priority="1" from="meaning">Search Hotel Price</note>
+      </trans-unit>
+      <trans-unit id="5142226925758661620" datatype="html">
+        <source>Hotel</source>
+        <target state="translated">Отель</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/results/lib/search-hotel-card/search-hotel-stars/search-hotel-stars.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Hotel</note>
+        <note priority="1" from="meaning">Search Hotel Stars</note>
+      </trans-unit>
+      <trans-unit id="2984787523010356077" datatype="html">
+        <source>View</source>
+        <target state="translated">Посмотреть на карте</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/results/lib/search-hotel-card/search-hotel-view/search-hotel-view.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">View</note>
+        <note priority="1" from="meaning">Search Hotel View</note>
       </trans-unit>
       <trans-unit id="7510690754661037908" datatype="html">
         <source>Departure station</source>
         <target state="translated">Станция отправления</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/search/railways/ui/form/lib/search-railway-form.component.ts</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">37</context>
         </context-group>
         <note priority="1" from="description">Search Field</note>
       </trans-unit>
@@ -703,7 +797,7 @@
         <target state="translated">Станция прибытия</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/search/railways/ui/form/lib/search-railway-form.component.ts</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">38</context>
         </context-group>
         <note priority="1" from="description">Search Field</note>
       </trans-unit>
