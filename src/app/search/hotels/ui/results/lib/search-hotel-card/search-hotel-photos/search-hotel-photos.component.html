@@ -1,0 +1,5 @@
+@if (searchHotel(); as hotel) {
+  @for (photo of hotel.photos; track photo.url) {
+    <img (swipeleft)="onSwipeLeft()" (swiperight)="onSwipeRight()" [ngSrc]="photo.url" alt="" width="320" height="240" priority />
+  }
+}

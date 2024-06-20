@@ -1,7 +1,7 @@
 import { AsyncPipe, CurrencyPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { switchMap } from 'rxjs';
+import { switchMap, tap } from 'rxjs';
 
 import { SearchHotelService } from '@baf/search/hotels/services';
 

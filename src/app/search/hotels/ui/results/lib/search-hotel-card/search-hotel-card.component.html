@@ -1,7 +1,8 @@
 @if (searchHotel(); as hotel) {
   <baf-card>
-    <baf-search-hotel-stars [stars]="hotel.stars" />
+    <baf-search-hotel-photos [searchHotel]="hotel" />
     <baf-search-hotel-title [title]="hotel.hotelName" />
+    <baf-search-hotel-stars [stars]="hotel.stars" />
     <baf-search-hotel-price [searchHotel]="hotel" />
     <baf-search-hotel-view [searchHotel]="hotel" />
   </baf-card>

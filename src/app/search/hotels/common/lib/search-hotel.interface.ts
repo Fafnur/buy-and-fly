@@ -33,7 +33,7 @@ export interface SearchHotelsResponse {
   readonly status: string;
 }
 
-export interface SearchHotel {
+export interface SearchHotelDto {
   readonly locationId: number;
   readonly hotelId: number;
   readonly priceFrom: number;
@@ -50,4 +50,53 @@ export interface SearchHotel {
       readonly lon: number;
     };
   };
+}
+
+export interface SearchHotelDetails {
+  readonly id: number;
+  readonly cityId: number;
+  readonly stars: number;
+  readonly pricefrom: number;
+  readonly rating: number;
+  readonly popularity: number;
+  readonly propertyType: number;
+  readonly checkIn: string;
+  readonly checkOut: string;
+  readonly distance: number;
+  readonly photoCount: number;
+  readonly photos: {
+    readonly url: string;
+    readonly width: number;
+    readonly height: number;
+  }[];
+  readonly photosByRoomType: Record<string, number>;
+  readonly yearOpened: number;
+  readonly yearRenovated: null | number;
+  readonly cntRooms: number;
+  readonly cntSuites: null | number;
+  readonly cntFloors: number;
+  readonly facilities: number[];
+  readonly shortFacilities: string[];
+  readonly location: {
+    readonly lon: number;
+    readonly lat: number;
+  };
+  readonly name: Record<string, string>;
+  readonly address: Record<string, string>;
+  readonly link: string;
+  readonly poi_distance: unknown;
+}
+
+export interface SearchHotelsDetailsResponse {
+  readonly pois: unknown[];
+  readonly hotels: SearchHotelDetails[];
+  readonly status: string;
+}
+
+export interface SearchHotel extends SearchHotelDto {
+  readonly photos: {
+    readonly url: string;
+    readonly width: number;
+    readonly height: number;
+  }[];
 }
