@@ -9,14 +9,14 @@ export class SearchDestinationService {
   private readonly httpClient = inject(HttpClient);
   private readonly localeId = inject(LOCALE_ID);
 
-  findDestination(term: string, types?: string[]): Observable<SearchDestination[]> {
+  findDestination(term: string, key: string, types?: string[]): Observable<SearchDestination[]> {
     const withTypes = types?.length ? `&${types.map((type) => `types[]=${type}`).join('&')}` : '';
 
     return this.httpClient.get<SearchDestination[]>(`/api/autocomplete/places2?locale=${this.localeId}${withTypes}&term=${term}`).pipe(
       map((result) =>
         result.map((item) => ({
           ...item,
-          value: item.code,
+          value: item[key as 'code' | 'name'],
         })),
       ),
     );

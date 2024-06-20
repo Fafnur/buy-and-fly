@@ -35,7 +35,7 @@ export class SearchHotelFormComponent {
   readonly name = 'name';
 
   readonly options: SearchFormOptions<SearchHotelForm> = {
-    city: { label: $localize`:Search Field:City`, id: 'city', types: ['city'] },
+    city: { label: $localize`:Search Field:City`, id: 'city', types: ['city'], key: 'name' },
     startDate: { label: $localize`:Search Field:When`, id: 'startDate' },
     endDate: { label: $localize`:Search Field:When back`, id: 'endDate', startDate: this.form.controls.startDate },
     passengers: { label: $localize`:Search Field:Guests`, id: 'passengers' },

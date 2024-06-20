@@ -12,6 +12,7 @@ import { SearchDestinationService } from './search-destination.service';
 
 export interface SearchDestinationOptions extends SearchFieldOptions {
   readonly types?: string[];
+  readonly key?: string;
 }
 
 @Component({
@@ -35,7 +36,7 @@ export class SearchDestinationComponent implements OnInit {
 
       return {
         ...options,
-        key: 'code',
+        key: options.key ?? 'code',
         displayFn: (item: SearchDestination) => {
           return `${item.name}, ${item.code}<br>${item.country_name}, ${item.city_name ?? item.name}`;
         },
@@ -68,7 +69,7 @@ export class SearchDestinationComponent implements OnInit {
             return EMPTY;
           }
 
-          return this.searchDestinationService.findDestination(query, this.options().types);
+          return this.searchDestinationService.findDestination(query, this.options().key, this.options().types);
         }),
         tap((response) => this.data$.next(response.slice(0, 6))),
         takeUntilDestroyed(this.destroyRef),
