@@ -1,7 +1,7 @@
 import { CurrencyPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-import { SearchFlight } from '@baf/search/common';
+import { SearchFlight } from '@baf/search/avia/common';
 import { AnchorComponent } from '@baf/ui/buttons';
 import { CardComponent } from '@baf/ui/cards';
 

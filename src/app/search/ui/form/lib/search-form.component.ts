@@ -24,6 +24,7 @@ export class SearchFormComponent implements OnInit {
 
   readonly form = input.required<FormGroup>();
   readonly redirectTo = input.required<PathValues>();
+  readonly name = input<string | undefined>(undefined);
   readonly submitted = output();
 
   ngOnInit(): void {
@@ -50,7 +51,7 @@ export class SearchFormComponent implements OnInit {
 
     // Note: Auto redirect
     void this.router.navigate(getRoute(this.redirectTo()), {
-      queryParams: getSearchQueryParams({ ...this.activatedRoute.snapshot.queryParams, ...this.form().getRawValue() }),
+      queryParams: getSearchQueryParams({ ...this.activatedRoute.snapshot.queryParams, ...this.form().getRawValue() }, this.name()),
     });
   }
 }

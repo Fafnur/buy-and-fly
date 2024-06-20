@@ -1,8 +1,7 @@
 import { inject, Pipe, PipeTransform } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { SearchAviaLine } from '@baf/search/avia/common';
-import { SearchFlight } from '@baf/search/common';
+import { SearchAviaLine, SearchFlight } from '@baf/search/avia/common';
 
 @Pipe({
   name: 'searchAviaLine',

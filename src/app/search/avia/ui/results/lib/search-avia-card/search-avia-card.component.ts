@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-import { SearchFlight } from '@baf/search/common';
+import { SearchFlight } from '@baf/search/avia/common';
 import { CardComponent } from '@baf/ui/cards';
 
 import { SearchAviaBuyComponent } from './search-avia-buy/search-avia-buy.component';

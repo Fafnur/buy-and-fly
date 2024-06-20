@@ -5,9 +5,10 @@ import { BehaviorSubject, debounceTime, EMPTY, of, switchMap, tap } from 'rxjs';
 
 import { ExtraClassService, toClass } from '@baf/core';
 import { SearchDestination, SearchFieldOptions } from '@baf/search/common';
-import { SearchService } from '@baf/search/services';
 import { AutocompleteComponent, AutocompleteOptions } from '@baf/ui/autocomplete';
 import { InputComponent } from '@baf/ui/input';
+
+import { SearchDestinationService } from './search-destination.service';
 
 export interface SearchDestinationOptions extends SearchFieldOptions {
   readonly types?: string[];
@@ -20,11 +21,11 @@ export interface SearchDestinationOptions extends SearchFieldOptions {
   templateUrl: './search-destination.component.html',
   styleUrl: './search-destination.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [ExtraClassService],
+  providers: [ExtraClassService, SearchDestinationService],
 })
 export class SearchDestinationComponent implements OnInit {
   private readonly destroyRef = inject(DestroyRef);
-  private readonly searchService = inject(SearchService);
+  private readonly searchDestinationService = inject(SearchDestinationService);
   private readonly extraClassService = inject(ExtraClassService);
 
   readonly control = input.required<FormControl<string | SearchDestination>>();
@@ -67,7 +68,7 @@ export class SearchDestinationComponent implements OnInit {
             return EMPTY;
           }
 
-          return this.searchService.findDestination(query, this.options().types);
+          return this.searchDestinationService.findDestination(query, this.options().types);
         }),
         tap((response) => this.data$.next(response.slice(0, 6))),
         takeUntilDestroyed(this.destroyRef),

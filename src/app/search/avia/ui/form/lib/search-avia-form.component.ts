@@ -32,6 +32,7 @@ import { ButtonComponent } from '@baf/ui/buttons';
 export class SearchAviaFormComponent {
   readonly form = initialSearchAviaFormGroup;
   readonly redirectTo = PATHS.searchAvia;
+  readonly name = 'city_name';
 
   readonly options: SearchFormOptions<SearchAviaForm> = {
     from: { label: $localize`:Search Field:Where from`, id: 'from', types: ['city', 'airport'] },

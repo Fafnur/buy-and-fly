@@ -14,5 +14,13 @@
       "^/api": ""
     },
     "changeOrigin": true
+  },
+  "/api/hotels": {
+    "target": "https://engine.hotellook.com/api/v2/lookup.json",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/hotels": ""
+    },
+    "changeOrigin": true
   }
 }
