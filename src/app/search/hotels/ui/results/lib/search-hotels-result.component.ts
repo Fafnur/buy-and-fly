@@ -5,10 +5,12 @@ import { switchMap } from 'rxjs';
 
 import { SearchHotelService } from '@baf/search/hotels/services';
 
+import { SearchHotelCardComponent } from './search-hotel-card/search-hotel-card.component';
+
 @Component({
   selector: 'baf-search-hotels-result',
   standalone: true,
-  imports: [AsyncPipe, CurrencyPipe],
+  imports: [AsyncPipe, CurrencyPipe, SearchHotelCardComponent],
   providers: [SearchHotelService],
   templateUrl: './search-hotels-result.component.html',
   styleUrl: './search-hotels-result.component.scss',

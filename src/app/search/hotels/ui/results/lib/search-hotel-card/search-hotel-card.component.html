@@ -1,0 +1,6 @@
+@if (searchHotel(); as hotel) {
+  <baf-card>
+    <p>{{ hotel.hotelName }}</p>
+    <p>от {{ hotel.priceAvg | currency }}</p>
+  </baf-card>
+}
