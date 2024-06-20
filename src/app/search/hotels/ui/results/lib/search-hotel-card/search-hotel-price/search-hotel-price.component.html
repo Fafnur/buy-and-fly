@@ -1,0 +1,7 @@
+<p><span i18n="Search Hotel Price|From">from</span> {{ searchHotel().priceFrom | currency }}</p>
+@if (days$ | async; as days) {
+  <p>
+    <span i18n="Search Hotel Price|Days">{days, plural, =0 {day} =1 {1 day} other {{{days | number}} days}},</span>
+    {{ searchHotel().priceFrom | searchHotelPrice: days | currency }} <span i18n="Search Hotel Price|Per Night">per night</span>
+  </p>
+}

@@ -9,5 +9,6 @@ export * from './lib/navigation/path.pipe';
 export * from './lib/styles/extra-class.directive';
 export * from './lib/styles/extra-class.service';
 export * from './lib/types/type';
+export * from './lib/utils/date.util';
 export * from './lib/utils/string.util';
 export * from './lib/utils/uuid.util';
