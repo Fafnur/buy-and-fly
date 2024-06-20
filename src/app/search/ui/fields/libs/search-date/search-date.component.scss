@@ -1,0 +1,30 @@
+@use 'src/stylesheets/device' as device;
+
+:host {
+  width: 100%;
+
+  &.is-hide {
+    display: none;
+  }
+
+  &.is-start-date.is-valid {
+    border-right: 1px solid var(--md-sys-color-background);
+  }
+
+  @include device.media-web() {
+    &.is-hide {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    &.is-start-date,
+    &.is-start-date.is-valid {
+      border-left: 1px solid var(--md-sys-color-background);
+      border-right: 1px solid var(--md-sys-color-background);
+    }
+
+    &.is-end-date {
+      border-right: 1px solid var(--md-sys-color-background);
+    }
+  }
+}

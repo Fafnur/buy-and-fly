@@ -1,0 +1,5 @@
+@if (searchLine(); as line) {
+  <baf-search-avia-time [at]="line.departureAt" [place]="line.originName" [placeShort]="line.origin" />
+  <baf-search-avia-duration [searchLine]="line" />
+  <baf-search-avia-time bafAlign="right" [at]="line.arriveAt" [place]="line.destinationName" [placeShort]="line.destination" />
+}

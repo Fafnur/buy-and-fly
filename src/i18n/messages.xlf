@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="5393461076378602347" datatype="html">
+        <source>Page is under construction</source>
+        <target state="translated">Страница в разработке</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/development/page/lib/development-page.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Development Page</note>
+      </trans-unit>
+      <trans-unit id="6148489785526525098" datatype="html">
+        <source> This section is currently under development and will be available soon. We are working diligently to bring you new and exciting content, packed with features and improvements to enhance your experience. Please check back later for updates. We appreciate your patience and look forward to unveiling this new section shortly. Thank you for your understanding and support! </source>
+        <target state="translated">Этот раздел находится в разработке и скоро будет доступен. Мы усердно работаем над тем, чтобы предоставить вам новый и интересный контент, наполненный функциями и улучшениями, которые улучшат ваш опыт. Пожалуйста, зайдите позже за обновлениями. Мы ценим ваше терпение и с нетерпением ждем возможности вскоре открыть этот новый раздел. Спасибо за понимание и поддержку!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/development/page/lib/development-page.component.html</context>
+          <context context-type="linenumber">4,8</context>
+        </context-group>
+        <note priority="1" from="description">Description</note>
+        <note priority="1" from="meaning">Development Page</note>
+      </trans-unit>
+      <trans-unit id="7199909457158125944" datatype="html">
+        <source>Page not found</source>
+        <target state="translated">Страница не найдена</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/errors/not-found/page/lib/not-found-page.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Not Found</note>
+      </trans-unit>
+      <trans-unit id="3302429194793252562" datatype="html">
+        <source>Permission denied</source>
+        <target state="translated">Доступ запрещен</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/errors/permission-denied/page/lib/permission-denied-page.component.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Permission Denied</note>
+      </trans-unit>
+      <trans-unit id="5822027910086725602" datatype="html">
+        <source>Internal Server Error</source>
+        <target state="translated">Внутренняя ошибка сервера</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/errors/server-error/page/lib/server-error-page.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Server Error</note>
+      </trans-unit>
+      <trans-unit id="130332167948491283" datatype="html">
+        <source>Please try again, if the problem persists, contact us support</source>
+        <target state="translated">Пожалуйста, попробуйте еще раз, если проблема не исчезнет, обратитесь в службу поддержки</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/errors/server-error/page/lib/server-error-page.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+        <note priority="1" from="description">Contact us support</note>
+        <note priority="1" from="meaning">Server Error</note>
+      </trans-unit>
+      <trans-unit id="7779914580422913976" datatype="html">
+        <source>Perhaps you were looking for pages</source>
+        <target state="translated">Возможно, вы искали страницы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/errors/ui/links/lib/errors-link.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+        <note priority="1" from="description">Perhaps you were looking for pages</note>
+        <note priority="1" from="meaning">Not Found</note>
+      </trans-unit>
+      <trans-unit id="1175668102699154868" datatype="html">
+        <source>We are always in touch</source>
+        <target state="translated">Мы всегда на связи</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/connect/connect.component.html</context>
+          <context context-type="linenumber">1,4</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Connect</note>
+      </trans-unit>
+      <trans-unit id="7713174955762430197" datatype="html">
+        <source>Have a question - write</source>
+        <target state="translated">Есть вопрос — пишите</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/connect/connect.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">Question</note>
+        <note priority="1" from="meaning">Connect</note>
+      </trans-unit>
+      <trans-unit id="6543574956354917153" datatype="html">
+        <source>For example, if you need help choosing a ticket or paying</source>
+        <target state="translated">Например, если нужна помощь с выбором билета или оплатой</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/connect/connect.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+        <note priority="1" from="description">Desctiption</note>
+        <note priority="1" from="meaning">Connect</note>
+      </trans-unit>
+      <trans-unit id="6020228817424098781" datatype="html">
+        <source>Write</source>
+        <target state="translated">Написать</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/connect/connect.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+        <note priority="1" from="description">Write</note>
+        <note priority="1" from="meaning">Connect</note>
+      </trans-unit>
+      <trans-unit id="4765559492707899151" datatype="html">
+        <source>It&apos;s convenient with us</source>
+        <target state="translated">С нами удобно</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="722877757859226979" datatype="html">
+        <source>Get cashback for everything</source>
+        <target state="translated">Получайте кэшбэк за всё</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+        <note priority="1" from="description">Cashback Title</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="8742444336658803495" datatype="html">
+        <source>In dollars or miles - if you have a Travel card</source>
+        <target state="translated">В рублях или милях — если есть карта Travel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">19,22</context>
+        </context-group>
+        <note priority="1" from="description">Cashback Desctiption</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="6142286865668191740" datatype="html">
+        <source>Earn airline miles</source>
+        <target state="translated">Копите мили авиакомпаний</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+        <note priority="1" from="description">Miles Title</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="3037781987174724684" datatype="html">
+        <source>Add a bonus card to earn miles</source>
+        <target state="translated">Добавьте бонусную карту, чтобы получать мили</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">33,36</context>
+        </context-group>
+        <note priority="1" from="description">Miles Desctiption</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="3635382804250537108" datatype="html">
+        <source>Pay as you want</source>
+        <target state="translated">Платите как хотите</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+        <note priority="1" from="description">Pay Title</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="639588811535151606" datatype="html">
+        <source>Any trip can be paid for immediately or in installments</source>
+        <target state="translated">Любую поездку можно оплатить сразу или частями</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">47,50</context>
+        </context-group>
+        <note priority="1" from="description">Pay Desctiption</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="8805274365156137733" datatype="html">
+        <source>How everything works here</source>
+        <target state="translated">Как тут всё устроено</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <note priority="1" from="description">Work Title</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="7017771624109993275" datatype="html">
+        <source>We tell you how to travel with maximum benefit</source>
+        <target state="translated">Рассказываем, как путешествовать с максимальной выгодой</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/convenient-with-us/convenient-with-us.component.html</context>
+          <context context-type="linenumber">57,60</context>
+        </context-group>
+        <note priority="1" from="description">Work Desctiption</note>
+        <note priority="1" from="meaning">Convenient</note>
+      </trans-unit>
+      <trans-unit id="8547234452468048431" datatype="html">
+        <source>Avia cashback 10%</source>
+        <target state="translated">Кэшбэк 10% за авиа</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/must-buy/must-buy-avia/must-buy-avia.component.html</context>
+          <context context-type="linenumber">1733,1734</context>
+        </context-group>
+        <note priority="1" from="description">Avia Title</note>
+        <note priority="1" from="meaning">Must Buy</note>
+      </trans-unit>
+      <trans-unit id="1913693057193175386" datatype="html">
+        <source>Hotels cashback 10%</source>
+        <target state="translated">Кэшбэк 10% за отели</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/must-buy/must-buy-hotel/must-buy-hotel.component.html</context>
+          <context context-type="linenumber">1948,1949</context>
+        </context-group>
+        <note priority="1" from="description">Hotel Title</note>
+        <note priority="1" from="meaning">Must Buy</note>
+      </trans-unit>
+      <trans-unit id="5984803957501853253" datatype="html">
+        <source>Tour cashback 4%</source>
+        <target state="translated">Кэшбэк 4% за туры</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/must-buy/must-buy-tour/must-buy-tour.component.html</context>
+          <context context-type="linenumber">1623,1624</context>
+        </context-group>
+        <note priority="1" from="description">Tour Title</note>
+        <note priority="1" from="meaning">Must Buy</note>
+      </trans-unit>
+      <trans-unit id="9025760594611774289" datatype="html">
+        <source>Must buy</source>
+        <target state="translated">Надо брать</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/must-buy/must-buy.component.html</context>
+          <context context-type="linenumber">1,3</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Home Must Buy</note>
+      </trans-unit>
+      <trans-unit id="1822380696940630710" datatype="html">
+        <source>Travel with cashback up to 10%</source>
+        <target state="translated">Путешествуйте с кэшбэком до 10%</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/promo/promo.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Home Promo</note>
+      </trans-unit>
+      <trans-unit id="7711092014605535743" datatype="html">
+        <source>Avia</source>
+        <target state="translated">Авиа</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/promo/promo.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Home Nav</note>
+      </trans-unit>
+      <trans-unit id="1597470736145319726" datatype="html">
+        <source>Hotels</source>
+        <target state="translated">Отели</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/promo/promo.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Home Nav</note>
+      </trans-unit>
+      <trans-unit id="5520837882591091600" datatype="html">
+        <source>Tours</source>
+        <target state="translated">Туры</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/promo/promo.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Home Nav</note>
+      </trans-unit>
+      <trans-unit id="6255701642155098381" datatype="html">
+        <source>Railway</source>
+        <target state="translated">Ж/Д</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/promo/promo.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Home Nav</note>
+      </trans-unit>
+      <trans-unit id="4125067935202080912" datatype="html">
+        <source>Frequently asked questions</source>
+        <target state="translated">Частые вопросы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/questions/questions.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Questions</note>
+      </trans-unit>
+      <trans-unit id="5994687670026853096" datatype="html">
+        <source>When will cashback arrive?</source>
+        <target state="translated">Когда придет кэшбэк</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Questions Get Title</note>
+      </trans-unit>
+      <trans-unit id="2577818589657315381" datatype="html">
+        <source>Cashback for purchases in the Travel service will be credited on the 10th of the next month after your flight or stay. For example, if the flight was on August 29, then the cashback will be credited on September 10.</source>
+        <target state="translated">Кэшбэк за покупки в сервисе начислим 10 числа следующего месяца после перелета или проживания. Например, если перелет был 29 августа, то кэшбэк начислим 10 сентября.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Questions Get Description</note>
+      </trans-unit>
+      <trans-unit id="3466386795790118650" datatype="html">
+        <source>What is the maximum cashback for a purchase in the service?</source>
+        <target state="translated">Максимальный кэшбэк за покупку в сервисе</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Questions Cashback Title</note>
+      </trans-unit>
+      <trans-unit id="5002372331012054876" datatype="html">
+        <source>Cashback for purchases in the Alpha Travel service is unlimited. The cashback amount is shown before purchase under the price of a ticket or hotel. For example, if an air ticket cost 1,000 dollars, we will credit you with a cashback of 100 dollars or miles.</source>
+        <target state="translated">Кэшбэк за покупки в сервисе не ограничен. Размер кэшбэка показываем ещё до покупки под ценой билета или отеля. Например, если авиабилет стоил 100 000 рублей, начислим кэшбэк 10 000 рублей или миль.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Questions Cashback Description</note>
+      </trans-unit>
+      <trans-unit id="1564247502165299899" datatype="html">
+        <source>Exchange or refund of air tickets</source>
+        <target state="translated">Обмен или возврат авиабилетов</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Questions Exchange Title</note>
+      </trans-unit>
+      <trans-unit id="6117276997544387633" datatype="html">
+        <source>To return a ticket, use the feedback form. Please note that processing a return requires additional processing time - at least three hours. Therefore, the processing time for the registration procedure should be added to the allowable return period specified by the airline in the fare rules.</source>
+        <target state="translated">Для возврата билета воспользуйтесь формой обратной связи. Обращаем Ваше внимание, что на оформление возврата требуется дополнительное технологическое время - не менее 3 (трёх) часов. Поэтому к допустимому сроку проведения возврата, указанному авиакомпанией в правилах тарифа, следует прибавлять технологическое время на процедуру оформления.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Questions Exchange Description</note>
+      </trans-unit>
+      <trans-unit id="758902945117763023" datatype="html">
+        <source>How to pay for a ticket or accommodation with miles</source>
+        <target state="translated">Как оплатить билет или проживание за мили</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Questions Pay Title</note>
+      </trans-unit>
+      <trans-unit id="4879776168468036333" datatype="html">
+        <source>With miles accrued for paying with a Travel card, you can pay up to 100% of the order value. The minimum number of miles you can spend on one order is 10$. Select the desired flight and enter passenger information → Book and proceed to payment. On the next page, in the payment methods, select Only with miles or Card + miles.</source>
+        <target state="translated">Милями, начисленными за оплату картой Travel, вы можете оплатить до 100% от стоимости заказа. Минимальное количество миль, которое вы можете потратить на один заказ — 1000 рублей. Выберите нужный рейс и введите данные о пассажире → Бронировать и перейти к оплате. На следующей странице в способах оплаты выберите Tолько милями или Картой + милями.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/questions/questions.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Questions Pay Description</note>
+      </trans-unit>
+      <trans-unit id="596338390709170052" datatype="html">
+        <source>For advantageous travel</source>
+        <target state="translated">Для выгодных путешествий</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/traveling/traveling.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Home Traveling</note>
+      </trans-unit>
+      <trans-unit id="7957483041651404821" datatype="html">
+        <source>Credit card with cashback up to 10%</source>
+        <target state="translated">Карта c кэшбэком до 10%</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/traveling/traveling.component.html</context>
+          <context context-type="linenumber">2762,2763</context>
+        </context-group>
+        <note priority="1" from="description">Credit Card</note>
+        <note priority="1" from="meaning">Home Traveling</note>
+      </trans-unit>
+      <trans-unit id="319729900013920986" datatype="html">
+        <source>Traveling with a card will be even more profitable</source>
+        <target state="translated">С картой путешествия будут еще выгоднее</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/traveling/traveling.component.html</context>
+          <context context-type="linenumber">2763,2766</context>
+        </context-group>
+        <note priority="1" from="description">Credit Card Hint</note>
+        <note priority="1" from="meaning">Home Traveling</note>
+      </trans-unit>
+      <trans-unit id="2304716733612789082" datatype="html">
+        <source>Order a card</source>
+        <target state="translated">Заказать карту</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/ui/widgets/lib/traveling/traveling.component.html</context>
+          <context context-type="linenumber">2766,2770</context>
+        </context-group>
+        <note priority="1" from="description">Order</note>
+        <note priority="1" from="meaning">Home Traveling</note>
+      </trans-unit>
+      <trans-unit id="7496212309624327441" datatype="html">
+        <source>Rules for using the site</source>
+        <target state="translated">Правила пользования сайтом</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/documents.routes.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Documents Rules</note>
+      </trans-unit>
+      <trans-unit id="4860437070296850519" datatype="html">
+        <source>Conditions for participation in the program</source>
+        <target state="translated">Условия участия в программе</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/documents.routes.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Documents Terms</note>
+      </trans-unit>
+      <trans-unit id="4733307402565258070" datatype="html">
+        <source>Documents</source>
+        <target state="translated">Документы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/documents.routes.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Documents All</note>
+      </trans-unit>
+      <trans-unit id="2806917038528218276" datatype="html">
+        <source>FAQ</source>
+        <target state="translated">FAQ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/documents.routes.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Documents FAQ</note>
+      </trans-unit>
+      <trans-unit id="5710550455494461439" datatype="html">
+        <source>Application</source>
+        <target state="translated">Оформить кредитную карту</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/documents.routes.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Cards</note>
+      </trans-unit>
+      <trans-unit id="5207635742003539443" datatype="html">
+        <source>Sign in</source>
+        <target state="translated">Войти</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/documents.routes.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Login Title</note>
+      </trans-unit>
+      <trans-unit id="7028204981963450021" datatype="html">
+        <source>Sign up</source>
+        <target state="translated">Регистрация</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/documents.routes.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Registration Title</note>
+      </trans-unit>
+      <trans-unit id="6981204084676320325" datatype="html">
+        <source>Buy &amp; Fly - Flights with 10% cashback</source>
+        <target state="translated">Buy &amp; Fly - Авиабилеты с кэшбэком 10%</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/home.routes.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Home Title</note>
+      </trans-unit>
+      <trans-unit id="2026216770460628770" datatype="html">
+        <source>Buy &amp; Fly - Hotels with 10% cashback</source>
+        <target state="translated">Buy &amp; Fly - Отели с кэшбэком 10%</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/home.routes.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Home Title</note>
+      </trans-unit>
+      <trans-unit id="3359049412232269789" datatype="html">
+        <source>Buy &amp; Fly - Tours with 10% cashback</source>
+        <target state="translated">Buy &amp; Fly - Туры с кэшбэком 4%</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/home.routes.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Home Title</note>
+      </trans-unit>
+      <trans-unit id="6079981224636026952" datatype="html">
+        <source>Buy &amp; Fly - Railways with 5% cashback</source>
+        <target state="translated">Buy &amp; Fly - Ж/д билеты с кэшбэком 5%</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/home.routes.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Home Title</note>
+      </trans-unit>
+      <trans-unit id="3909775635246512011" datatype="html">
+        <source>Search for cheap flights</source>
+        <target state="translated">Поиск дешевых рейсов</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/search.routes.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Search Page</note>
+      </trans-unit>
+      <trans-unit id="6112289020719627140" datatype="html">
+        <source>Search for cheap hotels</source>
+        <target state="translated">Поиск дешевых отелей</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/search.routes.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Search Page</note>
+      </trans-unit>
+      <trans-unit id="5156864544581050078" datatype="html">
+        <source>Search for cheap tours</source>
+        <target state="translated">Поиск дешевых туров</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/search.routes.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <note priority="1" from="description">Search Page</note>
+      </trans-unit>
+      <trans-unit id="1554268565498690332" datatype="html">
+        <source>Search for cheap railways</source>
+        <target state="translated">Поиск дешевых ж/д билетов</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/routes/search.routes.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">Search Page</note>
+      </trans-unit>
+      <trans-unit id="6903250500086446905" datatype="html">
+        <source>Baggage</source>
+        <target state="translated">Багаж</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/filters/lib/search-filters-avia.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Search Filter</note>
+      </trans-unit>
+      <trans-unit id="4478852084900703442" datatype="html">
+        <source>Direct</source>
+        <target state="translated">Без пересадок</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/filters/lib/search-filters-avia.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Search Filter</note>
+      </trans-unit>
+      <trans-unit id="6566948956352878818" datatype="html">
+        <source>Where from</source>
+        <target state="translated">Откуда</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/form/lib/search-avia-form.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Search Field</note>
+      </trans-unit>
+      <trans-unit id="3290124869549810799" datatype="html">
+        <source>Where to</source>
+        <target state="translated">Куда</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/form/lib/search-avia-form.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Search Field</note>
+      </trans-unit>
+      <trans-unit id="3198123723060667787" datatype="html">
+        <source>When</source>
+        <target state="translated">Когда</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/form/lib/search-avia-form.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/form/lib/search-hotel-form.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/railways/ui/form/lib/search-railway-form.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Search Field</note>
+      </trans-unit>
+      <trans-unit id="7800377007167364005" datatype="html">
+        <source>When back</source>
+        <target state="translated">Обратно</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/form/lib/search-avia-form.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/form/lib/search-hotel-form.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Search Field</note>
+      </trans-unit>
+      <trans-unit id="1965356297860228129" datatype="html">
+        <source>Passengers</source>
+        <target state="translated">Пассажиры</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/form/lib/search-avia-form.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/railways/ui/form/lib/search-railway-form.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <note priority="1" from="description">Search Field</note>
+      </trans-unit>
+      <trans-unit id="2748721906284210585" datatype="html">
+        <source>Select</source>
+        <target state="translated">Выбрать</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/results/lib/search-avia-card/search-avia-buy/search-avia-buy.component.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+        <note priority="1" from="description">Select</note>
+        <note priority="1" from="meaning">Search Avia Buy</note>
+      </trans-unit>
+      <trans-unit id="5540784627817253534" datatype="html">
+        <source> <x id="ICU" equiv-text="{line.transfers, plural, =0 {direct} =1 {1 transfer} other {{{line.transfers | number}} transfers }}" xid="1783785263838666232"/> </source>
+        <target state="translated"><x id="ICU" equiv-text="{line.transfers, plural, =0 {direct} =1 {1 transfer} other {{{line.transfers | number}} transfers }}" xid="1783785263838666232"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/results/lib/search-avia-card/search-avia-lines/search-avia-line/search-avia-duration/search-avia-duration.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+        <note priority="1" from="description">Transfers</note>
+        <note priority="1" from="meaning">Search Avia Duration</note>
+      </trans-unit>
+      <trans-unit id="689223566231655815" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {direct} =1 {1 transfer} other {<x id="INTERPOLATION"/> transfers }}</source>
+        <target state="translated">{VAR_PLURAL, plural, =0 {прямой} =1 {1 пересадка} =2 {2 пересадки} =3 {3 пересадки} =4 {4 пересадки} other {<x id="INTERPOLATION"/> пересадок}}</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/results/lib/search-avia-card/search-avia-lines/search-avia-line/search-avia-duration/search-avia-duration.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8398233202919865612" datatype="html">
+        <source>h</source>
+        <target state="translated">ч</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/results/lib/search-avia-card/search-avia-lines/search-avia-line/search-avia-duration/search-avia-duration.pipe.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Search Avia Time</note>
+      </trans-unit>
+      <trans-unit id="8033953731717586115" datatype="html">
+        <source>m</source>
+        <target state="translated">м</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/results/lib/search-avia-card/search-avia-lines/search-avia-line/search-avia-duration/search-avia-duration.pipe.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Search Avia Time</note>
+      </trans-unit>
+      <trans-unit id="2194198614384146147" datatype="html">
+        <source>cashback</source>
+        <target state="translated">кешбек</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/avia/ui/results/lib/search-avia-card/search-avia-price/search-avia-price.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Cashback</note>
+        <note priority="1" from="meaning">Search Avia Price</note>
+      </trans-unit>
+      <trans-unit id="5310530945730171806" datatype="html">
+        <source>Breakfast</source>
+        <target state="translated">Завтрак</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/filters/lib/search-filters-hotels.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Search Filter</note>
+      </trans-unit>
+      <trans-unit id="2094402497544625996" datatype="html">
+        <source>Five Stars</source>
+        <target state="translated">5 звезд</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/filters/lib/search-filters-hotels.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Search Filter</note>
+      </trans-unit>
+      <trans-unit id="7031769989941096340" datatype="html">
+        <source>Free Cancellation</source>
+        <target state="translated">Бесплатная отмена</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/filters/lib/search-filters-hotels.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Search Filter</note>
+      </trans-unit>
+      <trans-unit id="2314075913167237221" datatype="html">
+        <source>City</source>
+        <target state="translated">Город</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/form/lib/search-hotel-form.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">Search Field</note>
+      </trans-unit>
+      <trans-unit id="7184318772253450841" datatype="html">
+        <source>Guests</source>
+        <target state="translated">Гости</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/form/lib/search-hotel-form.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <note priority="1" from="description">Search Field</note>
+      </trans-unit>
+      <trans-unit id="2185986856139725238" datatype="html">
+        <source>from</source>
+        <target state="translated">от</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/results/lib/search-hotel-card/search-hotel-price/search-hotel-price.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">From</note>
+        <note priority="1" from="meaning">Search Hotel Price</note>
+      </trans-unit>
+      <trans-unit id="2474656936426935374" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {day} =1 {1 day} other {<x id="INTERPOLATION"/> days}}</source>
+        <target state="translated">{VAR_PLURAL, plural, =0 {день} =1 {1 день} =2 {2 дня} =3 {3 дня} =4 {4 дня} other {<x id="INTERPOLATION"/> дней}}</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/results/lib/search-hotel-card/search-hotel-price/search-hotel-price.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4785822252795944426" datatype="html">
+        <source><x id="ICU" equiv-text="{days, plural, =0 {day} =1 {1 day} other {{{days | number}} days}}" xid="989274420041699558"/>,</source>
+        <target state="translated"><x id="ICU" equiv-text="{days, plural, =0 {day} =1 {1 day} other {{{days | number}} days}}" xid="989274420041699558"/>,</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/results/lib/search-hotel-card/search-hotel-price/search-hotel-price.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">Days</note>
+        <note priority="1" from="meaning">Search Hotel Price</note>
+      </trans-unit>
+      <trans-unit id="7951250920631984904" datatype="html">
+        <source>per night</source>
+        <target state="translated">за ночь</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/results/lib/search-hotel-card/search-hotel-price/search-hotel-price.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+        <note priority="1" from="description">Per Night</note>
+        <note priority="1" from="meaning">Search Hotel Price</note>
+      </trans-unit>
+      <trans-unit id="5142226925758661620" datatype="html">
+        <source>Hotel</source>
+        <target state="translated">Отель</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/results/lib/search-hotel-card/search-hotel-stars/search-hotel-stars.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Hotel</note>
+        <note priority="1" from="meaning">Search Hotel Stars</note>
+      </trans-unit>
+      <trans-unit id="2984787523010356077" datatype="html">
+        <source>View</source>
+        <target state="translated">Посмотреть на карте</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/hotels/ui/results/lib/search-hotel-card/search-hotel-view/search-hotel-view.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">View</note>
+        <note priority="1" from="meaning">Search Hotel View</note>
+      </trans-unit>
+      <trans-unit id="7510690754661037908" datatype="html">
+        <source>Departure station</source>
+        <target state="translated">Станция отправления</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/railways/ui/form/lib/search-railway-form.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">Search Field</note>
+      </trans-unit>
+      <trans-unit id="6420845408234482690" datatype="html">
+        <source>Arrival station</source>
+        <target state="translated">Станция прибытия</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/railways/ui/form/lib/search-railway-form.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Search Field</note>
+      </trans-unit>
+      <trans-unit id="5535304461922787756" datatype="html">
+        <source>Swap</source>
+        <target state="translated">Поменять местами</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/ui/fields/libs/search-reverse/search-reverse.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Swap</note>
+        <note priority="1" from="meaning">Search Field</note>
+      </trans-unit>
+      <trans-unit id="7443722256148100672" datatype="html">
+        <source> Apply </source>
+        <target state="translated">Применить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/ui/filters/lib/search-filters.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+        <note priority="1" from="description">Apply</note>
+        <note priority="1" from="meaning">Search Filters</note>
+      </trans-unit>
+      <trans-unit id="141209653762808984" datatype="html">
+        <source> Reset </source>
+        <target state="translated">Сбросить</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/ui/filters/lib/search-filters.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+        <note priority="1" from="description">Reset</note>
+        <note priority="1" from="meaning">Search Filters</note>
+      </trans-unit>
+      <trans-unit id="2253059408709577020" datatype="html">
+        <source>Find</source>
+        <target state="translated">Найти</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/ui/form/lib/search-form.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">Find</note>
+        <note priority="1" from="meaning">Search Form</note>
+      </trans-unit>
+      <trans-unit id="2212313486695517466" datatype="html">
+        <source>Avia - cash back 10%</source>
+        <target state="translated">Авиа - кэшбэк 10%</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/ui/layout/lib/footer/footer-cashback/footer-cashback.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Avia</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="6505954128114415996" datatype="html">
+        <source>Tours - cash back 4%</source>
+        <target state="translated">Туры - кэшбэк 4%</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/ui/layout/lib/footer/footer-cashback/footer-cashback.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <note priority="1" from="description">Tours</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="6125366088434776825" datatype="html">
+        <source>Railways - cash back 5%</source>
+        <target state="translated">Поезда - кэшбэк 5%</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/ui/layout/lib/footer/footer-cashback/footer-cashback.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">Railways</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="1181971717987326912" datatype="html">
+        <source>Rules for using the site</source>
+        <target state="translated">Правила пользования сайтом</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/ui/layout/lib/footer/footer-links/footer-links.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">Rules</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="5133793276187148876" datatype="html">
+        <source>Conditions for participation in the program</source>
+        <target state="translated">Условия участия в программе</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/ui/layout/lib/footer/footer-links/footer-links.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <note priority="1" from="description">Terms</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="4879533940723963978" datatype="html">
+        <source>Documents</source>
+        <target state="translated">Документы</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/ui/layout/lib/footer/footer-links/footer-links.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">Documents</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="770010914393642801" datatype="html">
+        <source>All offers with cash back</source>
+        <target state="translated">Все предложения с кэшбэком</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/ui/layout/lib/footer/footer.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">Footer</note>
+      </trans-unit>
+      <trans-unit id="4789832408438980264" datatype="html">
+        <source>Sign in</source>
+        <target state="translated">Войти</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/ui/layout/lib/header/header.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">Login</note>
+        <note priority="1" from="meaning">Header</note>
+      </trans-unit>
+      <trans-unit id="8430970888358801421" datatype="html">
+        <source>Sign up</source>
+        <target state="translated">Регистрация</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/ui/layout/lib/header/header.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+        <note priority="1" from="description">Registration</note>
+        <note priority="1" from="meaning">Header</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

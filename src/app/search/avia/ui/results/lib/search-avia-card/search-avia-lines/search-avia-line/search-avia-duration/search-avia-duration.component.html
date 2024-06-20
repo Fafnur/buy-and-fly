@@ -1,0 +1,11 @@
+@if (searchLine(); as line) {
+  <div class="way">{{ line.duration | searchAviaDuration }}</div>
+  <div class="timeline"></div>
+  <div class="airports">
+    <div>{{ line.origin }}</div>
+    <div class="transfers" i18n="Search Avia Duration|Transfers">
+      {line.transfers, plural, =0 {direct} =1 {1 transfer} other {{{line.transfers | number}} transfers }}
+    </div>
+    <div>{{ line.destination }}</div>
+  </div>
+}

@@ -1,0 +1,41 @@
+@use 'src/stylesheets/device' as device;
+
+:host {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 0.5rem;
+
+  @include device.media-tablet-up() {
+    gap: 1rem;
+  }
+}
+
+a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.125rem;
+  color: var(--md-sys-color-on-surface-variant);
+  white-space: nowrap;
+
+  span {
+    padding: 0 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  &.is-active {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+
+    span {
+      display: block;
+      background-color: var(--md-sys-color-tertiary-container);
+      color: var(--md-sys-color-on-tertiary);
+    }
+  }
+}

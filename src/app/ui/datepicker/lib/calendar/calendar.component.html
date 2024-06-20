@@ -1,0 +1,24 @@
+<div class="calculator-header">
+  <button baf-icon-button class="calculator-action" type="button" (click)="onPrev()"><baf-chevron-left /></button>
+  <div>{{ config.date | date: 'MMMM y' }}</div>
+  <button baf-icon-button class="calculator-action" type="button" (click)="onNext()"><baf-chevron-right /></button>
+</div>
+<div class="calculator-week">
+  <div class="calculator-week-day">Вс</div>
+  <div class="calculator-week-day">Пн</div>
+  <div class="calculator-week-day">Вт</div>
+  <div class="calculator-week-day">Ср</div>
+  <div class="calculator-week-day">Чт</div>
+  <div class="calculator-week-day">Пт</div>
+  <div class="calculator-week-day">Сб</div>
+</div>
+<div class="calculator-days">
+  @for (day of config.firstDay.getDay() | calendarDays; track day) {
+    <div></div>
+  }
+  @for (day of config.lastDay.getDate() | calendarDays; track day) {
+    <button type="button" class="calculator-day" (click)="onSelect(day)" [class.is-active]="day === config.active">
+      {{ day }}
+    </button>
+  }
+</div>

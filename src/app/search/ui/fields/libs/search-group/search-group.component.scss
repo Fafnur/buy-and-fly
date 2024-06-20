@@ -1,0 +1,33 @@
+@use 'src/stylesheets/device' as device;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-grow: 1;
+
+  &.is-date {
+    flex-direction: row;
+  }
+
+  &.is-single {
+    flex-grow: 100;
+  }
+
+  &.is-line {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  @include device.media-web() {
+    flex-direction: row;
+
+    &.is-line {
+      gap: 0;
+    }
+    &.is-submit {
+      gap: 0;
+      margin-left: 1rem;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@use 'src/stylesheets/device' as device;
+
+:host {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+
+  @include device.media-web() {
+    position: relative;
+    top: initial;
+    right: initial;
+
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    display: flex;
+    border-left: 1px solid var(--md-sys-color-background);
+    border-right: 1px solid var(--md-sys-color-background);
+
+    button {
+      display: flex;
+      align-items: center;
+      height: 3rem;
+    }
+  }
+}
+
+button {
+  line-height: 1;
+}

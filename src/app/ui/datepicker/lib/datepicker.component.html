@@ -1,0 +1,29 @@
+<baf-input-control cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+  <label baf-label [attr.for]="options().id">{{ options().label }}</label>
+  <input
+    baf-input
+    type="tel"
+    [bafInputMask]="options().mask"
+    [bafInputMaskFrom]="options().maskForm"
+    [bafInputMaskTo]="options().maskTo"
+    [id]="options().id"
+    [formControl]="control()"
+    [placeholder]="options().placeholder ?? ''"
+    (click)="onOpen()"
+    (input)="onInput($event)"
+    [value]="12"
+  />
+</baf-input-control>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="open()"
+  [cdkConnectedOverlayWidth]="width"
+  [cdkConnectedOverlayOffsetY]="1"
+  (overlayOutsideClick)="onClose()"
+>
+  <div class="datepicker-overlay">
+    <baf-calendar [startDate]="control().value" (selected)="onSelected($event)"></baf-calendar>
+  </div>
+</ng-template>

@@ -1,0 +1,45 @@
+@use 'src/stylesheets/align' as align;
+@use 'src/stylesheets/device' as device;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  &.fluid {
+    max-width: 100%;
+  }
+
+  &:not(.mobile-no-gutter) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @include align.make-align();
+
+  @include device.media-tablet-portrait() {
+    &:not(.fluid) {
+      max-width: 788px;
+    }
+  }
+
+  @include device.media-tablet-landscape() {
+    &:not(.fluid) {
+      max-width: 928px;
+    }
+  }
+
+  @include device.media-web-portrait() {
+    &:not(.fluid) {
+      max-width: 808px;
+    }
+  }
+
+  @include device.media-web-landscape() {
+    &:not(.fluid) {
+      max-width: 1200px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use 'src/stylesheets/typography' as typography;
+
+:host {
+  :host-context(.baf-input-control) {
+    position: absolute;
+    z-index: 0;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transform: translateY(14px);
+    transition: transform 0.1s;
+    user-select: none;
+    @include typography.body-large();
+  }
+
+  :host-context(.baf-input-control.is-pressed, .baf-input-control.is-value) {
+    transform: translateY(4px);
+    @include typography.body-small();
+  }
+
+  :host-context(.baf-input-control.is-disabled) {
+    color: rgba(0, 0, 0, 0.38);
+  }
+
+  :host-context(.is-invalid) {
+    color: var(--md-sys-color-error);
+  }
+}

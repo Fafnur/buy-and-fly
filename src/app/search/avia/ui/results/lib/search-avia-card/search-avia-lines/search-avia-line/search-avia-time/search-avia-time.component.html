@@ -1,0 +1,6 @@
+<div class="flight-time">{{ at() | date: 'HH:mm' }}</div>
+<div class="flight-date">{{ at() | date: 'dd MMMM' }}</div>
+<div class="flight-place">
+  <span class="is-short">{{ placeShort() }}</span>
+  <span class="is-full">{{ place() }}</span>
+</div>

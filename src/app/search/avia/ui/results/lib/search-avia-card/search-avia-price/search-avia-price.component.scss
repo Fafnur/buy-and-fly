@@ -1,0 +1,26 @@
+@use 'src/stylesheets/device' as device;
+
+:host {
+  width: 100%;
+
+  @include device.media-web() {
+    text-align: right;
+  }
+}
+
+.flight-price {
+  font-size: 1.25rem;
+  font-weight: bolder;
+
+  @include device.media-web() {
+    font-size: 1.5rem;
+  }
+}
+
+.flight-cashback {
+  font-size: 0.85rem;
+
+  @include device.media-web() {
+    font-size: 1rem;
+  }
+}

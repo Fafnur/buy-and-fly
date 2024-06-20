@@ -1,0 +1,14 @@
+@use 'src/stylesheets/device' as device;
+
+:host {
+  display: block;
+  padding: 1rem 0;
+
+  &.color-smoke {
+    background-color: var(--md-sys-color-background);
+  }
+
+  @include device.media-web() {
+    padding: 2rem 0;
+  }
+}

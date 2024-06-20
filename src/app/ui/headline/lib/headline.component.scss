@@ -1,0 +1,16 @@
+@use 'src/stylesheets/align' as align;
+@use 'src/stylesheets/size' as size;
+@use 'src/stylesheets/typography' as typography;
+
+:host {
+  @include size.make-size() using ($size) {
+    @if $size == small {
+      @include typography.headline-small();
+    } @else if $size == medium {
+      @include typography.headline-medium();
+    } @else if $size == large {
+      @include typography.headline-large();
+    }
+  }
+  @include align.make-align();
+}

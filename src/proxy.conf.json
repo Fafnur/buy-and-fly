@@ -1,0 +1,26 @@
+{
+  "/api/autocomplete": {
+    "target": "https://autocomplete.travelpayouts.com",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/autocomplete": ""
+    },
+    "changeOrigin": true
+  },
+  "/api/aviasales": {
+    "target": "https://api.travelpayouts.com",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  },
+  "/api/hotels": {
+    "target": "https://engine.hotellook.com/api/v2",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/hotels": ""
+    },
+    "changeOrigin": true
+  }
+}

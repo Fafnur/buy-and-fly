@@ -1,0 +1,13 @@
+@mixin make-size() {
+  &.size-small {
+    @content (small);
+  }
+
+  &.size-medium {
+    @content (medium);
+  }
+
+  &.size-large {
+    @content (large);
+  }
+}

@@ -12,16 +12,27 @@
         "@schematics/angular:component": {
           "style": "scss",
           "changeDetection": "OnPush",
-          "standalone": true
+          "standalone": true,
+          "skipTests": true
         }
       },
       "root": "",
       "sourceRoot": "src",
       "prefix": "baf",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ru": {
+            "translation": "src/i18n/messages.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": ["ru"],
             "outputPath": "dist/buy-and-fly",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -31,6 +42,7 @@
             "stylePreprocessorOptions": {
               "includePaths": ["node_modules", "./"]
             },
+            "allowedCommonJsDependencies": ["dotenv", "hammerjs"],
             "assets": [
               {
                 "glob": "**/*",
@@ -40,7 +52,7 @@
             "styles": ["src/styles.scss"],
             "scripts": [],
             "server": "src/main.server.ts",
-            "prerender": true,
+            "prerender": false,
             "ssr": {
               "entry": "server.ts"
             }
@@ -71,6 +83,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "buildTarget": "buy-and-fly:build:production"

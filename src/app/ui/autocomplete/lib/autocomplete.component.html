@@ -1,0 +1,29 @@
+<baf-input-control cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+  <label baf-label [attr.for]="options().id">{{ options().label }}</label>
+  <input
+    #input
+    baf-input
+    type="text"
+    [bafInputDisplay]="options().inputDisplayFn"
+    [id]="options().id"
+    [formControl]="control()"
+    [placeholder]="options().placeholder ?? ''"
+    (click)="onOpen()"
+    (input)="onInput($event)"
+  />
+</baf-input-control>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="open()"
+  [cdkConnectedOverlayWidth]="width"
+  [cdkConnectedOverlayOffsetY]="1"
+  (overlayOutsideClick)="onClose()"
+>
+  <div class="autocomplete-overlay">
+    @for (option of data() | async; track option.id; let index = $index) {
+      <a class="autocomplete-option" [innerHTML]="options().displayFn(option, index)" (click)="onSelect(option)"></a>
+    }
+  </div>
+</ng-template>

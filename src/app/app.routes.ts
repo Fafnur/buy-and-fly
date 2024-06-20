@@ -1,25 +1,37 @@
 import { Routes } from '@angular/router';
 
-import { FooterComponent, HeaderComponent, LayoutComponent } from '@baf/ui/layout';
+import { PATHS } from '@baf/core';
 
 export const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    loadComponent: () => import('@baf/ui/layout').then((m) => m.LayoutComponent),
     children: [
       {
         path: '',
-        component: HeaderComponent,
+        loadComponent: () => import('@baf/ui/layout').then((m) => m.HeaderComponent),
         outlet: 'header',
       },
       {
         path: '',
-        component: FooterComponent,
+        loadComponent: () => import('@baf/ui/layout').then((m) => m.FooterComponent),
         outlet: 'footer',
       },
       {
         path: '',
-        loadComponent: () => import('@baf/home/page').then((m) => m.HomePageComponent),
+        loadChildren: () => import('./routes/home.routes').then((m) => m.homeRoutes),
+      },
+      {
+        path: '',
+        loadChildren: () => import('./routes/documents.routes').then((m) => m.documentsRoutes),
+      },
+      {
+        path: PATHS.search,
+        loadChildren: () => import('./routes/search.routes').then((m) => m.searchRoutes),
+      },
+      {
+        path: '',
+        loadChildren: () => import('./routes/errors.routes').then((m) => m.errorsRoutes),
       },
     ],
   },

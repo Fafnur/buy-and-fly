@@ -1,0 +1,54 @@
+@mixin disabled() {
+  &[disabled],
+  &.is-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+
+    @content;
+  }
+}
+
+@mixin common-size($size, $height, $radius, $paddingLeft, $paddingRight: $paddingLeft) {
+  font-size: $size;
+  height: $height;
+  padding-left: $paddingLeft;
+  padding-right: $paddingRight;
+}
+
+@mixin sizes() {
+  &.size-xsmall {
+    @include common-size(75%, 30px, 15px, 18px);
+  }
+
+  &.size-small {
+    @include common-size(90%, 36px, 18px, 22px);
+  }
+
+  &.size-medium {
+    @include common-size(110%, 48px, 22px, 26px);
+  }
+
+  &.size-large {
+    @include common-size(125%, 54px, 25px, 30px);
+  }
+
+  &.size-xlarge {
+    @include common-size(150%, 60px, 30px, 36px);
+  }
+}
+
+@mixin mode($background, $color, $backgroundActive: $background) {
+  background-color: var(#{$background});
+  color: var(#{$color});
+
+  &:visited {
+    color: var(#{$color});
+  }
+
+  &:hover,
+  &.is-active {
+    background-color: var(#{$backgroundActive});
+    color: var(#{$color});
+  }
+}

@@ -1,0 +1,14 @@
+@use 'src/stylesheets/device' as device;
+
+.baf-nav {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  margin-bottom: 1rem;
+  padding: 0 0 0.5rem 0;
+
+  @include device.media-web() {
+    justify-content: center;
+  }
+}

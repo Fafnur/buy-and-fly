@@ -1,0 +1,27 @@
+@use 'src/stylesheets/device' as device;
+
+.conveniences {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  svg {
+    max-width: 100px;
+  }
+
+  @include device.media-tablet-up() {
+    flex-direction: row;
+  }
+}
+
+.st0 {
+  fill: #bdd0fb;
+}
+
+.st1 {
+  fill: #1c468a;
+}
+
+.st2 {
+  fill: #e1473d;
+}

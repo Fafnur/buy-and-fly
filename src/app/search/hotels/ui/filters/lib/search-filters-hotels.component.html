@@ -1,0 +1,8 @@
+<baf-search-filters [form]="form">
+  <baf-filter-breakfast [control]="form.controls.breakfast" [options]="options.breakfast"></baf-filter-breakfast>
+  <baf-filter-five-stars [control]="form.controls.fiveStars" [options]="options.fiveStars"></baf-filter-five-stars>
+  <baf-filter-free-cancellation
+    [control]="form.controls.freeCancellation"
+    [options]="options.freeCancellation"
+  ></baf-filter-free-cancellation>
+</baf-search-filters>

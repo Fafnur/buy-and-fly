@@ -52,3 +52,5 @@ junit.xml
 package-lock.json
 yarn.lock
 .nx
+dev.json
+src/i18n/source.xlf

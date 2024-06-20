@@ -1,0 +1,5 @@
+@mixin make-width() {
+  &.width-max {
+    width: 100%;
+  }
+}

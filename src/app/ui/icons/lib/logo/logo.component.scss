@@ -1,0 +1,9 @@
+@use 'src/stylesheets/device' as device;
+
+svg {
+  max-width: 8rem;
+
+  @include device.media-tablet-up() {
+    max-width: 10rem;
+  }
+}

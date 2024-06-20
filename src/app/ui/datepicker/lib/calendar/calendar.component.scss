@@ -1,0 +1,47 @@
+.calculator-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--md-sys-color-background);
+}
+
+.calculator-days,
+.calculator-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin: auto;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.calculator-week {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.calculator-day,
+.calculator-week-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+
+.calculator-day {
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  background: transparent;
+
+  &:hover,
+  &.is-active {
+    background-color: var(--md-sys-color-on-secondary);
+    color: var(--md-sys-color-secondary);
+  }
+}
+
+.calculator-week-day {
+  opacity: 0.5;
+}
