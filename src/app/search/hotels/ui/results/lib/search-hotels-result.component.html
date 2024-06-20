@@ -1,0 +1,6 @@
+@if (results$ | async; as hotels) {
+  @for (hotel of hotels; track hotel.hotelId) {
+    <p>{{ hotel.hotelName }}</p>
+    <p>от {{ hotel.priceAvg | currency }}</p>
+  }
+}

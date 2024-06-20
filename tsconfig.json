@@ -39,6 +39,7 @@
       "@baf/search/hotels/services": ["src/app/search/hotels/services/index.ts"],
       "@baf/search/hotels/ui/filters": ["src/app/search/hotels/ui/filters/index.ts"],
       "@baf/search/hotels/ui/form": ["src/app/search/hotels/ui/form/index.ts"],
+      "@baf/search/hotels/ui/results": ["src/app/search/hotels/ui/results/index.ts"],
       "@baf/search/page": ["src/app/search/page/index.ts"],
       "@baf/search/railways/common": ["src/app/search/railways/common/index.ts"],
       "@baf/search/railways/ui/form": ["src/app/search/railways/ui/form/index.ts"],
