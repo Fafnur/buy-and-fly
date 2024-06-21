@@ -1,27 +1,56 @@
-# BuyAndFly
+# Buy & Fly
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0-rc.2.
+This application is designed to search for cheap flights and book hotels. It is developed using Angular 18, leveraging new features such as Signals. The project relies solely on the standard library, avoiding third-party solutions.
 
-## Development server
+To enhance the user interface, a custom UI Kit has been developed, with minimal usage of Angular CDK components.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![image](public/project.jpg)
 
-## Code scaffolding
+### Features
+- Flight Search: Find and compare the best flight deals from various airlines.
+- Hotel Booking: Book hotels at competitive prices with detailed listings.
+- Angular 18: Built using the latest version of Angular, incorporating cutting-edge features and improvements.
+- Custom UI Kit: A bespoke UI Kit designed to provide a consistent and intuitive user experience, with limited dependency on Angular CDK.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Technologies Used
+- Angular 18
+- Standard Angular Library
+- Custom UI Kit
+- Angular CDK (minimal usage)
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To get started with the project, clone the repository and install the necessary dependencies:
 
-## Running unit tests
+```bash
+git clone git@github.com:Fafnur/buy-and-fly.git
+cd buy-and-fly
+yarn install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Please use Yarn instead of NPM to install dependencies. See: `https://yarnpkg.com/getting-started/install`
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run the development server:
 
-## Further help
+```bash
+yarn ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Navigate to `http://localhost:4200/` in your browser to see the application in action.
+
+For build: 
+
+```bash
+yarn ng build
+```
+
+The build artifacts will be stored in the `dist/` directory.
+
+## Contributing
+
+We welcome contributions! Please fork the repository and submit pull requests for any improvements or new features.
+
+## License
+
+This project is licensed under the MIT License - see the `LICENSE` file for details.
