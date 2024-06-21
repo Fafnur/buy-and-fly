@@ -1,6 +1,7 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { CommonEngine } from '@angular/ssr';
 import express from 'express';
+import { createProxyMiddleware } from 'http-proxy-middleware';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -16,11 +17,47 @@ export function app(): express.Express {
 
   const commonEngine = new CommonEngine();
 
+  // Note: Don't use in production.
+  server.use(
+    '/api/autocomplete',
+    createProxyMiddleware({
+      target: 'https://autocomplete.travelpayouts.com',
+      changeOrigin: true,
+      secure: false,
+      pathRewrite: {
+        '^/api/autocomplete': '',
+      },
+    }),
+  );
+  server.use(
+    '/api/aviasales',
+    createProxyMiddleware({
+      target: 'https://api.travelpayouts.com',
+      secure: false,
+      pathRewrite: {
+        '^/api': '',
+      },
+      changeOrigin: true,
+    }),
+  );
+  server.use(
+    '/api/hotels',
+    createProxyMiddleware({
+      target: 'https://engine.hotellook.com/api/v2',
+      secure: false,
+      pathRewrite: {
+        '^/api/hotels': '',
+      },
+      changeOrigin: true,
+    }),
+  );
+
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
+
   // Serve static files from /browser
   server.get(
     '**',

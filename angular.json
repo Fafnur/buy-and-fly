@@ -42,7 +42,7 @@
             "stylePreprocessorOptions": {
               "includePaths": ["node_modules", "./"]
             },
-            "allowedCommonJsDependencies": ["dotenv", "hammerjs"],
+            "allowedCommonJsDependencies": ["dotenv", "hammerjs", "http-proxy-middleware"],
             "assets": [
               {
                 "glob": "**/*",
