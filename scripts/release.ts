@@ -83,7 +83,7 @@ function release(): void {
 
     const version = getVersion();
     updateVersion(version);
-    console.log({ title: 'New version was updated on packages.' });
+    console.log('New version was updated on packages.');
 
     createGitRelease(version);
     console.log('Release was merged on main branch.');
