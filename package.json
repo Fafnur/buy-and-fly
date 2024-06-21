@@ -19,7 +19,7 @@
     "serve": "node dist/buy-and-fly/server/ru/server.mjs",
     "lint": "ng lint",
     "---- App ----": "",
-    "release": "ts-node ./scripts/release.ts"
+    "release": "ts-node --project tsconfig.release.json ./scripts/release.ts"
   },
   "private": true,
   "devDependencies": {
@@ -68,6 +68,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.3.2",
     "rxjs": "^7.8.1",
+    "ts-node": "^10.9.2",
     "tslib": "^2.6.3",
     "typescript": "~5.4.5",
     "zone.js": "~0.14.7"

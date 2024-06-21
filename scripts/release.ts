@@ -65,7 +65,7 @@ function release(): void {
     const brunch = execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf8', maxBuffer: 50 * 1024 * 1024 }).trim();
 
     if (brunch !== 'develop') {
-      console.error({ title: `Creating a new release is only available for the develop branch.\n Current brunch: ${brunch}\n` });
+      console.error(`Creating a new release is only available for the develop branch.\n Current brunch: ${brunch}\n`);
       return;
     }
 
@@ -75,22 +75,22 @@ function release(): void {
     }).trim();
 
     if (/Merge branch 'release\/v.+?' into develop/gm.test(lastCommitMessage)) {
-      console.error({ title: `No new changes detected. If you need to make a release, then use gitlab.\n` });
+      console.error(`No new changes detected. If you need to make a release, then use gitlab.\n`);
       return;
     }
 
-    console.log({ title: 'Starting a new release.' });
+    console.log('Starting a new release.');
 
     const version = getVersion();
     updateVersion(version);
     console.log({ title: 'New version was updated on packages.' });
 
     createGitRelease(version);
-    console.log({ title: 'Release was merged on main branch.' });
+    console.log('Release was merged on main branch.');
 
-    console.log({ title: 'New version creation completed successfully.' });
+    console.log('New version creation completed successfully.');
   } catch (e) {
-    console.error({ title: 'Creation a new release did not complete successfully' + '\n' + e });
+    console.error('Creation a new release did not complete successfully' + '\n' + e);
   }
 }
 
