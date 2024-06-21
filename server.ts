@@ -32,10 +32,10 @@ export function app(): express.Express {
   server.use(
     '/api/aviasales',
     createProxyMiddleware({
-      target: 'https://api.travelpayouts.com',
+      target: 'https://api.travelpayouts.com/aviasales',
       secure: false,
       pathRewrite: {
-        '^/api': '',
+        '^/api/aviasales': '',
       },
       changeOrigin: true,
     }),
