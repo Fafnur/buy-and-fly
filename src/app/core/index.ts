@@ -5,6 +5,8 @@ export * from './lib/form/extract-changes.directive';
 export * from './lib/form/form';
 export * from './lib/hammer/hammer';
 export * from './lib/interceptors/provide';
+export * from './lib/metrics/metric.service';
+export * from './lib/metrics/provider';
 export * from './lib/navigation/navigation';
 export * from './lib/navigation/path.pipe';
 export * from './lib/styles/extra-class.directive';
