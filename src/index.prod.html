@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
-    <meta name="description" content="Example Angular 18 application for search for cheap flights and hotels." />
+
     <link rel="preconnect" href="https://photo.hotellook.com" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
@@ -18,6 +18,59 @@
     <meta name="msapplication-config" content="/browserconfig.xml" />
     <meta name="msapplication-TileColor" content="#172659" />
     <meta name="theme-color" content="#ffffff" />
+
+    <link rel="canonical" href="https://buy-and-fly.fafn.ru" id="canonical" />
+    <meta name="description" content="Пример приложения Angular 18 для поиска дешевых авиабилетов и отелей." />
+    <meta name="og:title" content="Buy & Fly поиск дешевых авиабилетов и отелей" />
+    <meta name="og:description" content="Пример приложения Angular 18 для поиска дешевых авиабилетов и отелей." />
+    <meta name="og:type" content="website" />
+    <meta name="og:locale" content="ru" />
+    <meta name="og:site_name" content="Buy & Fly" />
+    <meta name="og:image" content="/images/project.jpg" />
+    <meta name="og:image:type" content="image/jpeg" />
+    <meta name="og:image:width" content="1280" />
+    <meta name="og:image:height" content="800" />
+
+    <!-- partytown -->
+    <script>
+      partytown = {
+        forward: [['dataLayer.push', { preserveBehavior: true }], ['fbq', { preserveBehavior: false }], 'gtm.push', 'gtag', 'ym'],
+      };
+    </script>
+    <script src="/~partytown/debug/partytown.js"></script>
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-W88RSN32B9"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-W88RSN32B9');
+    </script>
+    <script type="text/partytown">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)), (a = e.getElementsByTagName(t)[0]), (k.async = 1), (k.src = r), a.parentNode.insertBefore(k, a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+      ym(97634082, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <!-- /partytown -->
+
     <style>
       *,
       *::before,
@@ -272,6 +325,10 @@
     </style>
   </head>
   <body>
-    <baf-root></baf-root>
+    <baf-root>
+      <noscript
+        ><div><img src="https://mc.yandex.ru/watch/97634082" style="position: absolute; left: -9999px" alt="" /></div
+      ></noscript>
+    </baf-root>
   </body>
 </html>

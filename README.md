@@ -4,7 +4,7 @@ This application is designed to search for cheap flights and book hotels. It is 
 
 To enhance the user interface, a custom UI Kit has been developed, with minimal usage of Angular CDK components.
 
-![image](public/project.jpg)
+![image](public/images/project.jpg)
 
 ### Features
 - Flight Search: Find and compare the best flight deals from various airlines.

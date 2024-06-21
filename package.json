@@ -43,6 +43,7 @@
     "@angular/platform-server": "^18.0.4",
     "@angular/router": "^18.0.4",
     "@angular/ssr": "^18.0.5",
+    "@builder.io/partytown": "^0.10.2",
     "@types/express": "^4.17.21",
     "@types/hammerjs": "^2.0.45",
     "@types/html-minifier-terser": "^7.0.2",
