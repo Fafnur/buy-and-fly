@@ -54,9 +54,9 @@ function createGitRelease(version: string): void {
   execSync('git checkout develop');
   execSync(`git merge ${branch} --no-ff`);
   execSync(`git branch --delete ${branch}`);
-  execSync(`git checkout master`);
+  execSync(`git checkout main`);
   execSync(`git rebase develop`);
-  execSync(`git push -u origin master develop`);
+  execSync(`git push -u origin main develop`);
   execSync(`git checkout develop`);
 }
 
