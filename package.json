@@ -1,6 +1,14 @@
 {
   "name": "buy-and-fly",
   "version": "0.0.0",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Aleksandr Serenko",
+      "email": "fafnur@yandex.ru",
+      "url": "https://fafn.ru"
+    }
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -64,6 +72,8 @@
   },
   "packageManager": "yarn@4.3.0",
   "engines": {
-    "node": "^18.19.1 || ^20.11.1 || >=22.0.0"
+    "yarn": ">=4.0.0",
+    "node": "^18.19.1 || ^20.11.1 || >=22.0.0",
+    "npm": "Please use Yarn instead of NPM to install dependencies. See: https://yarnpkg.com/getting-started/install/"
   }
 }
