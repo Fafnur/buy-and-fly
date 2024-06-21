@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Buy & Fly</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://photo.hotellook.com" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#172659" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="msapplication-TileColor" content="#172659" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="canonical" href="https://buy-and-fly.fafn.ru" id="canonical" />
+    <meta name="description" content="Пример приложения Angular 18 для поиска дешевых авиабилетов и отелей." />
+    <meta name="og:title" content="Buy & Fly поиск дешевых авиабилетов и отелей" />
+    <meta name="og:description" content="Пример приложения Angular 18 для поиска дешевых авиабилетов и отелей." />
+    <meta name="og:type" content="website" />
+    <meta name="og:locale" content="ru" />
+    <meta name="og:site_name" content="Buy & Fly" />
+    <meta name="og:image" content="/images/project.jpg" />
+    <meta name="og:image:type" content="image/jpeg" />
+    <meta name="og:image:width" content="1280" />
+    <meta name="og:image:height" content="800" />
+
+    <!-- partytown -->
+    <script>
+      partytown = {
+        forward: [['dataLayer.push', { preserveBehavior: true }], ['fbq', { preserveBehavior: false }], 'gtm.push', 'gtag', 'ym'],
+      };
+    </script>
+    <script src="/~partytown/debug/partytown.js"></script>
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-W88RSN32B9"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-W88RSN32B9');
+    </script>
+    <script type="text/partytown">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)), (a = e.getElementsByTagName(t)[0]), (k.async = 1), (k.src = r), a.parentNode.insertBefore(k, a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+      ym(97634082, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <!-- /partytown -->
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+
+        --md-sys-shape-corner-full: 50%;
+        --md-sys-color-primary: rgb(23 38 89);
+        --md-sys-color-surface-tint: rgb(78 92 145);
+        --md-sys-color-on-primary: rgb(255 255 255);
+        --md-sys-color-primary-container: rgb(59 72 124);
+        --md-sys-color-on-primary-container: rgb(227 230 255);
+        --md-sys-color-secondary: rgb(0 100 150);
+        --md-sys-color-on-secondary: rgb(255 255 255);
+        --md-sys-color-secondary-container: rgb(42 168 243);
+        --md-sys-color-on-secondary-container: rgb(0 21 36);
+        --md-sys-color-tertiary: rgb(162 0 63);
+        --md-sys-color-on-tertiary: rgb(255 255 255);
+        --md-sys-color-tertiary-container: rgb(214 52 97);
+        --md-sys-color-on-tertiary-container: rgb(255 255 255);
+        --md-sys-color-error: rgb(186 26 26);
+        --md-sys-color-on-error: rgb(255 255 255);
+        --md-sys-color-error-container: rgb(255 218 214);
+        --md-sys-color-on-error-container: rgb(65 0 2);
+        --md-sys-color-background: rgb(251 248 253);
+        --md-sys-color-on-background: rgb(27 27 31);
+        --md-sys-color-surface: rgb(251 248 253);
+        --md-sys-color-on-surface: rgb(27 27 31);
+        --md-sys-color-surface-variant: rgb(226 225 237);
+        --md-sys-color-on-surface-variant: rgb(69 70 79);
+        --md-sys-color-outline: rgb(118 118 128);
+        --md-sys-color-outline-variant: rgb(198 197 208);
+        --md-sys-color-shadow: rgb(0 0 0);
+        --md-sys-color-scrim: rgb(0 0 0);
+        --md-sys-color-inverse-surface: rgb(48 48 52);
+        --md-sys-color-inverse-on-surface: rgb(242 240 245);
+        --md-sys-color-inverse-primary: rgb(183 196 255);
+        --md-sys-color-primary-fixed: rgb(220 225 255);
+        --md-sys-color-on-primary-fixed: rgb(5 23 74);
+        --md-sys-color-primary-fixed-dim: rgb(183 196 255);
+        --md-sys-color-on-primary-fixed-variant: rgb(54 68 119);
+        --md-sys-color-secondary-fixed: rgb(203 230 255);
+        --md-sys-color-on-secondary-fixed: rgb(0 30 49);
+        --md-sys-color-secondary-fixed-dim: rgb(144 205 255);
+        --md-sys-color-on-secondary-fixed-variant: rgb(0 75 114);
+        --md-sys-color-tertiary-fixed: rgb(255 217 222);
+        --md-sys-color-on-tertiary-fixed: rgb(64 0 20);
+        --md-sys-color-tertiary-fixed-dim: rgb(255 178 189);
+        --md-sys-color-on-tertiary-fixed-variant: rgb(144 0 55);
+        --md-sys-color-surface-dim: rgb(219 217 222);
+        --md-sys-color-surface-bright: rgb(251 248 253);
+        --md-sys-color-surface-container-lowest: rgb(255 255 255);
+        --md-sys-color-surface-container-low: rgb(245 243 248);
+        --md-sys-color-surface-container: rgb(239 237 242);
+        --md-sys-color-surface-container-high: rgb(234 231 236);
+        --md-sys-color-surface-container-highest: rgb(228 225 231);
+
+        /* display - large */
+        --md-sys-typescale-display-large-font-family-style: Regular;
+        --md-sys-typescale-display-large-font-weight: 400;
+        --md-sys-typescale-display-large-font-size: 57px;
+        --md-sys-typescale-display-large-line-height: 64px;
+        --md-sys-typescale-display-large-letter-spacing: -0.25px;
+        /* display - medium */
+        --md-sys-typescale-display-medium-font-family-style: Regular;
+        --md-sys-typescale-display-medium-font-weight: 400;
+        --md-sys-typescale-display-medium-font-size: 45px;
+        --md-sys-typescale-display-medium-line-height: 52px;
+        --md-sys-typescale-display-medium-letter-spacing: 0px;
+        /* display - small */
+        --md-sys-typescale-display-small-font-family-style: Regular;
+        --md-sys-typescale-display-small-font-weight: 400;
+        --md-sys-typescale-display-small-font-size: 36px;
+        --md-sys-typescale-display-small-line-height: 44px;
+        --md-sys-typescale-display-small-letter-spacing: 0px;
+        /* headline - large */
+        --md-sys-typescale-headline-large-font-family-style: Regular;
+        --md-sys-typescale-headline-large-font-weight: 400;
+        --md-sys-typescale-headline-large-font-size: 32px;
+        --md-sys-typescale-headline-large-line-height: 40px;
+        --md-sys-typescale-headline-large-letter-spacing: 0px;
+        /* headline - medium */
+        --md-sys-typescale-headline-medium-font-family-style: Regular;
+        --md-sys-typescale-headline-medium-font-weight: 400;
+        --md-sys-typescale-headline-medium-font-size: 28px;
+        --md-sys-typescale-headline-medium-line-height: 36px;
+        --md-sys-typescale-headline-medium-letter-spacing: 0px;
+        /* headline - small */
+        --md-sys-typescale-headline-small-font-family-style: Regular;
+        --md-sys-typescale-headline-small-font-weight: 400;
+        --md-sys-typescale-headline-small-font-size: 24px;
+        --md-sys-typescale-headline-small-line-height: 32px;
+        --md-sys-typescale-headline-small-letter-spacing: 0px;
+        /* body - large */
+        --md-sys-typescale-body-large-font-family-name: Roboto;
+        --md-sys-typescale-body-large-font-family-style: Regular;
+        --md-sys-typescale-body-large-font-weight: 400;
+        --md-sys-typescale-body-large-font-size: 16px;
+        --md-sys-typescale-body-large-line-height: 24px;
+        --md-sys-typescale-body-large-letter-spacing: 0.5px;
+        /* body - medium */
+        --md-sys-typescale-body-medium-font-family-style: Regular;
+        --md-sys-typescale-body-medium-font-weight: 400;
+        --md-sys-typescale-body-medium-font-size: 14px;
+        --md-sys-typescale-body-medium-line-height: 20px;
+        --md-sys-typescale-body-medium-letter-spacing: 0.25px;
+        /* body - small */
+        --md-sys-typescale-body-small-font-family-style: Regular;
+        --md-sys-typescale-body-small-font-weight: 400;
+        --md-sys-typescale-body-small-font-size: 12px;
+        --md-sys-typescale-body-small-line-height: 16px;
+        --md-sys-typescale-body-small-letter-spacing: 0.4px;
+        /* tag - large */
+        --md-sys-typescale-label-large-font-family-style: Medium;
+        --md-sys-typescale-label-large-font-weight: 500;
+        --md-sys-typescale-label-large-font-size: 14px;
+        --md-sys-typescale-label-large-line-height: 20px;
+        --md-sys-typescale-label-large-letter-spacing: 0.1px;
+        /* tag - medium */
+        --md-sys-typescale-label-medium-font-family-style: Medium;
+        --md-sys-typescale-label-medium-font-weight: 500;
+        --md-sys-typescale-label-medium-font-size: 12px;
+        --md-sys-typescale-label-medium-line-height: 16px;
+        --md-sys-typescale-label-medium-letter-spacing: 0.5px;
+        /* tag - small */
+        --md-sys-typescale-label-small-font-family-style: Medium;
+        --md-sys-typescale-label-small-font-weight: 500;
+        --md-sys-typescale-label-small-font-size: 11px;
+        --md-sys-typescale-label-small-line-height: 16px;
+        --md-sys-typescale-label-small-letter-spacing: 0.5px;
+        /* title - large */
+        --md-sys-typescale-title-large-font-family-style: Regular;
+        --md-sys-typescale-title-large-font-weight: 400;
+        --md-sys-typescale-title-large-font-size: 22px;
+        --md-sys-typescale-title-large-line-height: 28px;
+        --md-sys-typescale-title-large-letter-spacing: 0px;
+        /* title - medium */
+        --md-sys-typescale-title-medium-font-family-style: Medium;
+        --md-sys-typescale-title-medium-font-weight: 500;
+        --md-sys-typescale-title-medium-font-size: 16px;
+        --md-sys-typescale-title-medium-line-height: 24px;
+        --md-sys-typescale-title-medium-letter-spacing: 0.15px;
+        /* title - small */
+        --md-sys-typescale-title-small-font-family-style: Medium;
+        --md-sys-typescale-title-small-font-weight: 500;
+        --md-sys-typescale-title-small-font-size: 14px;
+        --md-sys-typescale-title-small-line-height: 20px;
+        --md-sys-typescale-title-small-letter-spacing: 0.1px;
+      }
+
+      blockquote {
+        margin: 0;
+        padding: 1rem;
+      }
+
+      h1 {
+        margin-block-start: 1.45rem;
+        margin-block-end: 1.45rem;
+      }
+
+      h2 {
+        margin-block-start: 1.25rem;
+        margin-block-end: 1.25rem;
+      }
+
+      h3 {
+        margin-block-start: 1.175rem;
+        margin-block-end: 1.175rem;
+      }
+
+      h4 {
+        margin-block-start: 1.15rem;
+        margin-block-end: 1.15rem;
+      }
+
+      figure {
+        margin: 0;
+      }
+
+      p {
+        margin-block-start: 1rem;
+        margin-block-end: 1rem;
+      }
+
+      ul[role='list'],
+      ol[role='list'] {
+        list-style: none;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        line-height: 1.5;
+        font-family:
+          Roboto,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        font-size: 16px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      button,
+      input,
+      label {
+        line-height: 1.1;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        text-wrap: balance;
+      }
+
+      a:not([class]) {
+        text-decoration-skip-ink: auto;
+        color: currentColor;
+      }
+
+      img,
+      picture {
+        max-width: 100%;
+        display: block;
+      }
+
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      textarea:not([rows]) {
+        min-height: 10rem;
+      }
+
+      :target {
+        scroll-margin-block: 5ex;
+      }
+    </style>
+  </head>
+  <body>
+    <baf-root>
+      <noscript
+        ><div><img src="https://mc.yandex.ru/watch/97634082" style="position: absolute; left: -9999px" alt="" /></div
+      ></noscript>
+    </baf-root>
+  </body>
+</html>

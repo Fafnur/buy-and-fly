@@ -47,6 +47,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@builder.io/partytown/lib",
+                "output": "/~partytown"
               }
             ],
             "styles": ["src/styles.scss"],
@@ -59,6 +64,10 @@
           },
           "configurations": {
             "production": {
+              "index": {
+                "input": "src/index.prod.html",
+                "output": "index.html"
+              },
               "budgets": [
                 {
                   "type": "initial",
