@@ -31,22 +31,17 @@
     <meta name="og:image:width" content="1280" />
     <meta name="og:image:height" content="800" />
 
-    <!-- partytown -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W88RSN32B9"></script>
     <script>
-      partytown = {
-        forward: [['dataLayer.push', { preserveBehavior: true }], ['fbq', { preserveBehavior: false }], 'gtm.push', 'gtag', 'ym'],
-      };
-    </script>
-    <script src="/~partytown/debug/partytown.js"></script>
-    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-W88RSN32B9"></script>
-    <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
 
       gtag('config', 'G-W88RSN32B9');
     </script>
-    <script type="text/partytown">
+    <script>
       (function (m, e, t, r, i, k, a) {
         m[i] =
           m[i] ||
@@ -69,7 +64,6 @@
         webvisor: true,
       });
     </script>
-    <!-- /partytown -->
 
     <style>
       *,
