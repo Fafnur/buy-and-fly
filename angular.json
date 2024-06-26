@@ -47,11 +47,6 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              {
-                "glob": "**/*",
-                "input": "node_modules/@builder.io/partytown/lib",
-                "output": "/~partytown"
               }
             ],
             "styles": ["src/styles.scss"],
