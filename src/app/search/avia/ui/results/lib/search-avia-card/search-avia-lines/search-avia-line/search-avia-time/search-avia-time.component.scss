@@ -1,5 +1,5 @@
-@use '../../../../../../../../../../stylesheets/align' as align;
-@use '../../../../../../../../../../stylesheets/device' as device;
+@use 'src/stylesheets/align' as align;
+@use 'src/stylesheets/device' as device;
 
 :host {
   width: 25%;
