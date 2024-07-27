@@ -8,7 +8,7 @@ export class ButtonBase implements AfterViewInit, OnDestroy {
 
   private readonly focusMonitor = inject(FocusMonitor);
 
-  constructor(protected readonly elementRef: ElementRef) {}
+  protected constructor(protected readonly elementRef: ElementRef) {}
 
   get disabled(): boolean {
     return this.isDisabled;
@@ -49,7 +49,7 @@ export class AnchorBase extends ButtonBase implements OnInit, OnDestroy {
     }
   };
 
-  constructor(elementRef: ElementRef) {
+  protected constructor(elementRef: ElementRef) {
     super(elementRef);
   }
 
