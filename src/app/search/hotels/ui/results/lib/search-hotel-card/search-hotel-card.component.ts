@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-import { SearchHotel } from '@baf/search/hotels/common';
+import type { SearchHotel } from '@baf/search/hotels/common';
 import { CardComponent } from '@baf/ui/cards';
 
 import { SearchHotelPhotosComponent } from './search-hotel-photos/search-hotel-photos.component';

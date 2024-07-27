@@ -1,6 +1,6 @@
 import { FormControl, FormGroup } from '@angular/forms';
 
-import { FormFor } from '@baf/core';
+import type { FormFor } from '@baf/core';
 
 export interface SearchHotelFilters {
   readonly breakfast: boolean;

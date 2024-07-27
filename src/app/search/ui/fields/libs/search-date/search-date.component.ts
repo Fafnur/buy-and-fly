@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import type { FormControl } from '@angular/forms';
 
 import { camelCaseToHumanize, ExtraClassService } from '@baf/core';
-import { SearchFieldOptions } from '@baf/search/common';
-import { DatepickerComponent, DatepickerOptions } from '@baf/ui/datepicker';
+import type { SearchFieldOptions } from '@baf/search/common';
+import type { DatepickerOptions } from '@baf/ui/datepicker';
+import { DatepickerComponent } from '@baf/ui/datepicker';
 
 export interface SearchDateOptions extends SearchFieldOptions {
   readonly startDate?: FormControl<string>;

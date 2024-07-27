@@ -1,7 +1,8 @@
-import { inject, Pipe, PipeTransform } from '@angular/core';
+import type { PipeTransform } from '@angular/core';
+import { inject, Pipe } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { SearchAviaLine, SearchFlight } from '@baf/search/avia/common';
+import type { SearchAviaLine, SearchFlight } from '@baf/search/avia/common';
 
 @Pipe({
   name: 'searchAviaLine',
@@ -10,7 +11,7 @@ import { SearchAviaLine, SearchFlight } from '@baf/search/avia/common';
 export class SearchAviaLinePipe implements PipeTransform {
   private readonly activatedRoute = inject(ActivatedRoute);
 
-  transform(flight: SearchFlight, back: boolean = false): SearchAviaLine {
+  transform(flight: SearchFlight, back = false): SearchAviaLine {
     const { fromName, toName } = this.activatedRoute.snapshot.queryParams;
 
     if (back) {

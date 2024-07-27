@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import type { FormControl } from '@angular/forms';
 
 import { ExtractChangesDirective } from '@baf/core';
-import { SearchFieldOptions } from '@baf/search/common';
+import type { SearchFieldOptions } from '@baf/search/common';
 import { CheckboxComponent } from '@baf/ui/checkbox';
 
 export type FilterDirectOptions = SearchFieldOptions;

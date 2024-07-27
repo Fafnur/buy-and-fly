@@ -1,6 +1,8 @@
-import { FocusMonitor, FocusOrigin } from '@angular/cdk/a11y';
+import type { FocusOrigin } from '@angular/cdk/a11y';
+import { FocusMonitor } from '@angular/cdk/a11y';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { AfterViewInit, Directive, ElementRef, inject, NgZone, OnDestroy, OnInit } from '@angular/core';
+import type { AfterViewInit, ElementRef, OnDestroy, OnInit } from '@angular/core';
+import { Directive, inject, NgZone } from '@angular/core';
 
 @Directive()
 export class ButtonBase implements AfterViewInit, OnDestroy {

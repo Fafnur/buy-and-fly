@@ -1,11 +1,12 @@
-import { Directive, ElementRef, forwardRef, inject, InjectionToken, input, OnInit } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import type { OnInit } from '@angular/core';
+import { Directive, ElementRef, forwardRef, inject, InjectionToken, input } from '@angular/core';
+import type { ControlValueAccessor } from '@angular/forms';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
-import { ChangeFn, MaskFn, TouchedFn } from '@baf/core';
+import type { ChangeFn, MaskFn, TouchedFn } from '@baf/core';
 
 export const INPUT_MASK_VALUES = new InjectionToken<Record<string, RegExp>>('INPUT_MASK_VALUES');
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
 const DEFAULT_INPUT_MASK_VALUES: Record<string, RegExp> = { 0: /[0-9]/, a: /[a-z]/, A: /[A-Z]/, B: /[a-zA-Z]/ };
 
 export const DEFAULT_MASK_FN: MaskFn = (value) => value;

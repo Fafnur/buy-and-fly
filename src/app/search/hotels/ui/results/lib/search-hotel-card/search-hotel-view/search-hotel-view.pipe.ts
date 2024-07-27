@@ -1,7 +1,9 @@
-import { inject, Pipe, PipeTransform } from '@angular/core';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import type { PipeTransform } from '@angular/core';
+import { inject, Pipe } from '@angular/core';
+import type { SafeUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 
-import { SearchHotel } from '@baf/search/hotels/common';
+import type { SearchHotel } from '@baf/search/hotels/common';
 
 @Pipe({
   name: 'searchHotelView',

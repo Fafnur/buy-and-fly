@@ -1,16 +1,8 @@
-import {
-  AfterViewInit,
-  ChangeDetectionStrategy,
-  Component,
-  contentChild,
-  DestroyRef,
-  ElementRef,
-  inject,
-  OnDestroy,
-  Renderer2,
-} from '@angular/core';
+import type { AfterViewInit, OnDestroy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, contentChild, DestroyRef, ElementRef, inject, Renderer2 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { FormControlStatus, TouchedChangeEvent } from '@angular/forms';
+import type { FormControlStatus } from '@angular/forms';
+import { TouchedChangeEvent } from '@angular/forms';
 import { filter, startWith, tap } from 'rxjs';
 
 import { LabelComponent } from '@baf/ui/label';

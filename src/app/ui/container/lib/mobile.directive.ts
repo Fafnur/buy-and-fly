@@ -1,10 +1,10 @@
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Directive, inject, input } from '@angular/core';
 
-import { CoerceBoolean, ExtraClassService } from '@baf/core';
+import type { CoerceBoolean } from '@baf/core';
+import { ExtraClassService } from '@baf/core';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: 'baf-container[bafMobile]',
   standalone: true,
   providers: [ExtraClassService],

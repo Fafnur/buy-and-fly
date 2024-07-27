@@ -1,9 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { DEFAULT_CURRENCY_CODE, inject, Injectable, TransferState } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import type { Observable } from 'rxjs';
+import { map } from 'rxjs';
 
-import { castParams, ENV_DEFAULT, ENV_KEY, Environment } from '@baf/core';
-import { getSearchFlightOptions, SearchFlight, SearchFlightResponse } from '@baf/search/avia/common';
+import type { Environment } from '@baf/core';
+import { castParams, ENV_DEFAULT, ENV_KEY } from '@baf/core';
+import type { SearchFlight, SearchFlightResponse } from '@baf/search/avia/common';
+import { getSearchFlightOptions } from '@baf/search/avia/common';
 
 @Injectable()
 export class SearchAviaService {

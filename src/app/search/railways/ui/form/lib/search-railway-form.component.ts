@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { PATHS } from '@baf/core';
-import { SearchFormOptions } from '@baf/search/common';
-import { initialSearchRailwayFormGroup, SearchRailwayForm } from '@baf/search/railways/common';
+import type { SearchFormOptions } from '@baf/search/common';
+import type { SearchRailwayForm } from '@baf/search/railways/common';
+import { initialSearchRailwayFormGroup } from '@baf/search/railways/common';
 import {
   SearchDateComponent,
   SearchDestinationComponent,

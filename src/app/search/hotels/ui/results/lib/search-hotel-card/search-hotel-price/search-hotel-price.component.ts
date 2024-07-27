@@ -1,10 +1,11 @@
 import { AsyncPipe, CurrencyPipe, DecimalPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map, Observable } from 'rxjs';
+import type { Observable } from 'rxjs';
+import { map } from 'rxjs';
 
 import { getDaysBetweenDates } from '@baf/core';
-import { SearchHotel } from '@baf/search/hotels/common';
+import type { SearchHotel } from '@baf/search/hotels/common';
 
 import { SearchHotelPricePipe } from './search-hotel-price.pipe';
 

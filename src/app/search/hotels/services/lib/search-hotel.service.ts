@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { DEFAULT_CURRENCY_CODE, inject, Injectable, LOCALE_ID, TransferState } from '@angular/core';
-import { map, Observable, of, switchMap } from 'rxjs';
+import type { Observable } from 'rxjs';
+import { map, of, switchMap } from 'rxjs';
 
-import { castParams, ENV_DEFAULT, ENV_KEY, Environment } from '@baf/core';
-import {
-  getSearchHotelsInfoOptions,
-  getSearchHotelsOptions,
+import type { Environment } from '@baf/core';
+import { castParams, ENV_DEFAULT, ENV_KEY } from '@baf/core';
+import type {
   SearchHotel,
   SearchHotelDetails,
   SearchHotelDto,
@@ -13,6 +13,7 @@ import {
   SearchHotelsDetailsResponse,
   SearchHotelsResponse,
 } from '@baf/search/hotels/common';
+import { getSearchHotelsInfoOptions, getSearchHotelsOptions } from '@baf/search/hotels/common';
 
 @Injectable()
 export class SearchHotelService {

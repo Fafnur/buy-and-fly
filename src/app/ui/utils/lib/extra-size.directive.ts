@@ -2,7 +2,7 @@ import { Directive, inject, input } from '@angular/core';
 
 import { ExtraClassService, toClass } from '@baf/core';
 
-import { ExtraSize } from './types';
+import type { ExtraSize } from './types';
 
 @Directive({
   selector: '[bafSize]',

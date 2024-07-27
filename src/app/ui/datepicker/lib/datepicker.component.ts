@@ -1,13 +1,15 @@
 import { CdkConnectedOverlay, CdkOverlayOrigin } from '@angular/cdk/overlay';
 import { DOCUMENT } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ElementRef, inject, input, output, signal, viewChild } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import type { FormControl } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { MaskFn } from '@baf/core';
+import type { MaskFn } from '@baf/core';
 import { DEFAULT_MASK_FN, InputComponent, InputControlComponent, InputMaskDirective } from '@baf/ui/input';
 import { LabelComponent } from '@baf/ui/label';
 
-import { CalendarComponent, CalendarSelected } from './calendar/calendar.component';
+import type { CalendarSelected } from './calendar/calendar.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 export interface DatepickerOptions {
   readonly label: string;

@@ -2,7 +2,7 @@ import { Directive, inject, input } from '@angular/core';
 
 import { ExtraClassService, toClass } from '@baf/core';
 
-import { Width } from './types';
+import type { Width } from './types';
 
 @Directive({
   selector: '[bafWidth]',

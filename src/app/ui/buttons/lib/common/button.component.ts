@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, ElementRef } from '@angular/core';
+import type { ElementRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { DisabledDirective, ExtraSizeDirective, ModeDirective, WidthDirective } from '@baf/ui/utils';
 

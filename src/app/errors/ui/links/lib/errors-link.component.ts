@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { NavigationLink, PATHS } from '@baf/core';
+import type { NavigationLink } from '@baf/core';
+import { PATHS } from '@baf/core';
 import { NavComponent } from '@baf/ui/nav';
 
 @Component({

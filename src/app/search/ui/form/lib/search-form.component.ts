@@ -1,10 +1,13 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, inject, input, OnInit, output } from '@angular/core';
+import type { OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, input, output } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import type { FormGroup } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { tap } from 'rxjs';
 
-import { castQueryParams, getRoute, PathValues } from '@baf/core';
+import type { PathValues } from '@baf/core';
+import { castQueryParams, getRoute } from '@baf/core';
 import { getSearchQueryParams } from '@baf/search/common';
 import { SearchGroupComponent } from '@baf/search/ui/fields';
 import { ButtonComponent } from '@baf/ui/buttons';
