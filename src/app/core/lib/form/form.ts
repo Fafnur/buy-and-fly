@@ -1,4 +1,4 @@
-import { FormControl, FormGroup } from '@angular/forms';
+import type { FormControl, FormGroup } from '@angular/forms';
 
 export type FormFor<T> = {
   [P in keyof T]: FormControl<T[P]>;

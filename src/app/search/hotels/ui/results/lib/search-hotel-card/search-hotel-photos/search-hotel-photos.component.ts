@@ -1,7 +1,7 @@
 import { AsyncPipe, NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ElementRef, inject, input } from '@angular/core';
 
-import { SearchHotel } from '@baf/search/hotels/common';
+import type { SearchHotel } from '@baf/search/hotels/common';
 
 @Component({
   selector: 'baf-search-hotel-photos',

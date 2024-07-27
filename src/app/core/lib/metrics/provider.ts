@@ -1,8 +1,10 @@
-import { APP_INITIALIZER, Provider } from '@angular/core';
+import type { Provider } from '@angular/core';
+import { APP_INITIALIZER } from '@angular/core';
 
 import { GoogleAnalytics } from './google-analytics';
 import { MetricService } from './metric.service';
-import { METRIC_CONFIG, MetricConfig } from './metrica.interface';
+import type { MetricConfig } from './metrica.interface';
+import { METRIC_CONFIG } from './metrica.interface';
 import { YandexMetrika } from './yandex.metrika';
 
 export function provideMetrics(metricConfig: MetricConfig): Provider[] {

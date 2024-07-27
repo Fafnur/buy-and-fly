@@ -1,4 +1,4 @@
-export type HttpParams = Record<string, string | number | boolean | ReadonlyArray<string | number | boolean>>;
+export type HttpParams = Record<string, string | number | boolean | readonly (string | number | boolean)[]>;
 
 export function castParams(all: Record<string, unknown>): HttpParams {
   const params: HttpParams = {};

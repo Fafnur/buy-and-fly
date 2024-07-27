@@ -1,8 +1,10 @@
-import { DestroyRef, Directive, ElementRef, inject, input, OnInit, Renderer2 } from '@angular/core';
+import type { OnInit } from '@angular/core';
+import { DestroyRef, Directive, ElementRef, inject, input, Renderer2 } from '@angular/core';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
-import { Observable, tap } from 'rxjs';
+import type { Observable } from 'rxjs';
+import { tap } from 'rxjs';
 
-import { StyleFn } from '../types/type';
+import type { StyleFn } from '../types/type';
 
 @Directive({
   selector: '[bafExtraClass]',

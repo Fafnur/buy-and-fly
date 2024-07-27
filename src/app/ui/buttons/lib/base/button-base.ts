@@ -1,6 +1,8 @@
-import { FocusMonitor, FocusOrigin } from '@angular/cdk/a11y';
+import type { FocusOrigin } from '@angular/cdk/a11y';
+import { FocusMonitor } from '@angular/cdk/a11y';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { AfterViewInit, Directive, ElementRef, inject, NgZone, OnDestroy, OnInit } from '@angular/core';
+import type { AfterViewInit, ElementRef, OnDestroy, OnInit } from '@angular/core';
+import { Directive, inject, NgZone } from '@angular/core';
 
 @Directive()
 export class ButtonBase implements AfterViewInit, OnDestroy {
@@ -8,7 +10,7 @@ export class ButtonBase implements AfterViewInit, OnDestroy {
 
   private readonly focusMonitor = inject(FocusMonitor);
 
-  constructor(protected readonly elementRef: ElementRef) {}
+  protected constructor(protected readonly elementRef: ElementRef) {}
 
   get disabled(): boolean {
     return this.isDisabled;
@@ -49,7 +51,7 @@ export class AnchorBase extends ButtonBase implements OnInit, OnDestroy {
     }
   };
 
-  constructor(elementRef: ElementRef) {
+  protected constructor(elementRef: ElementRef) {
     super(elementRef);
   }
 

@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-import { SearchAviaLine } from '@baf/search/avia/common';
+import type { SearchAviaLine } from '@baf/search/avia/common';
 
+import { SearchAviaDurationComponent } from './search-avia-duration/search-avia-duration.component';
 import { SearchAviaDurationPipe } from './search-avia-duration/search-avia-duration.pipe';
 import { SearchAviaTimeComponent } from './search-avia-time/search-avia-time.component';
-import { SearchAviaDurationComponent } from './search-avia-duration/search-avia-duration.component';
 
 @Component({
   selector: 'baf-search-avia-line',

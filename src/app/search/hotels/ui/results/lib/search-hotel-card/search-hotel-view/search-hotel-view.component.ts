@@ -1,7 +1,7 @@
 import { CurrencyPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-import { SearchHotel } from '@baf/search/hotels/common';
+import type { SearchHotel } from '@baf/search/hotels/common';
 import { AnchorComponent } from '@baf/ui/buttons';
 
 import { SearchHotelViewPipe } from './search-hotel-view.pipe';

@@ -1,4 +1,4 @@
-import { HttpInterceptorFn } from '@angular/common/http';
+import type { HttpInterceptorFn } from '@angular/common/http';
 
 export const contentTypeInterceptor: HttpInterceptorFn = (req, next) => {
   if (!req.headers.has('Content-Type') && req.headers.get('enctype') !== 'multipart/form-data') {

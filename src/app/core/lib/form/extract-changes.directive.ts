@@ -1,6 +1,7 @@
-import { ChangeDetectorRef, DestroyRef, Directive, inject, input, OnInit } from '@angular/core';
+import type { OnInit } from '@angular/core';
+import { ChangeDetectorRef, DestroyRef, Directive, inject, input } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import type { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { tap } from 'rxjs/operators';
 
 @Directive({

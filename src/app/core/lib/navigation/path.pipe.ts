@@ -1,6 +1,8 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import type { PipeTransform } from '@angular/core';
+import { Pipe } from '@angular/core';
 
-import { GetPathParams, getRoute, PathValues } from '@baf/core';
+import type { GetPathParams, PathValues } from '@baf/core';
+import { getRoute } from '@baf/core';
 
 @Pipe({
   name: 'path',

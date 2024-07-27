@@ -1,10 +1,11 @@
 import { DestroyRef, ElementRef, inject, Injectable, Renderer2 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { Observable, Subscription, tap } from 'rxjs';
+import type { Observable, Subscription } from 'rxjs';
+import { tap } from 'rxjs';
 
 type Styles = string | string[] | undefined | null;
 
-export function toClass(value: unknown | undefined | null, prefix: string = 'is'): Styles {
+export function toClass(value: unknown | undefined | null, prefix = 'is'): Styles {
   return value ? `${prefix}-${value}` : undefined;
 }
 

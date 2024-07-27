@@ -1,6 +1,7 @@
 import 'hammerjs';
 
-import { ApplicationConfig, mergeApplicationConfig } from '@angular/core';
+import type { ApplicationConfig } from '@angular/core';
+import { mergeApplicationConfig } from '@angular/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
 import { provideHammer } from '@baf/core';

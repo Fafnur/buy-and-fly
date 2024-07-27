@@ -2,7 +2,7 @@ import { Directive, inject, input } from '@angular/core';
 
 import { ExtraClassService, toClass } from '@baf/core';
 
-import { ButtonMode } from './types';
+import type { ButtonMode } from './types';
 
 @Directive({
   selector: '[bafMode]',

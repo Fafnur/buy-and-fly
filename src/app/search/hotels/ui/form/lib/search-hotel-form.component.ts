@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { PATHS } from '@baf/core';
-import { SearchFormOptions } from '@baf/search/common';
-import { initialSearchHotelFormGroup, SearchHotelForm } from '@baf/search/hotels/common';
+import type { SearchFormOptions } from '@baf/search/common';
+import type { SearchHotelForm } from '@baf/search/hotels/common';
+import { initialSearchHotelFormGroup } from '@baf/search/hotels/common';
 import {
   SearchDateComponent,
   SearchDestinationComponent,

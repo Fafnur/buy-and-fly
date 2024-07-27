@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import type { FormGroup } from '@angular/forms';
 
 import { IconButtonComponent } from '@baf/ui/buttons';
 import { SyncAltComponent } from '@baf/ui/icons';

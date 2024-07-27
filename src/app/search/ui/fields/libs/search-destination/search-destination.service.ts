@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, LOCALE_ID } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import type { Observable } from 'rxjs';
+import { map } from 'rxjs';
 
-import { SearchDestination } from '@baf/search/common';
+import type { SearchDestination } from '@baf/search/common';
 
 @Injectable()
 export class SearchDestinationService {

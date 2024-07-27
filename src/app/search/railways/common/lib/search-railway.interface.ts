@@ -1,7 +1,7 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { FormFor } from '@baf/core';
-import { SearchDestination } from '@baf/search/common';
+import type { FormFor } from '@baf/core';
+import type { SearchDestination } from '@baf/search/common';
 
 export interface SearchRailwayForm {
   readonly from: string | SearchDestination;

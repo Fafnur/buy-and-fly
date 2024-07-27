@@ -101,6 +101,7 @@ module.exports = tseslint.config(
       'no-invalid-this': 'off',
       '@typescript-eslint/no-invalid-this': ['warn'],
       '@angular-eslint/no-host-metadata-property': 'off',
+      '@typescript-eslint/consistent-type-imports': 'error',
     },
   },
   {

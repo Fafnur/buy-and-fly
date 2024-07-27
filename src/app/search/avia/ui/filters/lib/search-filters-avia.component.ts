@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { initialSearchAviaFiltersGroup, SearchAviaFilters } from '@baf/search/avia/common';
-import { SearchFormOptions } from '@baf/search/common';
+import type { SearchAviaFilters } from '@baf/search/avia/common';
+import { initialSearchAviaFiltersGroup } from '@baf/search/avia/common';
+import type { SearchFormOptions } from '@baf/search/common';
 import { SearchFiltersComponent } from '@baf/search/ui/filters';
 
 import { FilterBaggageComponent } from './filter-baggage/filter-baggage.component';

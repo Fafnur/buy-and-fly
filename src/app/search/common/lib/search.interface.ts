@@ -21,9 +21,9 @@ export type SearchFormOptions<T> = {
   readonly [P in keyof T]: SearchFieldOptions;
 };
 
-export function getSearchQueryParams(form: {
-  readonly [key: string]: string | number | boolean | Record<string, unknown>;
-}): Record<string, unknown> {
+export function getSearchQueryParams(
+  form: Readonly<Record<string, string | number | boolean | Record<string, unknown>>>,
+): Record<string, unknown> {
   const params: Record<string, unknown> = {};
 
   for (const [key, value] of Object.entries(form)) {

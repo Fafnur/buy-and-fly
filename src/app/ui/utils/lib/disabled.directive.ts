@@ -1,7 +1,8 @@
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Directive, inject, input } from '@angular/core';
 
-import { CoerceBoolean, ExtraClassService } from '@baf/core';
+import type { CoerceBoolean } from '@baf/core';
+import { ExtraClassService } from '@baf/core';
 
 /**
  * Important: This is a special attribute for HTML and Angular uses this property in a special way.

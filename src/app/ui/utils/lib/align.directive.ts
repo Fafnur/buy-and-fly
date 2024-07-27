@@ -2,7 +2,7 @@ import { Directive, inject, input } from '@angular/core';
 
 import { ExtraClassService, toClass } from '@baf/core';
 
-import { Align } from './types';
+import type { Align } from './types';
 
 @Directive({
   selector: '[bafAlign]',

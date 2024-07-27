@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
-import { NavigationLink, PathPipe } from '@baf/core';
+import type { NavigationLink } from '@baf/core';
+import { PathPipe } from '@baf/core';
 
 @Component({
   selector: 'baf-nav',

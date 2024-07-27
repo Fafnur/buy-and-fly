@@ -1,7 +1,8 @@
 import { Directive, ElementRef, forwardRef, inject, input } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import type { ControlValueAccessor } from '@angular/forms';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
-import { ChangeFn, DisplayFn, TouchedFn } from '@baf/core';
+import type { ChangeFn, DisplayFn, TouchedFn } from '@baf/core';
 
 @Directive({
   selector: 'input[formControlName][bafInputDisplay],input[formControl][bafInputDisplay]',

@@ -1,10 +1,13 @@
 import { CdkConnectedOverlay, CdkOverlayOrigin } from '@angular/cdk/overlay';
 import { AsyncPipe, NgForOf } from '@angular/common';
-import { ChangeDetectionStrategy, Component, ElementRef, input, output, Signal, signal, viewChild } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { Observable, take, tap } from 'rxjs';
+import type { Signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, input, output, signal, viewChild } from '@angular/core';
+import type { FormControl } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import type { Observable } from 'rxjs';
+import { take, tap } from 'rxjs';
 
-import { DisplayFn } from '@baf/core';
+import type { DisplayFn } from '@baf/core';
 import { InputComponent, InputControlComponent, InputDisplayDirective } from '@baf/ui/input';
 import { LabelComponent } from '@baf/ui/label';
 
