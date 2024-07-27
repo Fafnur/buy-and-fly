@@ -1,4 +1,3 @@
-import type { ElementRef } from '@angular/core';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { DisabledDirective, ExtraSizeDirective, ModeDirective, WidthDirective } from '@baf/ui/utils';
@@ -34,11 +33,7 @@ import { AnchorBase, ButtonBase } from '../base/button-base';
     },
   ],
 })
-export class ButtonComponent extends ButtonBase {
-  constructor(elementRef: ElementRef) {
-    super(elementRef);
-  }
-}
+export class ButtonComponent extends ButtonBase {}
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -69,8 +64,4 @@ export class ButtonComponent extends ButtonBase {
     },
   ],
 })
-export class AnchorComponent extends AnchorBase {
-  constructor(elementRef: ElementRef) {
-    super(elementRef);
-  }
-}
+export class AnchorComponent extends AnchorBase {}
