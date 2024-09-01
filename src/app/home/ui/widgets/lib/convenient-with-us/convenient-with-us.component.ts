@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { CardComponent } from '@baf/ui/cards';
@@ -7,7 +8,7 @@ import { TitleComponent } from '@baf/ui/title';
 @Component({
   selector: 'baf-convenient-with-us',
   standalone: true,
-  imports: [TitleComponent, HeadlineComponent, CardComponent],
+  imports: [NgOptimizedImage, TitleComponent, HeadlineComponent, CardComponent, NgOptimizedImage],
   templateUrl: './convenient-with-us.component.html',
   styleUrl: './convenient-with-us.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

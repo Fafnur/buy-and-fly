@@ -1,5 +1,11 @@
 @use 'src/stylesheets/device' as device;
 
+:host {
+  img {
+    height: auto;
+  }
+}
+
 .traveling-info {
   position: relative;
 }

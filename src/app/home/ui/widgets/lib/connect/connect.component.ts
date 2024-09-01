@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
@@ -10,7 +11,7 @@ import { TitleComponent } from '@baf/ui/title';
 @Component({
   selector: 'baf-connect',
   standalone: true,
-  imports: [TitleComponent, HeadlineComponent, CardComponent, AnchorComponent, RouterLink, PathPipe],
+  imports: [NgOptimizedImage, TitleComponent, HeadlineComponent, CardComponent, AnchorComponent, RouterLink, PathPipe],
   templateUrl: './connect.component.html',
   styleUrl: './connect.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

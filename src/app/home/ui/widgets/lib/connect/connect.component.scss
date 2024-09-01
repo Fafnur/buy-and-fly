@@ -6,6 +6,7 @@
 
   img {
     max-width: 10rem;
+    aspect-ratio: 1;
   }
 
   @include device.media-tablet-up() {
