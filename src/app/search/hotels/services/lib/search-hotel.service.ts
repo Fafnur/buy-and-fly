@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { DEFAULT_CURRENCY_CODE, inject, Injectable, LOCALE_ID, TransferState } from '@angular/core';
 import type { Observable } from 'rxjs';
-import { map, of, switchMap } from 'rxjs';
+import { map } from 'rxjs';
 
 import type { Environment } from '@baf/core';
 import { castParams, ENV_DEFAULT, ENV_KEY } from '@baf/core';

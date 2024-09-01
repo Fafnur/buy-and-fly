@@ -2,14 +2,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import type { NavigationLink } from '@baf/core';
 import { PATHS } from '@baf/core';
-import { SearchFormComponent } from '@baf/search/ui/form';
 import { HeadlineComponent } from '@baf/ui/headline';
 import { NavComponent } from '@baf/ui/nav';
 
 @Component({
   selector: 'baf-promo',
   standalone: true,
-  imports: [SearchFormComponent, HeadlineComponent, NavComponent],
+  imports: [HeadlineComponent, NavComponent],
   templateUrl: './promo.component.html',
   styleUrl: './promo.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
