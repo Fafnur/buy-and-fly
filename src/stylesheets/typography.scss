@@ -1,5 +1,4 @@
 @mixin body-small() {
-  font-family: var(--md-sys-typescale-body-small-font-family-name);
   font-style: var(--md-sys-typescale-body-small-font-family-style);
   font-weight: var(--md-sys-typescale-body-small-font-weight);
   font-size: var(--md-sys-typescale-body-small-font-size);
@@ -8,7 +7,6 @@
 }
 
 @mixin body-medium() {
-  font-family: var(--md-sys-typescale-body-medium-font-family-name);
   font-style: var(--md-sys-typescale-body-medium-font-family-style);
   font-weight: var(--md-sys-typescale-body-medium-font-weight);
   font-size: var(--md-sys-typescale-body-medium-font-size);
@@ -17,7 +15,6 @@
 }
 
 @mixin body-large() {
-  font-family: var(--md-sys-typescale-body-large-font-family-name);
   font-style: var(--md-sys-typescale-body-large-font-family-style);
   font-weight: var(--md-sys-typescale-body-large-font-weight);
   font-size: var(--md-sys-typescale-body-large-font-size);
@@ -26,7 +23,6 @@
 }
 
 @mixin label-small() {
-  font-family: var(--md-sys-typescale-label-small-font-family-name);
   font-style: var(--md-sys-typescale-label-small-font-family-style);
   font-weight: var(--md-sys-typescale-label-small-font-weight);
   font-size: var(--md-sys-typescale-label-small-font-size);
@@ -35,7 +31,6 @@
 }
 
 @mixin label-medium() {
-  font-family: var(--md-sys-typescale-label-medium-font-family-name);
   font-style: var(--md-sys-typescale-label-medium-font-family-style);
   font-weight: var(--md-sys-typescale-label-medium-font-weight);
   font-size: var(--md-sys-typescale-label-medium-font-size);
@@ -44,7 +39,6 @@
 }
 
 @mixin label-large() {
-  font-family: var(--md-sys-typescale-label-large-font-family-name);
   font-style: var(--md-sys-typescale-label-large-font-family-style);
   font-weight: var(--md-sys-typescale-label-large-font-weight);
   font-size: var(--md-sys-typescale-label-large-font-size);
@@ -53,7 +47,6 @@
 }
 
 @mixin title-small() {
-  font-family: var(--md-sys-typescale-title-small-font-family-name);
   font-style: var(--md-sys-typescale-title-small-font-family-style);
   font-weight: var(--md-sys-typescale-title-small-font-weight);
   font-size: var(--md-sys-typescale-title-small-font-size);
@@ -62,7 +55,6 @@
 }
 
 @mixin title-medium() {
-  font-family: var(--md-sys-typescale-title-medium-font-family-name);
   font-style: var(--md-sys-typescale-title-medium-font-family-style);
   font-weight: var(--md-sys-typescale-title-medium-font-weight);
   font-size: var(--md-sys-typescale-title-medium-font-size);
@@ -71,7 +63,6 @@
 }
 
 @mixin title-large() {
-  font-family: var(--md-sys-typescale-title-large-font-family-name);
   font-style: var(--md-sys-typescale-title-large-font-family-style);
   font-weight: var(--md-sys-typescale-title-large-font-weight);
   font-size: var(--md-sys-typescale-title-large-font-size);
@@ -80,7 +71,6 @@
 }
 
 @mixin headline-small() {
-  font-family: var(--md-sys-typescale-headline-small-font-family-name);
   font-style: var(--md-sys-typescale-headline-small-font-family-style);
   font-weight: var(--md-sys-typescale-headline-small-font-weight);
   font-size: var(--md-sys-typescale-headline-small-font-size);
@@ -89,7 +79,6 @@
 }
 
 @mixin headline-medium() {
-  font-family: var(--md-sys-typescale-headline-medium-font-family-name);
   font-style: var(--md-sys-typescale-headline-medium-font-family-style);
   font-weight: var(--md-sys-typescale-headline-medium-font-weight);
   font-size: var(--md-sys-typescale-headline-medium-font-size);
@@ -98,7 +87,6 @@
 }
 
 @mixin headline-large() {
-  font-family: var(--md-sys-typescale-headline-large-font-family-name);
   font-style: var(--md-sys-typescale-headline-large-font-family-style);
   font-weight: var(--md-sys-typescale-headline-large-font-weight);
   font-size: var(--md-sys-typescale-headline-large-font-size);
@@ -107,7 +95,6 @@
 }
 
 @mixin display-small() {
-  font-family: var(--md-sys-typescale-display-small-font-family-name);
   font-style: var(--md-sys-typescale-display-small-font-family-style);
   font-weight: var(--md-sys-typescale-display-small-font-weight);
   font-size: var(--md-sys-typescale-display-small-font-size);
@@ -116,7 +103,6 @@
 }
 
 @mixin display-medium() {
-  font-family: var(--md-sys-typescale-display-medium-font-family-name);
   font-style: var(--md-sys-typescale-display-medium-font-family-style);
   font-weight: var(--md-sys-typescale-display-medium-font-weight);
   font-size: var(--md-sys-typescale-display-medium-font-size);
@@ -125,7 +111,6 @@
 }
 
 @mixin display-large() {
-  font-family: var(--md-sys-typescale-display-large-font-family-name);
   font-style: var(--md-sys-typescale-display-large-font-family-style);
   font-weight: var(--md-sys-typescale-display-large-font-weight);
   font-size: var(--md-sys-typescale-display-large-font-size);
