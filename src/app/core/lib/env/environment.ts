@@ -1,3 +1,4 @@
+import type { ApplicationConfig} from '@angular/core';
 import { APP_INITIALIZER, makeStateKey, TransferState } from '@angular/core';
 // import process from 'node:process';
 
@@ -30,3 +31,7 @@ export function provideEnv() {
     },
   ];
 }
+
+export const envConfig: ApplicationConfig = {
+  providers: [provideEnv()],
+};
